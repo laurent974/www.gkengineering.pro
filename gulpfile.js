@@ -28,7 +28,7 @@ gulp.task('browser-sync', function() {
   ];
 
   browserSync.init(files, {
-    proxy: url,
+    //proxy: url,
     injectChanges: true
   });
 });
@@ -61,21 +61,54 @@ gulp.task('styles', function() {
     .pipe(notify({ message: 'Styles Task Complete', onLast: true}));
 });
 
-//JS Task
-gulp.task('js-uglifyf', function() {
-  return gulp.src('./src/js/*.js')
-    .pipe(plumber())
-    .pipe(rename(function(path) {
-      path.basename.replace('.src', '.min');
+//Sripts task: Vendors
+gulp.task('vendorJS', function() {
+  return gulp.src(['./app/js/vendor/*.js', bower+'**/*.js'])
+    .pipe(concat('vendors.js'))
+    .pipe(gulp.dest('./src/js'))
+    .pipe(rename({
+      basename: "vendors",
+      suffix: '.min'
     }))
     .pipe(uglify())
     .pipe(gulp.dest('./src/js'));
+    .pipe(notify({ message: 'Vendor scripts task Complete', onLast: true}));
 });
 
-//Watcher
-gulp.task('watch', function() {
-  gulp.watch('./src/style/sass/*.scss', ['css']);
-  gulp.watch('./src/js/*.js', ['js-uglify']);
+//Script task: Custom
+gulp.task('customJs', function() {
+  return gulp.src('./app/js/*.js')
+    .pipe(concat('custom.js'))
+    .pipe(gulp.dest('./assets/js'))
+    .pipe(rename( {
+      basename: 'custom',
+      suffiix: '.min'
+    }))
+    .pipe(uglify())
+    .pipe(gulp.dest('./src/js/'))
+    .pipe(notify({ message: 'Custom scripts task Complete', onLast: true}));
 });
 
-gulp.task('default', ['watch']);
+//Image task
+gulp.task('images', function() {
+  return gulp.src(['./app/img/raw/**/*.{png,jpg,gif}'])
+    .pipe(newer('./src/img/'))
+    .pipe(rimraf({ force: true }))
+    .pipe(imagemin({ optimizationLevel: 7, progressive: true, interlaced: true}))
+    .pipe(gulp.dest('./src/img/'))
+    .pipe(notify({ message: 'Images task Complete', onLast: true}));
+});
+
+//Clean gulp task
+gulp.task('clear', function() {
+  cache.clearAll();
+});
+
+
+
+//Watch task
+gulp.task('default', ['styles', 'vendorJs', 'scriptJs', 'images', 'browser-sync'], function() {
+  gulp.watch('./app/img/raw/**/*', ['images']);
+  gulp.watch('./app/style/**/*.scss', ['styles']);
+  gulp.watch('./app/js/**/*.js', ['scriptJs', browserSync.reload]);
+});
