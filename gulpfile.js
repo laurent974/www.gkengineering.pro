@@ -35,7 +35,7 @@ gulp.task('browser-sync', function() {
 
 //Style Task
 gulp.task('styles', function() {
-  return gulp.src('./app/style/sass/*.scss')
+  return gulp.src('./app/style/*.scss')
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(sass({
