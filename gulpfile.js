@@ -104,8 +104,6 @@ gulp.task('clear', function() {
   cache.clearAll();
 });
 
-
-
 //Watch task
 gulp.task('default', ['styles', 'vendorJs', 'customJs', 'images', 'browser-sync'], function() {
   gulp.watch('./app/img/raw/**/*', ['images']);
