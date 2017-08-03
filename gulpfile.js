@@ -59,13 +59,13 @@ gulp.task('styles', function() {
 gulp.task('vendorJs', function() {
   return gulp.src(['./app/js/vendor/*.js', './bower_components/' + '**/*.js'])
     .pipe(concat('vendors.js'))
-    .pipe(gulp.dest('./src/js'))
+    .pipe(gulp.dest('./assets/js'))
     .pipe(rename({
       basename: "vendors",
       suffix: '.min'
     }))
     .pipe(uglify())
-    .pipe(gulp.dest('./src/js'))
+    .pipe(gulp.dest('./assets/js'))
     .pipe(notify({ message: 'Vendor scripts task Complete', onLast: true}));
 });
 
@@ -79,7 +79,7 @@ gulp.task('customJs', function() {
       suffiix: '.min'
     }))
     .pipe(uglify())
-    .pipe(gulp.dest('./src/js/'))
+    .pipe(gulp.dest('./assets/js/'))
     .pipe(notify({ message: 'Custom scripts task Complete', onLast: true}));
 });
 
@@ -89,7 +89,7 @@ gulp.task('images', function() {
     .pipe(newer('./src/img/'))
     .pipe(rimraf({ force: true }))
     .pipe(imagemin({ optimizationLevel: 7, progressive: true, interlaced: true}))
-    .pipe(gulp.dest('./src/img/'))
+    .pipe(gulp.dest('./assets/img/'))
     .pipe(notify({ message: 'Images task Complete', onLast: true}));
 });
 
