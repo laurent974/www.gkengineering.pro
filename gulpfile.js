@@ -63,7 +63,7 @@ gulp.task('styles', function() {
 
 //Sripts task: Vendors
 gulp.task('vendorJs', function() {
-  return gulp.src(['./app/js/vendor/*.js', bower+'**/*.js'])
+  return gulp.src(['./app/js/vendor/*.js', './bower_components/' + '**/*.js'])
     .pipe(concat('vendors.js'))
     .pipe(gulp.dest('./src/js'))
     .pipe(rename({
@@ -108,5 +108,5 @@ gulp.task('clear', function() {
 gulp.task('default', ['styles', 'vendorJs', 'customJs', 'images', 'browser-sync'], function() {
   gulp.watch('./app/img/raw/**/*', ['images']);
   gulp.watch('./app/style/**/*.scss', ['styles']);
-  gulp.watch('./app/js/**/*.js', ['scriptJs', browserSync.reload]);
+  gulp.watch('./app/js/**/*.js', ['customJs', browserSync.reload]);
 });
