@@ -62,7 +62,7 @@ gulp.task('styles', function() {
 });
 
 //Sripts task: Vendors
-gulp.task('vendorJS', function() {
+gulp.task('vendorJs', function() {
   return gulp.src(['./app/js/vendor/*.js', bower+'**/*.js'])
     .pipe(concat('vendors.js'))
     .pipe(gulp.dest('./src/js'))
@@ -71,7 +71,7 @@ gulp.task('vendorJS', function() {
       suffix: '.min'
     }))
     .pipe(uglify())
-    .pipe(gulp.dest('./src/js'));
+    .pipe(gulp.dest('./src/js'))
     .pipe(notify({ message: 'Vendor scripts task Complete', onLast: true}));
 });
 
@@ -107,7 +107,7 @@ gulp.task('clear', function() {
 
 
 //Watch task
-gulp.task('default', ['styles', 'vendorJs', 'scriptJs', 'images', 'browser-sync'], function() {
+gulp.task('default', ['styles', 'vendorJs', 'customJs', 'images', 'browser-sync'], function() {
   gulp.watch('./app/img/raw/**/*', ['images']);
   gulp.watch('./app/style/**/*.scss', ['styles']);
   gulp.watch('./app/js/**/*.js', ['scriptJs', browserSync.reload]);
