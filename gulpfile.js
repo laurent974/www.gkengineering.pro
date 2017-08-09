@@ -28,7 +28,7 @@ gulp.task('browser-sync', function() {
   ];
 
   browserSync.init(files, {
-    //proxy: url,
+    proxy: "localhost/www.gk-engineering.com/",
     injectChanges: true
   });
 });
@@ -57,15 +57,10 @@ gulp.task('styles', function() {
 
 //Sripts task: Vendors
 gulp.task('vendorJs', function() {
-  return gulp.src(['./app/js/vendor/*.js', './bower_components/' + '**/*.js'])
+  return gulp.src(['./app/js/vendor/jquery.min.js','./app/js/vendor/*.js'])
     .pipe(concat('vendors.js'))
     .pipe(gulp.dest('./assets/js'))
-    .pipe(rename({
-      basename: "vendors",
-      suffix: '.min'
-    }))
     .pipe(uglify())
-    .pipe(gulp.dest('./assets/js'))
     .pipe(notify({ message: 'Vendor scripts task Complete', onLast: true}));
 });
 
@@ -74,12 +69,7 @@ gulp.task('customJs', function() {
   return gulp.src('./app/js/*.js')
     .pipe(concat('custom.js'))
     .pipe(gulp.dest('./assets/js'))
-    .pipe(rename( {
-      basename: 'custom',
-      suffiix: '.min'
-    }))
     .pipe(uglify())
-    .pipe(gulp.dest('./assets/js/'))
     .pipe(notify({ message: 'Custom scripts task Complete', onLast: true}));
 });
 
