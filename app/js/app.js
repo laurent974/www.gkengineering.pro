@@ -1,7 +1,6 @@
 var app = {
   transitionsInit: function() {
     Barba.Pjax.getTransition = function() {
-      console.log(Transition)
       return Transition;
     };
   },
@@ -11,6 +10,9 @@ var app = {
     ExampleView.init();
     ContactView.init();
   },
+  menuInit: function() {
+    Menu.init();
+  },
   init: function() {
     this.viewsInit();
     //Please note, the DOM should be ready
@@ -18,6 +20,7 @@ var app = {
     this.transitionsInit();
     Barba.Prefetch.init();
     prevReoladingSamePage.init();
+    this.menuInit();
   }
 }
 
