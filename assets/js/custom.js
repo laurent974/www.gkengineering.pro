@@ -1,7 +1,6 @@
 var app = {
   transitionsInit: function() {
     Barba.Pjax.getTransition = function() {
-      console.log(Transition)
       return Transition;
     };
   },
@@ -11,6 +10,9 @@ var app = {
     ExampleView.init();
     ContactView.init();
   },
+  menuInit: function() {
+    Menu.init();
+  },
   init: function() {
     this.viewsInit();
     //Please note, the DOM should be ready
@@ -18,6 +20,7 @@ var app = {
     this.transitionsInit();
     Barba.Prefetch.init();
     prevReoladingSamePage.init();
+    this.menuInit();
   }
 }
 
@@ -72,6 +75,21 @@ var HomeView = Barba.BaseView.extend({
     console.log("Homepage container has just been removed from the DOM");
   }
 });
+
+var Menu = {
+  switchActive: function(container, MouseEvent) {
+    if (MouseEvent.type === "click") {
+      $(".menu-item").removeClass('active');
+      $(container).parent().addClass('active');
+    }
+  },
+  init: function() {
+    var that = this;
+    Barba.Dispatcher.on('linkClicked', function(container, MouseEvent) {
+      that.switchActive(container, MouseEvent);
+    });
+  }
+}
 
 var prevReoladingSamePage = {
   links: document.querySelectorAll('a[href]'),
