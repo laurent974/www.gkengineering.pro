@@ -58,6 +58,7 @@ gulp.task('styles', function() {
 //Sripts task: Vendors
 gulp.task('vendorJs', function() {
   return gulp.src(['./app/js/vendor/jquery.min.js','./app/js/vendor/*.js'])
+    .pipe(plumber())
     .pipe(concat('vendors.js'))
     .pipe(gulp.dest('./assets/js'))
     .pipe(uglify())
@@ -67,6 +68,7 @@ gulp.task('vendorJs', function() {
 //Script task: Custom
 gulp.task('customJs', function() {
   return gulp.src('./app/js/*.js')
+    .pipe(plumber())
     .pipe(concat('custom.js'))
     .pipe(gulp.dest('./assets/js'))
     .pipe(uglify())
