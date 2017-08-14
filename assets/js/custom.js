@@ -110,21 +110,34 @@ var prevReoladingSamePage = {
   }
 }
 
-var animData = {
-  container: document.getElementById("bm"),
+var animInData = {
+  container: document.getElementById("bmIn"),
   renderer: "svg",
   loop: false,
   autoplay: false,
-  animationData: AnimationData,
+  animationData: AnimationInData,
   rendererSettings: {
     scaleMode: 'noScale',
     preserveAspectRatio: 'xMidYMid slice'
   }
 };
 
-var animation = bodymovin.loadAnimation(animData);
-bodymovin.setQuality('low');
+var animOutData = {
+  container: document.getElementById("bmOut"),
+  renderer: "svg",
+  loop: false,
+  autoplay: false,
+  animationData: AnimationOutData,
+  rendererSettings: {
+    scaleMode: 'noScale',
+    preserveAspectRatio: 'xMidYMid slice'
+  }
+};
 
+var animationIn = bodymovin.loadAnimation(animInData);
+var animationOut = bodymovin.loadAnimation(animOutData);
+
+bodymovin.setQuality('low');
 
 var Transition = Barba.BaseTransition.extend({
   start: function() {
@@ -138,29 +151,26 @@ var Transition = Barba.BaseTransition.extend({
     //Bodyovin animation
     return new Promise(function(resolve) {
       //Bodymovin Controls
-      animation.goToAndStop(0);
-      animation.setDirection(1);
-      animation.play();
+      animationOut.goToAndPlay(0);
 
-      animation.onComplete = function() {
+      animationOut.onComplete = function() {
+        debugger;
         resolve(true);
       }
-    })
+    });
   },
   AnimateIn :function() {
     var that = this;
     var $el = $(this.newContainer);
 
     //Animation Control
-    animation.goToAndStop(animation.totalFrames, true);
-    animation.setDirection(-1);
-    animation.play();
+    animationIn.goToAndPlay(0);
 
     //Show Content
     $(that.oldContainer).hide();
     $el.show();
 
-    animation.onComplete = function() {
+    animationIn.onComplete = function() {
       that.done();
     }
   }
