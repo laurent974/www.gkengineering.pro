@@ -17,7 +17,7 @@
   add_action( 'init', 'register_my_menu' );
 
   // Register Custom Navigation Walker
-require_once('wp-bootstrap-navwalker.php');
+  require_once('wp-bootstrap-navwalker.php');
 
   function disable_wp_emojicons() {
 
