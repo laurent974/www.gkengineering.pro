@@ -51,5 +51,4 @@ require_once('wp-bootstrap-navwalker.php');
 
   // Remove p content
   remove_filter ('the_excerpt', 'wpautop');
-
 ?>
