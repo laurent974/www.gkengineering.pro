@@ -1,18 +1,30 @@
-var animData = {
-  container: document.getElementById("bm"),
+var data = {
   renderer: "svg",
   loop: false,
   autoplay: false,
-  animationData: AnimationData,
   rendererSettings: {
     scaleMode: 'noScale',
     preserveAspectRatio: 'xMidYMid slice'
   }
-};
+}
 
-var animation = bodymovin.loadAnimation(animData);
+//Chargement des animations
+var animInData = {};
+$.extend(animInData, data, {
+  container: document.getElementById("bmIn"),
+  animationData: AnimationInData
+});
+
+var animOutData = {};
+$.extend(animOutData, data, {
+  container: document.getElementById("bmOut"),
+  animationData: AnimationOutData
+});
+
+var animationIn = bodymovin.loadAnimation(animInData);
+var animationOut = bodymovin.loadAnimation(animOutData);
+
 bodymovin.setQuality('low');
-
 
 var Transition = Barba.BaseTransition.extend({
   start: function() {
@@ -25,30 +37,42 @@ var Transition = Barba.BaseTransition.extend({
 
     //Bodyovin animation
     return new Promise(function(resolve) {
-      //Bodymovin Controls
-      animation.goToAndStop(0);
-      animation.setDirection(1);
-      animation.play();
+      //toggle animation div
+      $("#bmIn").hide();
+      $("#bmOut").show();
 
-      animation.onComplete = function() {
+      //Bodymovin Controls
+      animationOut.goToAndPlay(0);
+
+      animationOut.onComplete = function() {
+        //Affiche le loader
+        $('.LoaderTransition').css("display", "table");
         resolve(true);
       }
-    })
+    });
   },
   AnimateIn :function() {
     var that = this;
     var $el = $(this.newContainer);
 
+    //hide Loader
+    $(".LoaderTransition").hide();
+
+    //toggle animation div
+    $("#bmIn").show();
+    $("#bmOut").hide();
+
     //Animation Control
-    animation.goToAndStop(animation.totalFrames, true);
-    animation.setDirection(-1);
-    animation.play();
+    animationIn.goToAndPlay(0);
 
     //Show Content
     $(that.oldContainer).hide();
-    $el.show();
+    $el.css({
+      "visibility": "visible"
+    });
 
-    animation.onComplete = function() {
+    animationIn.onComplete = function() {
+      $("#bmIn").hide();
       that.done();
     }
   }
