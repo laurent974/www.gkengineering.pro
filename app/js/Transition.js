@@ -56,6 +56,7 @@ var Transition = Barba.BaseTransition.extend({
     var $el = $(this.newContainer);
 
     //hide Loader
+    $(that.oldContainer).hide();
     $(".LoaderTransition").hide();
 
     //toggle animation div
@@ -66,7 +67,6 @@ var Transition = Barba.BaseTransition.extend({
     animationIn.goToAndPlay(0);
 
     //Show Content
-    $(that.oldContainer).hide();
     $el.css({
       "visibility": "visible"
     });

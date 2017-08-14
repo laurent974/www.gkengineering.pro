@@ -1,4 +1,16 @@
 .LoaderTransition {
+  display         : none;
+  position        : fixed;
+  width           : 100%;
+  height          : 100%;
+
   background-color: $gothic;
   color           : $white;
+  z-index         : 5;
+
+  &-Inner {
+    display       : table-cell;
+    vertical-align: middle;
+    text-align    : center;
+  }
 }
