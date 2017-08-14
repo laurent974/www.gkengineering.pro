@@ -78,7 +78,7 @@ gulp.task('customJs', function() {
 //Image task
 gulp.task('images', function() {
   return gulp.src(['./app/img/raw/**/*.{png,jpg,gif}'])
-    .pipe(newer('./src/img/'))
+    .pipe(newer('./assets/img/'))
     .pipe(rimraf({ force: true }))
     .pipe(imagemin({ optimizationLevel: 7, progressive: true, interlaced: true}))
     .pipe(gulp.dest('./assets/img/'))
