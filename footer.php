@@ -1,4 +1,5 @@
-  </main><!-- /!.barba-wrapper -->
+    </main><!-- /!.barba-wrapper -->
+  </div><!-- /!.Global -->
   <?php wp_footer(); ?>
   <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/vendors.js"></script>
   <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/custom.js"></script>
