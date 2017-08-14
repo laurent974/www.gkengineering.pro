@@ -95,4 +95,5 @@ gulp.task('default', ['styles', 'vendorJs', 'customJs', 'images', 'browser-sync'
   gulp.watch('./app/img/raw/**/*', ['images']);
   gulp.watch('./app/style/**/*.scss', ['styles']);
   gulp.watch('./app/js/**/*.js', ['customJs', browserSync.reload]);
+  gulp.watch('./app/js/vendor/*.js', ['vendorJs', browserSync.reload]);
 });
