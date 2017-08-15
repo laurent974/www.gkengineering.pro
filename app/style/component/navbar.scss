@@ -5,14 +5,55 @@
   border          : 0;
   //border-bottom : 1px solid $iron;
 
+  .navbar-inner {
+    text-align    : center;
+  }
+
   .navbar-nav {
     display       : inline-block;
-    margin        : 0 auto;
+    float         : none;
   }
 
   &>.container-fluid .navbar-brand {
     margin-top    : 10px;
     margin-left   : -5px;
     padding       : 0;
+  }
+
+  //item Menu
+  .navbar-nav > .active > a {
+    background-color: transparent;
+    @extend .Font-Black;
+    @extend .Font-Blue;
+  }
+
+  .navbar-nav > li > a {
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+      &:before {
+        transform: translateY(0);
+      }
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 50%;
+      margin: 0 auto;
+      z-index: -1;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #2098D1;
+      height: 4px;
+      transform: translateY(4px);
+      transition-property: transform;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-out;
+    }
   }
 }
