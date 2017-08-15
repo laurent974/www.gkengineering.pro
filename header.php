@@ -29,7 +29,7 @@
       </div><!-- /!.LoaderTransition -->
 
       <nav class="navbar navbar-default" role="navigation"><!-- .navbar -->
-        <div class="container-fluid"><!-- .container-fluid -->
+        <div class="navbar-inner container-fluid"><!-- .container-fluid -->
           <div class="navbar-header"><!-- .navbar-header -->
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><!-- .navbar-toggle -->
               <span class="sr-only">Toggle navigation</span>
