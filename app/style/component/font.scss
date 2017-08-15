@@ -1,0 +1,25 @@
+.Font {
+  &-Thin {
+    font-weight: 100;
+  }
+
+  &-Light {
+    font-weight: 300;
+  }
+
+  &-Bold {
+    font-weight: 700;
+  }
+
+  &-Black {
+    font-weight: 900;
+  }
+
+  &-Ita {
+    font-style: italic;
+  }
+
+  &-Blue {
+    color: $east_bay;
+  }
+}
