@@ -1,25 +1,28 @@
 .Font {
+  /* Style */
   &-Thin {
     font-weight: 100;
   }
-
   &-Light {
     font-weight: 300;
   }
-
   &-Bold {
     font-weight: 700;
   }
-
   &-Black {
     font-weight: 900;
   }
-
   &-Ita {
-    font-style: italic;
+    font-style : italic;
   }
 
+  /* Colors */
   &-Blue {
-    color: $east_bay;
+    color      : $east_bay;
+  }
+
+  /* Size */
+  &-Big {
+    font-size  : 18px;
   }
 }
