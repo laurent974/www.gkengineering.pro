@@ -3,35 +3,65 @@
   background-color: transparent;
   margin-bottom   : 0;
   border          : 0;
-  //border-bottom : 1px solid $iron;
+
+  @include breakpoint(xs) {
+    position     : fixed;
+    width        : 100%;
+    border-bottom: 1px solid $iron;
+    top          : 0;
+  }
 
   .navbar-inner {
-    text-align    : center;
+    text-align: center;
   }
 
   .navbar-nav {
-    display       : inline-block;
-    float         : none;
+    float: none;
+
+    @include breakpoint(sm) {
+      display: inline-block;
+    }
   }
 
-  &>.container-fluid .navbar-brand {
-    margin-top    : 10px;
-    margin-left   : -5px;
-    padding       : 0;
+  & > .container-fluid {
+    .navbar-brand {
+      margin-top    : $spaceMedium;
+      margin-left   : -5px;
+      padding       : 0;
+    }
+
+    > .navbar-header {
+      @include breakpoint(xs) {
+        margin-left: 0;
+
+        .navbar-toggle {
+          margin-right: $spaceMedium;
+        }
+      }
+    }
   }
+
 
   //item Menu
   .navbar-nav > .active > a {
     background-color: transparent;
     @extend .Font-Black;
     @extend .Font-Blue;
+
+    &:before {
+      transform: translateY(0);
+    }
   }
 
   .navbar-nav > li > a {
-    transform: perspective(1px) translateZ(0);
+    transform : perspective(1px) translateZ(0);
     box-shadow: 0 0 1px transparent;
-    position: relative;
-    overflow: hidden;
+    position  : relative;
+    overflow  : hidden;
+    @extend .Font-Big;
+    @extend .Font-Light;
+    padding: $spaceExtraLarge 0;
+    margin: 0 $spaceMedium;
 
     &:hover {
       &:before {
@@ -40,19 +70,19 @@
     }
 
     &:before {
-      content: "";
-      position: absolute;
-      width: 50%;
-      margin: 0 auto;
-      z-index: -1;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: #2098D1;
-      height: 4px;
-      transform: translateY(4px);
-      transition-property: transform;
-      transition-duration: 0.3s;
+      content                   : "";
+      position                  : absolute;
+      width                     : 100%;
+      margin                    : 0 auto;
+      z-index                   : -1;
+      left                      : 0;
+      right                     : 0;
+      bottom                    : 0;
+      background                : #2098D1;
+      height                    : 8px;
+      transform                 : translateY(8px);
+      transition-property       : transform;
+      transition-duration       : 0.3s;
       transition-timing-function: ease-out;
     }
   }
