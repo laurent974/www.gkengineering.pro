@@ -31,14 +31,14 @@
       <nav class="navbar navbar-default" role="navigation"><!-- .navbar -->
         <div class="navbar-inner container-fluid"><!-- .container-fluid -->
           <div class="navbar-header"><!-- .navbar-header -->
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><!-- .navbar-toggle -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu-menu-principal"><!-- .navbar-toggle -->
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button><!-- /.navbar-toggle -->
             <a class="navbar-brand" href="<?php bloginfo('url')?>">
-              <img class="Logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="GK Engineering">
+              <img class="Logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="GK Engineering" width="150" height="75">
             </a>
           </div><!-- /!.navbar-header -->
             <?php
@@ -46,7 +46,7 @@
                 'menu'              => 'header-menu',
                 'depth'             => 2,
                 'container'         => false,
-                'menu_class'        => 'nav navbar-nav',
+                'menu_class'        => 'nav navbar-nav collapse',
                 'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
                 'walker'            => new WP_Bootstrap_Navwalker())
               );
