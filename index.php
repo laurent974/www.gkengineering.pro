@@ -53,9 +53,75 @@
       <li class="breadcrumb-item active">Home</li>
     </ol><!-- /.breadcrumb -->
 
-    <section class="ArticleList"><!-- .ArticleList -->
+    <section class="Box ArticleList container"><!-- .ArticleList -->
+      <div class="ProjectBox col-md-6"><!-- .ProjectBox -->
+        <div class="row">
+          <a class="ProjectBox-Link col-md-6" href="#">
+            <article class="ProjectBox-Article"><!-- .ProjectBox-Article -->
+              <span class="ProjectBox-LittleTitle Font-Thin">What we do</span>
+              <h2 class="Title Title-Blue Font-Bold">Full MEP Design at International Standards of the residential premise</h2>
+              <img class="ProjectBox-Image" src="<?php echo get_template_directory_uri(); ?>/assets/img/project-preview1" alt="Full MEP Design at International Standards of the residential premise">
+            </article><!-- /.ProjectBoc-Article -->
+          </a>
 
+          <a class="ProjectBox-Link col-md-6" href="#">
+            <article class="ProjectBox-Article"><!-- .ProjectBox-Article -->
+              <span class="ProjectBox-LittleTitle Font-Thin">What we are</span>
+              <h2 class="Title Title-Blue Font-Bold">Full MEP Design at International Standards of the residential premise</h2>
+              <img class="ProjectBox-Image" src="<?php echo get_template_directory_uri(); ?>/assets/img/project-preview1" alt="Full MEP Design at International Standards of the residential premise">
+            </article><!-- /.ProjectBox-Article -->
+          </a>
+        </div>
+        <div class="row noGutter">
+          <a class="ProjectBox-Link col-md-12" href="#">
+            <article class="ProjectBox-Article"><!-- .ProjectBox-Article -->
+              <span class="ProjectBox-LittleTitle Font-Thin">What we promise</span>
+              <h2 class="Title Title-Blue Font-Bold">A quality work for a satisfied client</h2>
+            </article><!-- /.ProjectBox-Article -->
+          </a>
+        </div>
+
+      </div><!-- /.ProjectBox -->
+      <div class="row noGutter">
+        <a class="CompanyBox-Link col-md-6" href="#">
+          <div class="CompanyBox-Article"><!-- .CompanyBox-Article -->
+            <span class="CompanyBox-LittleTitle Font-Thin">About Us</span>
+            <h2 class="Title Title-Blue Font-Bold">Full MEP Design at International Standards of the residential premise</h2>
+            <img class="CompanyBox-Image" src="<?php echo get_template_directory_uri(); ?>/assets/img/project-preview2" alt="Full MEP Design at International Standards of the residential premise">
+          </div><!-- /.CompanyBox-Article -->
+        </a>
+      </div>
     </section><!-- /.ArticleList -->
 
+    <section class="Box Citation container"><!-- .Citation -->
+      <h4 class="Title Title-PaleSky Font-Thin Font-Upper">We provide carefully <strong class="Font-Ita">engineered solutions</strong><br />that are cost <strong class="Font-Ita">effective</strong> and <strong class="Font-Ita">technically</strong> responsive<br />to client needs.</h4>
+    </section><!-- /.Citation -->
+
+    <section class="Box ClientList container-fluid row"><!-- .ClientList -->
+      <div class="Box-TitleBackground-Gothic">
+        <div class="container">
+          <h2 class="Title Font-Black Font-White Font-Upper Title-Space">Our clients</h2>
+        </div>
+      </div>
+      <div class="customer-logos slider">
+        <div class="slide"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-acleda.jpg"></div>
+        <div class="slide"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-acleda.jpg"></div>
+        <div class="slide"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-acleda.jpg"></div>
+        <div class="slide"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-acleda.jpg"></div>
+        <div class="slide"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-acleda.jpg"></div>
+        <div class="slide"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-acleda.jpg"></div>
+        <div class="slide"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-acleda.jpg"></div>
+        <div class="slide"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-acleda.jpg"></div>
+        <div class="slide"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-acleda.jpg"></div>
+        <div class="slide"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-acleda.jpg"></div>
+     </div>
+    </section><!-- /.ClientList -->
+
+    <section class="Box ProjectStartBox container-fluid"><!-- .ProjectStartBox -->
+      <div class="ProjectStartBox-Inner">
+        <h3 class="Title Font-Upper Font-White Font-Bold">Ready to start a project with us ?</h3>
+        <a href="#" class="Button Button-Rounded Button-White Font-Upper Font-White">Start a project</a>
+      </div>
+    </section><!-- /.ProjectStartBox -->
   </div><!-- /!.barba-container -->
 <?php get_footer(); ?>
