@@ -1,0 +1,15 @@
+.Button {
+  display: inline-block;
+  line-height: 50px;
+  padding: 0 $spaceLarge;
+
+  &-Rounded {
+    border: 5px solid;
+    border-radius: 50px;
+  }
+
+  &-White {
+    border-color: $white;
+    color: $white;
+  }
+}
