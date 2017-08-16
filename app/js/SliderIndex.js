@@ -10,7 +10,7 @@ var SliderIndex = {
     var $item = $('body').find(".carousel .item");
     $item.removeClass('active');
     $item.eq(0).addClass('active');
-    $item.height(that.params.windowHeight);
+    //$item.height(that.params.windowHeight);
     $item.addClass('full-screen');
   },
   loopCarouselImg: function() {
@@ -30,9 +30,8 @@ var SliderIndex = {
   handleResize: function() {
     var that = this;
     $(window).on('resize', function (){
-      that.params.windowHeight = $(window).height();
-      $("body").find('.carousel .item').height(that.params.windowHeight);
-      console.log("bind resize");
+      // that.params.windowHeight = $(window).height();
+      // $("body").find('.carousel .item').height(that.params.windowHeight);
     });
   },
   handleSwipe: function() {
