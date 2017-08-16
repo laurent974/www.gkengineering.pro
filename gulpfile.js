@@ -28,7 +28,7 @@ gulp.task('browser-sync', function() {
   ];
 
   browserSync.init(files, {
-    proxy: "127.0.0.1/www.gk-engineering.com/",
+    proxy: "http://127.0.0.1/www.gk-engineering.com/",
     injectChanges: true,
     server: false
   });
