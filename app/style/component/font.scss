@@ -13,7 +13,7 @@
     font-weight: 900;
   }
   &-Ita {
-    font-style : italic;
+    font-style: italic;
   }
   &-Upper {
     text-transform: uppercase;
@@ -21,11 +21,11 @@
 
   /* Colors */
   &-Blue {
-    color      : $east_bay;
+    color: $east_bay;
   }
 
   /* Size */
   &-Big {
-    font-size  : 18px;
+    font-size: 18px;
   }
 }
