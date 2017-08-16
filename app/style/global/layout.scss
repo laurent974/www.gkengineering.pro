@@ -4,6 +4,10 @@ html, body {
   font-family: 'Roboto', sans-serif;
 }
 
+strong {
+  @extend .Font-Black;
+}
+
 .navbar, h1 {
   z-index    : 10
 }
