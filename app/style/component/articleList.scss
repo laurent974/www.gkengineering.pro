@@ -1,0 +1,58 @@
+.ArticleList {
+  .ProjectBox,
+  .CompanyBox {
+    &-Link {
+      margin-top: $spaceBig;
+      border-left: 1px solid $iron;
+
+      &:first-child {
+        border: 0;
+      }
+
+      &:hover {
+        text-decoration: none;
+
+        .ProjectBox-Article,
+        .CompanyBox-Article {
+          border-color: $crimson;
+        }
+
+        .Title {
+          color: $crimson;
+        }
+      }
+    }
+
+    &-Article {
+      border-top: 15px solid $east_bay;
+
+      .Title {
+        font-size: 18px;
+        height: 60px;
+      }
+    }
+
+    &-Article,
+    &-Article .Title {
+      transition-duration: .3s;
+      transition-property: all;
+    }
+
+    &-Article .Title,
+    &-Image {
+      margin-top: $spaceLarge;
+    }
+
+    &-LittleTitle {
+      display: inline-block;
+      margin-top: $spaceMedium;
+      font-size: 15px;
+    }
+  }
+
+  .CompanyBox {
+    &-Link:first-child {
+      border-left: 1px solid $iron;
+    }
+  }
+}
