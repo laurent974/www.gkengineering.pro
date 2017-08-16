@@ -1,0 +1,17 @@
+.ProjectStartBox {
+  display: table;
+  width: 100%;
+  background: url("assets/img/background-start-project-box.jpg") center center;
+  text-align: center;
+  height: 263px;
+
+  &-Inner {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .Title {
+    margin-top: $spaceLarge;
+    font-size: 25px;
+  }
+}
