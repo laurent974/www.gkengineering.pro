@@ -1,0 +1,23 @@
+.carousel {
+  z-index: 5;
+  margin-top: -106px;
+
+  .item {
+    &.full-screen {
+      background-size: cover;
+      background: no-repeat center center fixed;
+    }
+
+    .carousel-caption {
+      right: 5%;
+      left: 5%;
+      bottom: 30%;
+      text-shadow: unset;
+
+      h3 {
+        color: $east_bay;
+        font-size: 85px;
+      }
+    }
+  }
+}
