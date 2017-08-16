@@ -1,23 +1,75 @@
 .carousel {
-  z-index: 5;
+  z-index   : 5;
   margin-top: -106px;
+  height    : 100%;
+
+  @include breakpoint(xs) {
+    margin-top: 0;
+  }
+
+  &-inner {
+    height: 100vh;
+
+    & > .item > img.item-Hide {
+      display: none;
+    }
+  }
 
   .item {
     &.full-screen {
+      height         : 100%;
       background-size: cover;
-      background: no-repeat center center fixed;
+      background     : no-repeat center center fixed;
     }
 
     .carousel-caption {
-      right: 5%;
-      left: 5%;
-      bottom: 30%;
+      top        : 50%;
+      left       : 0;
+      width      : 100%;
+      transform  : translateY(-50%);
       text-shadow: unset;
 
       h3 {
-        color: $east_bay;
+        position : relative;
+        transform: translateY(-50%);
+        top      : 50%;
+        color    : $east_bay;
         font-size: 85px;
       }
+    }
+  }
+
+  .carousel-indicators {
+    li {
+      border          : 5px solid $pale_sky;
+      background-color: $pale_sky;
+      vertical-align  : middle;
+      margin-left     : 5px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &.active {
+       border          : 10px solid $crimson;
+       background-color: $crimson;
+     }
+    }
+  }
+
+  .carousel-control {
+    width: 10%;
+    background-image: none;
+    opacity: 1;
+
+    @include breakpoint(xs) {
+      display: none; 
+    }
+
+    .arrow {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 }
