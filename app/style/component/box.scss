@@ -1,0 +1,11 @@
+.Box {
+  margin-top: $spaceUltraLarge;
+
+  &-TitleBackground-Gothic {
+    background: $gothic;
+
+    .Title {
+      padding: $spaceRegular;
+    }
+  }
+}
