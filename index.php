@@ -113,7 +113,7 @@
      </div>
     </section><!-- /.ClientList -->
 
-    <section class="Box ProjectStartBox container-fluid"><!-- .ProjectStartBox -->
+    <section class="Box Box--noMargin ProjectStartBox container-fluid"><!-- .ProjectStartBox -->
       <div class="ProjectStartBox-Inner">
         <h3 class="Title Font-Upper Font-White Font-Bold"><?php _e("Ready to start a project with us ?", "Home-Page") ?></h3>
         <a href="#" class="Button Button-Rounded Button-White Font-Upper Font-White"><?php _e("Start a project", "Home-Page") ?></a>
