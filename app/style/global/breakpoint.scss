@@ -29,6 +29,10 @@
       @media (min-width: 992px) { @content; }
     }
 
+    @else if $min == maxmd {
+      @media (max-width: 992px) { @content; }
+    }
+
     @else if $min == lg {
       @media (min-width: 1200px) { @content; }
     }
