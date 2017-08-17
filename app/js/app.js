@@ -17,7 +17,11 @@ var app = {
     ClientSlider.init();
     SliderIndex.init();
   },
+  setNoBarbaToLinks: function() {
+    $(".wpml-ls-item a").addClass("no-barba");
+  },
   init: function() {
+    this.setNoBarbaToLinks();
     this.viewsInit();
     //Please note, the DOM should be ready
     Barba.Pjax.start();
