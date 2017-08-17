@@ -10,7 +10,6 @@
   Text Domain: gkengineering
 */
 
-@import "global/reset";
 @import "global/bootstrap";
 @import "global/colors";
 @import "global/breakpoint";
@@ -32,3 +31,4 @@
 @import "component/citation";
 @import "component/clientList";
 @import "component/projectStartBox";
+@import "component/breadcrumb";
