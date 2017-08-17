@@ -2,7 +2,7 @@ var SliderIndex = {
   params: {
     $carousel: $('.carousel'),
     $item: $('.carousel .item'),
-    $img: $('.carousel .item > img'),
+    image: '.carousel .item > img',
     windowHeight: "",
   },
   onLoadInit: function() {
@@ -10,13 +10,12 @@ var SliderIndex = {
     var $item = $('body').find(".carousel .item");
     $item.removeClass('active');
     $item.eq(0).addClass('active');
-    //$item.height(that.params.windowHeight);
     $item.addClass('full-screen');
   },
   loopCarouselImg: function() {
     var src, color;
 
-    this.params.$img.each(function() {
+    $("body").find(this.params.image).each(function() {
       src = $(this).attr('src');
       color = $(this).attr('data-color');
 
@@ -25,14 +24,7 @@ var SliderIndex = {
         'background-color' : color
       });
     });
-    $(this).remove();
-  },
-  handleResize: function() {
-    var that = this;
-    $(window).on('resize', function (){
-      // that.params.windowHeight = $(window).height();
-      // $("body").find('.carousel .item').height(that.params.windowHeight);
-    });
+    //$(this).remove();
   },
   handleSwipe: function() {
     $("body").find(".carousel").hammer().on("swipeleft swiperight",function(e) {
@@ -44,9 +36,6 @@ var SliderIndex = {
     });
   },
   destroyEvents: function() {
-    $(window).unbind("resize", function() {
-      console.log("unbind resize");
-    });
     this.params.$carousel.unbind();
   },
   init: function() {
@@ -54,7 +43,6 @@ var SliderIndex = {
     this.onLoadInit();
     this.handleSwipe();
     this.loopCarouselImg();
-    this.handleResize();
     $("body").find(".carousel").carousel({
       interval: 6000,
       pause: "false"
