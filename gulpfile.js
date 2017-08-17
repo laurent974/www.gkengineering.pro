@@ -49,10 +49,10 @@ gulp.task('styles', function() {
     .pipe(filter('**/*.css'))
     .pipe(mmq())
     .pipe(reload({ stream: true }))
-    .pipe(rename({ suffix: '.min'}))
-    .pipe(cleanCss())
-    .pipe(gulp.dest('./'))
-    .pipe(reload({ stream: true }))
+    // .pipe(rename({ suffix: '.min'}))
+    // .pipe(cleanCss())
+    // .pipe(gulp.dest('./'))
+    // .pipe(reload({ stream: true }))
     .pipe(notify({ message: 'Styles Task Complete', onLast: true}));
 });
 
