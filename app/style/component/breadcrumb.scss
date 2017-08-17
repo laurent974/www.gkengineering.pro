@@ -1,3 +1,16 @@
 .breadcrumb {
   margin-bottom: 0;
+  border-radius: 0;
+  background-color: transparent;
+
+  &-item {
+    color: $pale_sky;
+    @extend .Font-Light;
+    font-size: 16px;
+
+    &.active {
+      @extend .Font-Bold;
+      color: $east_bay;
+    }
+  }
 }
