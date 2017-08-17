@@ -1,6 +1,12 @@
 .ArticleList {
+  margin-top: $spaceLarge;
+
   @include breakpoint(maxmd) {
     width: 100%;
+  }
+
+  @include breakpoint(xs) {
+    margin-top: 0;
   }
 
   .ProjectBox,
