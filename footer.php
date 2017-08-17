@@ -1,38 +1,39 @@
-    <footer class="Footer"><!-- .Footer -->
-      <div class="Footer-Inner container"><!-- .Footer-Inner -->
-        <div class="row">
-          <section class="col-md-4 Footer-Box Footer-Info"><!-- .Footer-Box -->
-            <address class="Address">
-              <div class="Address-Adr">
-                <div class="street-address">8AE street 261, Saugkat</div>
-                <div class="locality">Boeung salang</div >
-                <div class="postal-code">Phnom Penh</div >
-                <div class="country-name">Cambodia</div >
-              </div>
-              <div class="tel">061 661 112</div>
-              <div class="email">contact@gkengineering.pro</div>
-            </address>
-          </section><!-- /.Footer-Box -->
+      <footer class="Footer"><!-- .Footer -->
+        <div class="Footer-Inner container"><!-- .Footer-Inner -->
+          <div class="row">
+            <section class="col-md-4 Footer-Box Footer-Info"><!-- .Footer-Box -->
+              <address class="Address">
+                <div class="Address-Adr">
+                  <div class="street-address">8AE street 261, Saugkat</div>
+                  <div class="locality">Boeung salang</div >
+                  <div class="postal-code">Phnom Penh</div >
+                  <div class="country-name">Cambodia</div >
+                </div>
+                <div class="tel">061 661 112</div>
+                <div class="email">contact@gkengineering.pro</div>
+              </address>
+            </section><!-- /.Footer-Box -->
 
-          <section class="col-md-4 Footer-Box Footer-Menu"><!-- .Footer-Box -->
-            <ul>
-              <li>Home</li>
-              <li>Home</li>
-              <li>Home</li>
-            </ul>
-          </section><!-- /.Footer-Box -->
+            <section class="col-md-4 Footer-Box Footer-Menu"><!-- .Footer-Box -->
+              <ul>
+                <li>Home</li>
+                <li>Home</li>
+                <li>Home</li>
+              </ul>
+            </section><!-- /.Footer-Box -->
 
-          <section class="col-md-4 Footer-Box Footer-Social"><!-- .Footer-Box -->
-            <h4 class="Title Font-White">Follow Us</h4>
-            <div class="FooterSocial-Icon">F</div>
-            <div class="FooterSocial-Icon">In</div>
-          </section><!-- /.Footer-Box -->
-        </div>
-        <span class="col-md-12 Footer-Copyright Font-White Font-Light">
-          Copyright © 2017 GKengineering.pro
-        </span>
-      </div><!-- /.Footer-Inner -->
-    </footer><!-- /.Footer -->
+            <section class="col-md-4 Footer-Box Footer-Social"><!-- .Footer-Box -->
+              <h4 class="Title Font-White">Follow Us</h4>
+              <div class="FooterSocial-Icon">F</div>
+              <div class="FooterSocial-Icon">In</div>
+            </section><!-- /.Footer-Box -->
+          </div>
+          <span class="col-md-12 Footer-Copyright Font-White Font-Light">
+            Copyright © 2017 GKengineering.pro
+          </span>
+        </div><!-- /.Footer-Inner -->
+      </footer><!-- /.Footer -->
+    </div><!-- /!.barba-container -->
     </main><!-- /!.barba-wrapper -->
   </div><!-- /!.Global -->
   <?php wp_footer(); ?>

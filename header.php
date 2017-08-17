@@ -29,6 +29,7 @@
 
       <nav class="navbar navbar-default" role="navigation"><!-- .navbar -->
         <div class="navbar-inner container-fluid"><!-- .container-fluid -->
+
           <div class="navbar-header"><!-- .navbar-header -->
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu-menu-1"><!-- .navbar-toggle -->
               <span class="sr-only">Toggle navigation</span>
@@ -36,6 +37,11 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button><!-- /.navbar-toggle -->
+
+            <div class="navbar-Lang-Mobile visible-xs"><!-- .navbar-Lang -->
+              <?php do_action('wpml_add_language_selector'); ?>
+            </div><!-- /.navbar-Lang -->
+
             <a class="navbar-brand" href="<?php bloginfo('url')?>">
               <img class="Logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="GK Engineering" width="150" height="75">
             </a>
@@ -50,6 +56,10 @@
                 'walker'            => new WP_Bootstrap_Navwalker())
               );
             ?>
+
+            <div class="navbar-Lang pull-right hidden-xs"><!-- .navbar-Lang -->
+              <?php do_action('wpml_add_language_selector'); ?>
+            </div><!-- /.navbar-Lang -->
           </div><!-- /!.container-fluid -->
       </nav><!-- /!.navbar -->
       <main id="barba-wrapper"><!-- .barba-wrapper -->
