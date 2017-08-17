@@ -2,7 +2,7 @@ var HomeView = Barba.BaseView.extend({
   namespace: 'homepage',
   onEnter: function() {
     console.log('Homepage is ready and attached to the DOM');
-    SliderIndex.init();
+    app.homeInit();
   },
   onEnterCompleted: function() {
     console.log("Homepage Transition has just finished");
@@ -14,5 +14,6 @@ var HomeView = Barba.BaseView.extend({
   onLeaveCompleted: function() {
     console.log("Homepage container has just been removed from the DOM");
     SliderIndex.destroyEvents();
+    ClientSlider.destroy();
   }
 });
