@@ -19,7 +19,8 @@
     &.full-screen {
       height         : 100%;
       background-size: cover;
-      background     : no-repeat center center fixed;
+      background-repeat    : no-repeat;
+      background-position: 50% 50%;
     }
 
     .carousel-caption {
@@ -35,6 +36,18 @@
         top      : 50%;
         color    : $east_bay;
         font-size: 85px;
+
+        @include breakpoint($min: 320px, $max: 1500px) {
+          font-size: 50px;
+        }
+
+        @include breakpoint(maxmd) {
+          font-size: 35px;
+        }
+
+        @include breakpoint($min: 320px, $max: 530px) {
+          font-size: 25px;
+        }
       }
     }
   }
@@ -63,7 +76,7 @@
     opacity: 1;
 
     @include breakpoint(xs) {
-      display: none; 
+      display: none;
     }
 
     .arrow {
