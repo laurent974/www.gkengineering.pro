@@ -13,6 +13,10 @@ var app = {
   menuInit: function() {
     Menu.init();
   },
+  homeInit: function() {
+    ClientSlider.init();
+    SliderIndex.init();
+  },
   init: function() {
     this.viewsInit();
     //Please note, the DOM should be ready
