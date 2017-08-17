@@ -12,4 +12,8 @@
       padding: $spaceRegular;
     }
   }
+
+  &--noMargin {
+    margin-top: 0;
+  }
 }
