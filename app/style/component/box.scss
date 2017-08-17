@@ -1,5 +1,9 @@
 .Box {
-  margin-top: $spaceUltraLarge;
+  margin-top: $spaceBig;
+
+  @include breakpoint(lg) {
+    margin-top: $spaceUltraLarge;
+  }
 
   &-TitleBackground-Gothic {
     background: $gothic;

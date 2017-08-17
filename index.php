@@ -54,9 +54,9 @@
     </ol><!-- /.breadcrumb -->
 
     <section class="Box ArticleList container"><!-- .ArticleList -->
-      <div class="ProjectBox col-md-6"><!-- .ProjectBox -->
+      <div class="ProjectBox col-lg-6 col-sm-12"><!-- .ProjectBox -->
         <div class="row">
-          <a class="ProjectBox-Link col-md-6" href="#">
+          <a class="ProjectBox-Link col-lg-6 col-sm-6" href="#">
             <article class="ProjectBox-Article"><!-- .ProjectBox-Article -->
               <span class="ProjectBox-LittleTitle Font-Thin">What we do</span>
               <h2 class="Title Title-Blue Font-Bold">Full MEP Design at International Standards of the residential premise</h2>
@@ -64,7 +64,7 @@
             </article><!-- /.ProjectBoc-Article -->
           </a>
 
-          <a class="ProjectBox-Link col-md-6" href="#">
+          <a class="ProjectBox-Link col-lg-6 col-sm-6" href="#">
             <article class="ProjectBox-Article"><!-- .ProjectBox-Article -->
               <span class="ProjectBox-LittleTitle Font-Thin">What we are</span>
               <h2 class="Title Title-Blue Font-Bold">Full MEP Design at International Standards of the residential premise</h2>
@@ -72,18 +72,17 @@
             </article><!-- /.ProjectBox-Article -->
           </a>
         </div>
-        <div class="row noGutter">
-          <a class="ProjectBox-Link col-md-12" href="#">
+        <div class="row">
+          <a class="ProjectBox-Link col-sm-12" href="#">
             <article class="ProjectBox-Article"><!-- .ProjectBox-Article -->
               <span class="ProjectBox-LittleTitle Font-Thin">What we promise</span>
               <h2 class="Title Title-Blue Font-Bold">A quality work for a satisfied client</h2>
             </article><!-- /.ProjectBox-Article -->
           </a>
         </div>
-
       </div><!-- /.ProjectBox -->
-      <div class="row noGutter">
-        <a class="CompanyBox-Link col-md-6" href="#">
+      <div class="row">
+        <a class="CompanyBox-Link col-lg-6 col-md-12" href="#">
           <div class="CompanyBox-Article"><!-- .CompanyBox-Article -->
             <span class="CompanyBox-LittleTitle Font-Thin">About Us</span>
             <h2 class="Title Title-Blue Font-Bold">Full MEP Design at International Standards of the residential premise</h2>

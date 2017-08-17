@@ -1,9 +1,20 @@
 .ArticleList {
+  @include breakpoint(maxmd) {
+    width: 100%;
+  }
+
   .ProjectBox,
   .CompanyBox {
     &-Link {
+      display: block;
       margin-top: $spaceBig;
       border-left: 1px solid $iron;
+
+      @include breakpoint(xs) {
+        border-left: 0;
+        padding-left: 0;
+        padding-right: 0;
+      }
 
       &:first-child {
         border: 0;
@@ -29,6 +40,10 @@
       .Title {
         font-size: 18px;
         height: 60px;
+
+        @include breakpoint(maxmd) {
+          height: auto;
+        }
       }
     }
 
@@ -41,18 +56,49 @@
     &-Article .Title,
     &-Image {
       margin-top: $spaceLarge;
+
+      @include breakpoint(maxmd) {
+        text-align: center;
+        margin-top: $spaceMedium;
+      }
+    }
+
+    &-Image {
+      display: block;
+
+      @include breakpoint(maxmd) {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
 
     &-LittleTitle {
       display: inline-block;
       margin-top: $spaceMedium;
       font-size: 15px;
+
+      @include breakpoint(maxmd) {
+        text-align: left;
+      }
+    }
+  }
+
+  .ProjectBox {
+    @include breakpoint(maxmd) {
+      float: none;
     }
   }
 
   .CompanyBox {
     &-Link:first-child {
       border-left: 1px solid $iron;
+
+      @include breakpoint(xs) {
+        border-left: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
     }
   }
 }
