@@ -10,7 +10,7 @@
   	<?php wp_head(); ?>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.min.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
 
     <script type="text/javascript">
       var templateUrl = '<?php echo get_template_directory_uri(); ?>';
