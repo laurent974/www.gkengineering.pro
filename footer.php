@@ -3,27 +3,27 @@
           <div class="row">
             <section class="col-md-4 Footer-Box Footer-Info"><!-- .Footer-Box -->
               <address class="Address">
+                <i class="material-icons">&#xE0C8;</i>
                 <div class="Address-Adr">
                   <div class="street-address">8AE street 261, Saugkat</div>
                   <div class="locality">Boeung salang</div >
                   <div class="postal-code">Phnom Penh</div >
                   <div class="country-name">Cambodia</div >
                 </div>
-                <div class="tel">061 661 112</div>
-                <div class="email">contact@gkengineering.pro</div>
+                <div class="tel"><i class="material-icons">&#xE0D4;</i> 061 661 112</div>
+                <div class="email"><i class="material-icons">&#xE0E1;</i> contact@gkengineering.pro</div>
               </address>
             </section><!-- /.Footer-Box -->
 
             <section class="col-md-4 Footer-Box Footer-Menu"><!-- .Footer-Box -->
-              <ul>
-                <li>Home</li>
-                <li>Home</li>
-                <li>Home</li>
-              </ul>
+              <?php wp_nav_menu( array(
+                'menu' => 'menu-footer',
+                'walker' => new Footer_Menu
+              ) ); ?>
             </section><!-- /.Footer-Box -->
 
             <section class="col-md-4 Footer-Box Footer-Social"><!-- .Footer-Box -->
-              <h4 class="Title Font-White">Follow Us</h4>
+              <h4 class="Title Font-White Font-Bold">Follow Us</h4>
               <div class="FooterSocial-Icon">F</div>
               <div class="FooterSocial-Icon">In</div>
             </section><!-- /.Footer-Box -->
