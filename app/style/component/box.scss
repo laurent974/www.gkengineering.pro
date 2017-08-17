@@ -1,5 +1,5 @@
 .Box {
-  margin-top: $spaceBig;
+  margin-top: $spaceLarge;
 
   @include breakpoint(lg) {
     margin-top: $spaceUltraLarge;
