@@ -15,6 +15,7 @@
   }
 
   .navbar-inner {
+    box-shadow: inset 50px 98px 66px -31px $white;
     text-align: center;
   }
 
@@ -112,6 +113,10 @@
       float: right;
       margin-top: 11px;
       margin-right: 30px;
+
+      @include breakpoint(sm) {
+        display: none !important;
+      }
     }
   }
 }
