@@ -99,4 +99,19 @@
       transition-timing-function: ease-out;
     }
   }
+
+  .navbar-Lang {
+    .wpml-ls-legacy-list-horizontal {
+      padding: 0;
+      margin-top: $spaceExtraLarge;
+      border: 0;
+    }
+
+    &-Mobile {
+      display: inline-block !important;
+      float: right;
+      margin-top: 11px;
+      margin-right: 30px;
+    }
+  }
 }
