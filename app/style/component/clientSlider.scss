@@ -4,7 +4,8 @@
 }
 
 .slick-slide img {
-    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .slick-slider
@@ -58,6 +59,7 @@
     top: 0;
     left: 0;
     display: block;
+    margin: 0 auto;
 }
 .slick-track:before,
 .slick-track:after
