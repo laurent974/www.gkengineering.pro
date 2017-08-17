@@ -9,7 +9,8 @@
   	<![endif]-->
   	<?php wp_head(); ?>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
 
     <script type="text/javascript">
@@ -38,7 +39,7 @@
               <span class="icon-bar"></span>
             </button><!-- /.navbar-toggle -->
 
-            <div class="navbar-Lang-Mobile visible-xs"><!-- .navbar-Lang -->
+            <div class="navbar-Lang-Mobile hidden-md"><!-- .navbar-Lang -->
               <?php do_action('wpml_add_language_selector'); ?>
             </div><!-- /.navbar-Lang -->
 
