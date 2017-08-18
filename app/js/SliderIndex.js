@@ -44,7 +44,7 @@ var SliderIndex = {
     this.handleSwipe();
     this.loopCarouselImg();
     $("body").find(".carousel").carousel({
-      interval: 6000,
+      interval: 10000,
       pause: "false"
     });
   }
