@@ -28,7 +28,7 @@
         </div><!-- /!.LoaderTransition-Inner -->
       </div><!-- /!.LoaderTransition -->
 
-      <nav class="navbar navbar-default" role="navigation"><!-- .navbar -->
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation"><!-- .navbar -->
         <div class="navbar-inner container-fluid"><!-- .container-fluid -->
 
           <div class="navbar-header"><!-- .navbar-header -->

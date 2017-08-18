@@ -29,6 +29,7 @@ var app = {
     Barba.Prefetch.init();
     prevReoladingSamePage.init();
     this.menuInit();
+    Navbar.init();
   }
 }
 

@@ -1,11 +1,7 @@
 .carousel {
   z-index   : 5;
-  margin-top: -106px;
   height    : 100%;
-
-  @include breakpoint(xs) {
-    margin-top: -60px;
-  }
+ 
 
   &-inner {
     height: 100vh;

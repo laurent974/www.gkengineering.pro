@@ -119,4 +119,45 @@
       }
     }
   }
+
+  &.navbar-fixed-top {
+    &.navbar-theme {
+      background-color: $white;
+      border-bottom: 1px solid $iron;
+      box-shadow: 0 0 5px rgba(255,255,255,.8);
+
+      .navbar-nav {
+        margin-top: $spaceMedium;
+      }
+
+      .navbar-nav > li > a {
+        padding: $spaceMedium 0;
+      }
+
+      .Logo {
+        transform: scale(0.7) rotate(0.01deg);
+        transform-origin: 24% -25%;
+      }
+
+      .navbar-Lang .wpml-ls-legacy-list-horizontal {
+        margin-top: $spaceRegular;
+      }
+    }
+  }
+
+  .navbar-brand.navbar-theme {
+      font-size: 18px;
+  }
+
+  .navbar-brand.navbar-theme,
+  .navbar-inner.navbar-theme,
+  &.navbar-fixed-top.navbar-theme,
+  .navbar-brand,
+  .navbar-inner,
+  .navbar-nav > li > a,
+  .Logo,
+  .navbar-Lang .wpml-ls-legacy-list-horizontal {
+      transition: 0.8s;
+      -webkit-transition:  0.8s;
+  }
 }
