@@ -120,6 +120,21 @@
     }
   }
 
+  .navbar-StartAProject {
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 28px;
+
+    @include breakpoint($min: 320px, $max: 1366px) {
+      width: auto;
+      padding: 0 20px;
+    }
+
+    @include breakpoint($min: 320px, $max: 1250px) {
+      display: none;
+    }
+  }
+
   &.navbar-fixed-top {
     &.navbar-theme {
       background-color: $white;
@@ -135,12 +150,18 @@
       }
 
       .Logo {
-        transform: scale(0.7) rotate(0.01deg);
-        transform-origin: 24% -25%;
+        @include breakpoint(md) {
+          transform: scale(0.7) rotate(0.01deg);
+          transform-origin: 24% -25%;
+        }
       }
 
       .navbar-Lang .wpml-ls-legacy-list-horizontal {
         margin-top: $spaceRegular;
+      }
+
+      .navbar-StartAProject {
+        margin-top: 7px;
       }
     }
   }
@@ -156,7 +177,8 @@
   .navbar-inner,
   .navbar-nav > li > a,
   .Logo,
-  .navbar-Lang .wpml-ls-legacy-list-horizontal {
+  .navbar-Lang .wpml-ls-legacy-list-horizontal,
+  .navbar-StartAProject {
       transition: 0.8s;
       -webkit-transition:  0.8s;
   }
