@@ -28,6 +28,10 @@
         </div><!-- /!.LoaderTransition-Inner -->
       </div><!-- /!.LoaderTransition -->
 
+      <a href="<?php echo get_permalink( apply_filters( 'wpml_object_id', 46, 'page' ) ); ?>" class="StartAProject-StickyBar Font-Upper">
+        <i class="material-icons">&#xE254;</i> <?php _e("Start a project", "Home-Page") ?>
+      </a>
+
       <nav class="navbar navbar-default navbar-fixed-top" role="navigation"><!-- .navbar -->
         <div class="navbar-inner container-fluid"><!-- .container-fluid -->
 
@@ -57,6 +61,8 @@
                 'walker'            => new WP_Bootstrap_Navwalker())
               );
             ?>
+
+            <a href="<?php echo get_permalink( apply_filters( 'wpml_object_id', 46, 'page' ) ); ?>" class="Button Button-Rounded Button-Red Font-Upper Font-Red navbar-StartAProject"><?php _e("Start a project", "Home-Page") ?></a>
 
             <div class="navbar-Lang pull-right hidden-xs"><!-- .navbar-Lang -->
               <?php do_action('wpml_add_language_selector'); ?>
