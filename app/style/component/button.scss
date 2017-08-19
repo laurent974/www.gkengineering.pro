@@ -25,4 +25,19 @@
         inset 50px 0 0 20px adjust-hue($white, 45deg);
     }
   }
+
+  &-Red {
+    border-color: $crimson;
+
+    // Stack multiple shadows, one from the left, the other from the right
+    &:hover,
+    &:focus {
+      color: $white;
+      @extend .Font-Bold;
+      text-decoration: none;
+      box-shadow:
+        inset -50px 0 0 20px $crimson,
+        inset 50px 0 0 20px adjust-hue($crimson, 45deg);
+    }
+  }
 }
