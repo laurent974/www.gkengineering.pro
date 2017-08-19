@@ -15,7 +15,7 @@
         <div class="item"><!-- .item -->
             <img class="item-Hide" src="<?php echo get_template_directory_uri(); ?>/assets/img/slider-1.jpg" data-color="lightblue" alt="We are GK Engineering">
             <div class="carousel-caption"><!-- .carousel-caption -->
-                <h3 class="Font-Thin Font-Upper"><?php _e("We are", "Home-Page") ?> <img class="Logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="GK Engineering" width="150" height="75"></h3>
+                <h3 class="Font-Thin Font-Upper"><img class="Logo-Big" src="<?php echo get_template_directory_uri(); ?>/assets/img/slider-logo.png" alt="GK Engineering" width="474" height="240"></h3>
             </div><!-- /.carousel-caption -->
         </div><!-- /.item -->
         <div class="item"><!-- .item -->
@@ -116,7 +116,7 @@
     <section class="Box Box--noMargin ProjectStartBox container-fluid"><!-- .ProjectStartBox -->
       <div class="ProjectStartBox-Inner">
         <h3 class="Title Font-Upper Font-White Font-Bold"><?php _e("Ready to start a project with us ?", "Home-Page") ?></h3>
-        <a href="#" class="Button Button-Rounded Button-White Font-Upper Font-White"><?php _e("Start a project", "Home-Page") ?></a>
+        <a href="<?php echo get_permalink( apply_filters( 'wpml_object_id', 46, 'page' ) ); ?>" class="Button Button-Rounded Button-White Font-Upper Font-White"><?php _e("Start a project", "Home-Page") ?></a>
       </div>
     </section><!-- /.ProjectStartBox -->
 <?php get_footer(); ?>
