@@ -9,6 +9,7 @@ var app = {
     HomeView.init();
     ExampleView.init();
     ContactView.init();
+    AboutUsView.init();
   },
   menuInit: function() {
     Menu.init();
