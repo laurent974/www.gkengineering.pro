@@ -1,0 +1,41 @@
+.AboutUsBox {
+  position: relative;
+  background-repeat: no-repeat;
+  padding: $spaceLarge 0;
+
+  &-Content {
+    .Title {
+      font-size: 20px;
+      margin-bottom: $spaceBig;
+    }
+
+    p {
+      @extend .Font-Light;
+      font-size: 16px;
+    }
+  }
+
+  &.OurCompany {
+    background-image: url("assets/img/background-about-ourcompany.jpg");
+
+    p {
+      @extend .Font-LightBlue;
+    }
+  }
+
+  &.OurMission {
+    background-image: url("assets/img/background-about-mission.jpg");
+
+    p {
+      @extend .Font-DarkGray;
+    }
+  }
+
+  &.OurServices {
+    background-image: url("assets/img/background-about-services.jpg");
+
+    p {
+      @extend .Font-White;
+    }
+  }
+}

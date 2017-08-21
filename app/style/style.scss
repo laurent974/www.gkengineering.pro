@@ -13,8 +13,8 @@
 @import "global/bootstrap";
 @import "global/colors";
 @import "global/breakpoint";
-@import "global/layout";
 @import "global/space";
+@import "global/layout";
 
 //Component
 @import "component/font";
@@ -34,3 +34,4 @@
 @import "component/clientList";
 @import "component/projectStartBox";
 @import "component/breadcrumb";
+@import "component/aboutUs";

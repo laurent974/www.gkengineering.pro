@@ -13,6 +13,39 @@
     }
   }
 
+  &-Split {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    background: $white;
+    opacity: 0.8;
+
+    &--left {
+      left: 0;
+    }
+
+    &--right {
+      right: 0;
+    }
+
+    &--brown {
+      background: #e6ce7d;
+    }
+
+    &--lightGray {
+      background: $iron;
+    }
+
+    &--blue {
+      background: $east_bay;
+    }
+  }
+
+  &--littleMargin {
+    margin-top: $spaceBig;
+  }
+
   &--noMargin {
     margin-top: 0;
   }
