@@ -13,6 +13,15 @@
       @extend .Font-Light;
       font-size: 16px;
     }
+
+    .Title,
+    p {
+      text-align: center;
+
+      @include breakpoint(md) {
+        text-align: left;
+      }
+    }
   }
 
   &.OurCompany {
