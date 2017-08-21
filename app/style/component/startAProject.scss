@@ -1,22 +1,25 @@
 .StartAProject {
   &-StickyBar {
-    display: block;
-    position: fixed;
-    z-index: 5;
-    bottom: -1px;
-    background-color: $crimson;
-    color: $white;
-    width: 100%;
-    padding: $spaceRegular $spaceSmall;
-    text-align: center;
-    transition: 0.8s;
-
-    &:hover,
-    &:focus {
-      background-color: $pale_sky;
-      text-decoration: none;
+    display: none;
+    @include breakpoint($min:320px, $max: 1250px) {
+      display: block;
+      position: fixed;
+      z-index: 5;
+      bottom: -1px;
+      background-color: $crimson;
       color: $white;
-      @extend .Font-Bold;
+      width: 100%;
+      padding: $spaceRegular $spaceSmall;
+      text-align: center;
+      transition: 0.8s;
+
+      &:hover,
+      &:focus {
+        background-color: $pale_sky;
+        text-decoration: none;
+        color: $white;
+        font-weight: 700;
+      }
     }
   }
 }

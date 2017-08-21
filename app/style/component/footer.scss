@@ -2,6 +2,10 @@
   background: $shark;
   color: $gothic;
 
+  @include breakpoint($min:320px, $max: 1250px) {
+    margin-bottom: 49px;
+  }
+
   &-Inner {
     padding: $spaceLarge 0 $spaceMedium;
     overflow: hidden;
