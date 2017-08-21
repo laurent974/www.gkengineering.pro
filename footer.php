@@ -1,7 +1,7 @@
       <footer class="Footer"><!-- .Footer -->
         <div class="Footer-Inner container"><!-- .Footer-Inner -->
           <div class="row">
-            <section class="col-md-4 Footer-Box Footer-Info"><!-- .Footer-Box -->
+            <section class="col-xs-12 col-md-4 Footer-Box Footer-Info"><!-- .Footer-Box -->
               <address class="Address">
                 <i class="material-icons">&#xE0C8;</i>
                 <div class="Address-Adr">
@@ -15,14 +15,14 @@
               </address>
             </section><!-- /.Footer-Box -->
 
-            <section class="col-md-4 Footer-Box Footer-Menu"><!-- .Footer-Box -->
+            <section class="col-xs-12 col-md-4 Footer-Box Footer-Menu"><!-- .Footer-Box -->
               <?php wp_nav_menu( array(
                 'menu' => 'menu-footer',
                 'walker' => new Footer_Menu
               ) ); ?>
             </section><!-- /.Footer-Box -->
 
-            <section class="col-md-4 Footer-Box Footer-Social"><!-- .Footer-Box -->
+            <section class="col-xs-12 col-md-4 Footer-Box Footer-Social"><!-- .Footer-Box -->
               <h4 class="Title Font-White Font-Bold">Follow Us</h4>
               <div class="FooterSocial-Icon">F</div>
               <div class="FooterSocial-Icon">In</div>

@@ -1,6 +1,7 @@
 .StartAProject {
   &-StickyBar {
     display: none;
+
     @include breakpoint($min:320px, $max: 1250px) {
       display: block;
       position: fixed;
@@ -9,9 +10,13 @@
       background-color: $crimson;
       color: $white;
       width: 100%;
-      padding: $spaceRegular $spaceSmall;
+      padding: $spaceMedium $spaceSmall;
       text-align: center;
       transition: 0.8s;
+
+      .material-icons {
+        font-size: 12px;
+      }
 
       &:hover,
       &:focus {

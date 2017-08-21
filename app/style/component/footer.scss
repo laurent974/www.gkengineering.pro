@@ -3,7 +3,7 @@
   color: $gothic;
 
   @include breakpoint($min:320px, $max: 1250px) {
-    margin-bottom: 49px;
+    margin-bottom: 39px;
   }
 
   &-Inner {
@@ -13,15 +13,29 @@
 
   &-Box {
     text-align: center;
-    border-left: 1px solid $gothic;
-    height: 149px;
+    margin-top: $spaceBig;
+    border-top: 1px solid lighten($shark, 10%);
+    padding-top: $spaceBig;
 
     &:first-child {
+      margin-top: 0;
+      padding-top: 0;
       border-left: 0;
+      border-top: 0;
     }
 
     @include breakpoint(xs) {
-      border-left: 0;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    @include breakpoint(md) {
+      border-top: 0;
+      margin-top: 0;
+      padding-top: 0;
+      border-left: 1px solid $gothic;
+      height: 149px;
     }
   }
 
@@ -51,10 +65,18 @@
   }
 
   &-Menu {
-    .menu-menu-footer-container {
-      margin-left: 12%;
+    .menu-menu-footer-container,
+    .menu-menu-1-container {
+      display: inline-block;
+
+      @include breakpoint(md) {
+        display: block;
+        margin-left: 12%;
+      }
 
       &:after {
+        display: table;
+        content: '';
         clear: both;
       }
 
@@ -62,9 +84,24 @@
         float: left;
         text-align: left;
         margin-left: $spaceExtraLarge;
+        margin-bottom: 0;
+
+        @include breakpoint(xs) {
+          padding-left: 0;
+        }
+
+        &:after {
+          display: table;
+          content: "";
+          clear: both;
+        }
 
         &:first-child {
           margin-left: 0;
+
+          &:after {
+            display: none;
+          }
         }
 
         li {
@@ -89,7 +126,11 @@
     display: block;
     text-align: center;
     font-size: 13px;
-    margin-top: $spaceMedium;
+    margin-top: $spaceBig;
+
+    @include breakpoint(md) {
+      margin-top: $spaceMedium;
+    }
   }
 
   &-Social {

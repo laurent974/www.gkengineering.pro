@@ -6,7 +6,13 @@ html, body {
 
 .Global {
   &-WithMargin {
-    margin-top: $spaceUltraLarge;
+    @include breakpoint(sm) {
+      margin-top: $spaceUltraLarge;
+    }
+
+    @include breakpoint(xs) {
+      margin-top: 68px;
+    }
   }
 }
 
