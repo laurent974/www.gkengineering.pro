@@ -49,9 +49,11 @@
       </a><!-- /.carousel-control -->
     </div>
 
-    <ol class="breadcrumb"><!-- .breadcrumb -->
-      <li class="breadcrumb-item active">Home</li>
-    </ol><!-- /.breadcrumb -->
+    <div class="breadcrumb" typeof="BreadcrumbList" vocab="https://schema.org/">
+    	<?php if(function_exists('bcn_display')) {
+    		bcn_display();
+    	} ?>
+    </div>
 
     <section class="Box ArticleList container"><!-- .ArticleList -->
       <div class="ProjectBox col-lg-6 col-sm-12"><!-- .ProjectBox -->

@@ -3,9 +3,11 @@
 <?php get_header(); ?>
   <div class="barba-container Global-WithMargin" data-namespace="aboutpage"><!-- .barba-container -->
 
-    <ol class="breadcrumb"><!-- .breadcrumb -->
-      <li class="breadcrumb-item active">Home</li>
-    </ol><!-- /.breadcrumb -->
+    <div class="breadcrumb" typeof="BreadcrumbList" vocab="https://schema.org/">
+    	<?php if(function_exists('bcn_display')) {
+    		bcn_display();
+    	} ?>
+    </div>
 
     <section class="Box Box--noMargin AboutUsBox OurCompany container-fluid"><!-- .OurCompany -->
       <div class="Box-Split Box-Split--lightGray Box-Split--left"></div>
