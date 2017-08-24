@@ -1,0 +1,49 @@
+.wpcf7-form {
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  textarea {
+    padding: 11px $spaceBig;
+    color: $east_bay;
+    font-size: 14px;
+
+    border-radius: 10px;
+    border: 1px solid $iron;
+    width: 100%;
+    max-width: 500px;
+
+    &::-webkit-input-placeholder,
+    &:-ms-input-placeholder,
+    &:-moz-placeholder {
+      color: $pale_sky;
+      font-weight: 100;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &.wpcf7-not-valid {
+      border-color: $crimson;
+      background-color: lighten($crimson, 45%);
+    }
+  }
+
+  .wpcf7-not-valid-tip {
+    color: $crimson;
+    @extend .Font-Bold;
+    padding: $spaceSmall $spaceRegular;
+  }
+
+  .wpcf7-response-output {
+    padding: $spaceMedium $spaceRegular;
+    margin: $spaceBig 0 0;
+    color: $pale_sky;
+
+    &.wpcf7-validation-errors,
+    &.wpcf7-mail-sent-ng {
+      border: 0;
+      border-top: 7px solid $crimson;
+    }
+  }
+}

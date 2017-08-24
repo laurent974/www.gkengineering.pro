@@ -1,0 +1,15 @@
+.wpcf7-submit {
+  @extend .Button;
+  @extend .Button-Rounded;
+  @extend .Button-Red;
+  @extend .Font-Upper;
+  @extend .Font-Red;
+  @extend .Font-Bold;
+
+  background: $white;
+  font-size: 15px;
+
+  &:focus {
+    outline: none;
+  }
+}
