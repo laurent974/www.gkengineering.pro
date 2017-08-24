@@ -39,6 +39,23 @@
       font-size: 18px;
     }
   }
+
+  &-FluidContainerSm {
+    @include breakpoint(maxmd) {
+      width: 100%;
+      padding: 0;
+
+      .ContactUs-Form {
+        padding: 0;
+
+        .wpcf7 {
+          padding-left: $spaceRegular;
+          padding-right: $spaceRegular;
+          margin-top: $spaceRegular;
+        }
+      }
+    }
+  }
 }
 
 .GMap {

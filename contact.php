@@ -13,11 +13,11 @@
       <div class="Box-TitleBackground-Gothic"><!-- .Box-TitleBackground-Gothic -->
         <div class="container"><!-- .container -->
           <h2 class="Title Font-Black Font-White Font-Upper Title-Space col-md-6"><?php _e("Find Us. Call Us. Meet Us.", "Page: Contact") ?></h2>
-          <h2 class="Title Font-Black Font-White Font-Upper Title-Space col-md-6"><?php _e("We listen. Tell us.", "Page: Contact") ?></h2>
+          <h2 class="hidden-xs hidden-sm Title Font-Black Font-White Font-Upper Title-Space col-md-6"><?php _e("We listen. Tell us.", "Page: Contact") ?></h2>
         </div><!-- /.container -->
       </div><!-- /.Box-TitleBackground-Gothic -->
 
-      <div class="container"><!-- .container -->
+      <div class="container ContactUs-FluidContainerSm"><!-- .container -->
         <div class="col-md-6 Box Box--littleMargin ContactUs-Coord"><!-- .Box -->
           <address class="Address">
             <i class="material-icons">&#xE0C8;</i>
@@ -32,6 +32,11 @@
           </address>
         </div><!-- /.Box -->
         <div class="col-md-6 Box Box--littleMargin ContactUs-Form"><!-- .Box -->
+          <div class="Box-TitleBackground-Gothic hidden-md hidden-lg"><!-- .Box-TitleBackground-Gothic -->
+            <div class="container">
+              <h2 class="Title Font-Black Font-White Font-Upper Title-Space col-md-6"><?php _e("We listen. Tell us.", "Page: Contact") ?></h2>
+            </div>
+          </div><!-- /.Box-TitleBackground-Gothic -->
           <?php if(ICL_LANGUAGE_CODE=='en'): ?>
             <?php echo do_shortcode('[contact-form-7 id="164" title="English - Contact form"]'); ?>
           <?php elseif(ICL_LANGUAGE_CODE=='fr'): ?>
