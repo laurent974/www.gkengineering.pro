@@ -36,9 +36,8 @@
     </div><!-- /!.barba-container -->
     </main><!-- /!.barba-wrapper -->
   </div><!-- /!.Global -->
+
   <?php wp_footer(); ?>
-  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/vendors.js"></script>
-  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/custom.js"></script>
 
   <!-- gMap -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJzT1SMgW1oVenVOqjXm_xON3O7k8f9EE"></script>

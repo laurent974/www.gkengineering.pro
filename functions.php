@@ -10,6 +10,17 @@
   remove_action( 'wp_head','qtranxf_wp_head_meta_generator');
   remove_action( 'wp_head', 'wp_resource_hints', 2 );
 
+  // Clean JS
+  function starter_scripts() {
+    wp_deregister_script( 'jquery' );
+    wp_register_script( 'jquery', get_template_directory_uri() . '/assets/js/vendors.js', false, NULL, true );
+    wp_enqueue_script( 'jquery' );
+
+    wp_enqueue_style( 'starter-style', get_stylesheet_uri() );
+    wp_enqueue_script( 'includes', get_template_directory_uri() . '/assets/js/custom.js', '', '', true );
+  }
+  add_action( 'wp_enqueue_scripts', 'starter_scripts' );
+
   //Menu
   function register_my_menu() {
     register_nav_menu('header-menu',__( 'Header Menu', 'gkengineering' ));
