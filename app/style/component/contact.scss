@@ -1,4 +1,10 @@
 .ContactUs {
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+
   .Title {
     font-size: 20px;
   }
@@ -33,6 +39,14 @@
       font-size: 18px;
     }
   }
+}
+
+.GMap {
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
 }
 
 #map-canvas {
