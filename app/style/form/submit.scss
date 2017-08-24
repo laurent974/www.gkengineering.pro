@@ -12,4 +12,12 @@
   &:focus {
     outline: none;
   }
+
+  @include breakpoint(maxmd) {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
