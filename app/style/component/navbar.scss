@@ -112,7 +112,7 @@
       display: inline-block !important;
       float: right;
       margin-top: 11px;
-      margin-right: 30px;
+      margin-right: 0;
 
       @include breakpoint(sm) {
         display: none !important;
