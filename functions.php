@@ -1,4 +1,7 @@
 <?php
+  // Supprimer barre noir
+  add_filter('show_admin_bar', '__return_false');  
+
   // Header clean
   remove_action( 'wp_head', 'rsd_link' );
   remove_action( 'wp_head', 'wlwmanifest_link' );
