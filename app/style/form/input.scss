@@ -12,6 +12,8 @@
     width: 100%;
     max-width: 500px;
 
+    transition: 0.5s;
+
     &::-webkit-input-placeholder,
     &:-ms-input-placeholder,
     &:-moz-placeholder {
@@ -21,11 +23,31 @@
 
     &:focus {
       outline: none;
+      border-color: $east_bay;
     }
 
     &.wpcf7-not-valid {
       border-color: $crimson;
       background-color: lighten($crimson, 45%);
+    }
+
+    &.Input {
+      &-Little {
+        display: inline-block;
+        width: 100%;
+        max-width: 200px;
+      }
+
+      &-Prefix,
+      &-Intro {
+        font-size: 16px;
+      }
+
+      &-Float {
+        @include breakpoint(maxmd) {
+          margin-top: $spaceMedium;
+        }
+      }
     }
   }
 
