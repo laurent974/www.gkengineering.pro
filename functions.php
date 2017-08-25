@@ -110,5 +110,20 @@
 
         $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
     }
-}
+  }
+
+  // Supprimer Menus back office
+  function remove_menu_items() {
+    global $menu;
+    $restricted = array(__('Posts'), __('Comments'));
+    end ($menu);
+    while (prev($menu)) {
+      $value = explode(' ',$menu[key($menu)][0]);
+      if(in_array($value[0] != NULL?$value[0]:"" , $restricted)){
+        unset($menu[key($menu)]);
+      }
+    }
+  }
+
+  add_action('admin_menu', 'remove_menu_items');
 ?>
