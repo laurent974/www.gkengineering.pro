@@ -9,7 +9,7 @@
     background: $gothic;
 
     .Title {
-      padding: $spaceRegular;
+      padding: $spaceRegular 0;
     }
   }
 
@@ -48,6 +48,10 @@
 
   &--littleMargin {
     margin-top: $spaceBig;
+  }
+
+  &--mediumMargin {
+    margin-top: $spaceLarge;
   }
 
   &--noMargin {
