@@ -39,5 +39,10 @@
         inset -50px 0 0 20px $crimson,
         inset 50px 0 0 20px adjust-hue($crimson, 45deg);
     }
+
+    &.active {
+      background-color: $crimson;
+      color: $white;
+    }
   }
 }
