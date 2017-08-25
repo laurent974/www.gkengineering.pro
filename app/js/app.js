@@ -7,9 +7,9 @@ var app = {
   viewsInit: function() {
     //Please note, the DOM should be ready
     HomeView.init();
-    ExampleView.init();
     ContactView.init();
     AboutUsView.init();
+    StartProjectView.init();
   },
   menuInit: function() {
     Menu.init();
