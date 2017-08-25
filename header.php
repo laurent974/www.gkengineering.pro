@@ -62,7 +62,7 @@
               );
             ?>
 
-            <a href="<?php echo get_permalink( apply_filters( 'wpml_object_id', 46, 'page' ) ); ?>" class="Button Button-Rounded Button-Red Font-Upper Font-Red navbar-StartAProject"><?php _e("Start a project", "Home-Page") ?></a>
+            <a href="<?php echo get_permalink( apply_filters( 'wpml_object_id', 46, 'page' ) ); ?>" class="Button Button-Rounded Button-Red Font-Upper Font-Red navbar-StartAProject <?php if (is_page(icl_object_id(46, 'page'))) echo 'active'; ?>"><?php _e("Start a project", "Home-Page") ?></a>
 
             <div class="navbar-Lang pull-right hidden-xs"><!-- .navbar-Lang -->
               <?php do_action('wpml_add_language_selector'); ?>
