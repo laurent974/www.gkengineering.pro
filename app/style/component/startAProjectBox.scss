@@ -1,0 +1,75 @@
+.StartAProjectBox {
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: $spaceMedium;
+
+  @include breakpoint(md) {
+    margin-bottom: $spaceLarge;
+  }
+
+  .Box-TitleBackground-Gothic {
+    .Title {
+      font-size: 20px;
+    }
+  }
+
+  &-Introduction {
+    p {
+      font-size: 17px;
+      color: $gothic;
+      @extend .Font-Light;
+      margin: 0 0;
+    }
+  }
+
+  &-Form {
+    .form-group {
+      margin: $spaceExtraLarge 0 0;
+
+      &.container {
+        padding: 0;
+      }
+
+      .Title {
+        font-size: 20px;
+      }
+
+      .material-icons {
+        font-size: 20px;
+        vertical-align: bottom;
+      }
+
+      > p {
+        margin: $spaceMedium 0 0;
+      }
+
+      textarea {
+        max-width: initial;
+        width: 100%;
+      }
+    }
+
+    .wpcf7-submit {
+      margin-top: $spaceLarge;
+    }
+
+    .form-group-input {
+      margin-top: $spaceMedium;
+      padding-left: 0;
+      padding-right: 0;
+
+      .wpcf7-form-control-wrap {
+        @extend .col-md-4;
+        margin-top: $spaceMedium;
+
+        @include breakpoint(maxmd) {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
