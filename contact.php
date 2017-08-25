@@ -38,11 +38,11 @@
             </div>
           </div><!-- /.Box-TitleBackground-Gothic -->
           <?php if(ICL_LANGUAGE_CODE=='en'): ?>
-            <?php echo do_shortcode('[contact-form-7 id="164" title="English - Contact form"]'); ?>
+            <?php echo do_shortcode( '[contact-form-7 id="164" title="English - Contact form"]' ); ?>
           <?php elseif(ICL_LANGUAGE_CODE=='fr'): ?>
-            ---do something else--
+            <?php echo do_shortcode( '[contact-form-7 id="176" title="Français - Contact form"]' ) ?>
           <?php elseif(ICL_LANGUAGE_CODE=='kh'): ?>
-            ---do something else--
+            <?php echo do_shortcode( '[contact-form-7 id="177" title="Khmer - Contact form"]' ) ?>
           <?php endif; ?>
         </div><!-- /.Box -->
       </div><!-- /.container -->

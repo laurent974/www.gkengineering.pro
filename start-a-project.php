@@ -22,7 +22,13 @@
         </article><!-- /.StartAProjectBox-Introduction -->
 
         <div class="Box--mediumMargin StartAProjectBox-Form"><!-- .StartAProjectBox-Form -->
-          <?php echo do_shortcode( '[contact-form-7 id="171" title="English - Start a Project"]' ); ?>
+          <?php if(ICL_LANGUAGE_CODE=='en'): ?>
+            <?php echo do_shortcode( '[contact-form-7 id="171" title="English - Start a Project"]' ); ?>
+          <?php elseif(ICL_LANGUAGE_CODE=='fr'): ?>
+            <?php echo do_shortcode( '[contact-form-7 id="172" title="Français - Start a Project"]' ); ?>
+          <?php elseif(ICL_LANGUAGE_CODE=='kh'): ?>
+            <?php echo do_shortcode( '[contact-form-7 id="173" title="Khmer - Start a Project"]' ); ?>
+          <?php endif; ?>
         </div><!-- /.StartBoxAProject-Form -->
       </div><!-- /.container -->
     </section><!-- /.StartAProjectBox -->
