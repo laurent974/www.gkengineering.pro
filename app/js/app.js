@@ -10,6 +10,7 @@ var app = {
     ContactView.init();
     AboutUsView.init();
     StartProjectView.init();
+    JobsView.init();
   },
   menuInit: function() {
     Menu.init();
