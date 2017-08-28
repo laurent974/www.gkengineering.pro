@@ -2,14 +2,13 @@
 
 <?php get_header(); ?>
   <div class="barba-container Global-WithMargin" data-namespace="contactpage"><!-- .barba-container -->
-
     <div class="breadcrumb" typeof="BreadcrumbList" vocab="https://schema.org/">
     	<?php if(function_exists('bcn_display')) {
     		bcn_display();
     	} ?>
     </div>
 
-    <section class="Box Box--noMargin ContactUs container-fluid row"><!-- .ClientList -->
+    <section class="Box Box--noMargin ContactUs container-fluid row"><!-- .ContactUs -->
       <div class="Box-TitleBackground-Gothic"><!-- .Box-TitleBackground-Gothic -->
         <div class="container"><!-- .container -->
           <h2 class="Title Font-Black Font-White Font-Upper Title-Space col-md-6"><?php _e("Find Us. Call Us. Meet Us.", "Page: Contact") ?></h2>
@@ -46,7 +45,7 @@
           <?php endif; ?>
         </div><!-- /.Box -->
       </div><!-- /.container -->
-    </section>
+    </section><!-- /.ContactUs -->
 
     <div class="Box GMap container-fluid row">
       <div id="map-canvas"></div>
