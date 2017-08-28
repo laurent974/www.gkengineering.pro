@@ -1,0 +1,66 @@
+.Jobs,
+.JobsForm {
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+
+  .Box-TitleBackground-Gothic .Title {
+    font-size: 20px;
+  }
+
+  &-Content {
+    margin-top: $spaceExtraLarge;
+  }
+}
+
+.Jobs {
+  &-Title {
+    font-size: 20px;
+  }
+
+  &-NoOffer {
+    font-size: 20px;
+    margin-top: $spaceLarge;
+  }
+
+  .panel-group {
+    margin-top: $spaceMedium;
+    margin-bottom: 0;
+
+    .panel {
+      border-radius: 0;
+    }
+
+    .panel-heading {
+      padding: 0;
+      color: $pale_sky;
+      background-color: transparent;
+      border: 0;
+    }
+
+    .panel-body {
+      background: $iron;
+    }
+
+    .panel-collapseBar {
+      display: block;
+      padding: $spaceRegular $spaceLarge;
+      background: $iron;
+      font-size: 20px;
+      transition: 0.25s;
+      font-weight: 300;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        background-color: darken($iron, 10%);
+      }
+    }
+  }
+}
+
+.JobsForm {
+  margin-top: $spaceExtraLarge;
+}
