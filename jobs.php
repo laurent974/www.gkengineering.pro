@@ -36,13 +36,15 @@
                 <div class="panel-heading" role="tab" id="heading<?php echo $inc ?>">
                   <h4 class="panel-title">
                     <a class="panel-collapseBar" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $inc ?>" aria-expanded="false" aria-controls="collapse<?php echo $inc ?>">
-                      <?php the_title(); ?> <i class="material-icons">&#xE145;</i>
+                      <?php the_title(); ?> <i class="material-icons">&#xE145;</i><i class="material-icons" style="display:none;">&#xE15B;</i>
                     </a>
                   </h4>
                 </div>
                 <div id="collapse<?php echo $inc ?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading<?php echo $inc ?>">
                   <div class="panel-body">
                     <?php echo get_field( "job_description" ); ?>
+
+                    <a href="#" class="Button Button-Rounded Button-BlueLight Button-Apply Font-Upper Font-LightBlue no-barba"><?php _e("Apply", "Page: Jobs"); ?></a>
                   </div>
                 </div>
               </div>
@@ -68,11 +70,11 @@ Sorry recruitment is currently closed. You can make a spontaneous application, w
       </div><!-- /.Box-TitleBackground-Gothic -->
 
       <div class="container JobsForm-Content"><!-- .container -->
-
+        <?php echo do_shortcode( '[contact-form-7 id="184" title="English - Jobs Form"]' ); ?>
       </div><!-- /.container -->
     </section><!-- /.JobsForm -->
 
-    <section class="Box Box--noMargin ProjectStartBox container-fluid"><!-- .ProjectStartBox -->
+    <section class="Box Box--littleMargin ProjectStartBox container-fluid"><!-- .ProjectStartBox -->
       <div class="ProjectStartBox-Inner"><!-- .ProjectStartBox-Inner -->
         <h3 class="Title Font-Upper Font-White Font-Bold"><?php _e("Ready to start a project with us ?", "Home-Page") ?></h3>
         <a href="<?php echo get_permalink( apply_filters( 'wpml_object_id', 46, 'page' ) ); ?>" class="Button Button-Rounded Button-White Font-Upper Font-White"><?php _e("Start a project", "Home-Page") ?></a>
