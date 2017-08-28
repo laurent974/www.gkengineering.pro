@@ -63,6 +63,9 @@ var Transition = Barba.BaseTransition.extend({
     $("#bmIn").show();
     $("#bmOut").hide();
 
+    //Close Menu on Mobile
+    $("button.navbar-toggle").click();
+
     //Animation Control
     animationIn.goToAndPlay(0);
 
@@ -71,8 +74,11 @@ var Transition = Barba.BaseTransition.extend({
       "visibility": "visible"
     });
 
+    //Scroll top
+    window.scrollTo(0, 0);
+
     animationIn.onComplete = function() {
-      $("#bmIn").hide();
+      $("#bmIn").hide()
       that.done();
     }
   }
