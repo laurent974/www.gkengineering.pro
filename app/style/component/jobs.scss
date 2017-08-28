@@ -33,6 +33,10 @@
       border-radius: 0;
     }
 
+    .panel-title .material-icons {
+      float: right;
+    }
+
     .panel-heading {
       padding: 0;
       color: $pale_sky;
@@ -42,11 +46,37 @@
 
     .panel-body {
       background: $iron;
+      text-align: center;
+
+      p,
+      ul li,
+      h4, h2, h3, h1 {
+        text-align: left;
+      }
+
+      p,
+      ul li {
+        font-size: 16px;
+        @extend .Font-PaleSky;
+      }
+
+      h4 {
+        @extend .Font-LightBlue;
+        @extend .Font-Black;
+      }
+
+      ul li {
+        @extend .Font-Light;
+      }
+
+      .Button {
+        margin-top: $spaceMedium;
+      }
     }
 
     .panel-collapseBar {
       display: block;
-      padding: $spaceRegular $spaceLarge;
+      padding: $spaceMedium $spaceLarge;
       background: $iron;
       font-size: 20px;
       transition: 0.25s;
@@ -58,9 +88,29 @@
         background-color: darken($iron, 10%);
       }
     }
+
+    .panel-collapse {
+      border-top: 1px solid $white;
+    }
   }
 }
 
 .JobsForm {
   margin-top: $spaceExtraLarge;
+
+  &-Content {
+    .form-group br {
+      display: none;
+    }
+
+    @include breakpoint(sm) {
+      .form-group .SpanCV {
+        padding: 0 $spaceBig;
+      }
+
+      input[type=file] {
+        display: inline-block;
+      }
+    }
+  }
 }
