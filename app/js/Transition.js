@@ -4,6 +4,7 @@ var data = {
   autoplay: false,
   rendererSettings: {
     scaleMode: 'noScale',
+    preserveAspectRatio:'none',
     preserveAspectRatio: 'xMidYMid slice'
   }
 }
@@ -38,15 +39,17 @@ var Transition = Barba.BaseTransition.extend({
     //Bodyovin animation
     return new Promise(function(resolve) {
       //toggle animation div
-      $("#bmIn").hide();
+      //$("#bmIn").hide();
       $("#bmOut").show();
 
       //Bodymovin Controls
-      animationOut.goToAndPlay(0);
+      bodymovin.setDirection(1);
+      animationOut.play();
 
       animationOut.onComplete = function() {
         //Affiche le loader
         $('.LoaderTransition').css("display", "table");
+        $("#bmOut").hide();
         resolve(true);
       }
     });
@@ -60,14 +63,19 @@ var Transition = Barba.BaseTransition.extend({
     $(".LoaderTransition").hide();
 
     //toggle animation div
-    $("#bmIn").show();
-    $("#bmOut").hide();
-
-    //Close Menu on Mobile
-    $("button.navbar-toggle").click();
+    $("#bmOut").show();
+    //$("#bmIn").show();
 
     //Animation Control
-    animationIn.goToAndPlay(0);
+    //animationIn.goToAndStop(animationIn.totalFrames);
+    bodymovin.setDirection(-1);
+    //animationIn.goToAndStop(33, true);
+    animationOut.play();
+
+    //Close Menu on Mobile
+    if ($("#menu-menu-1.nav").hasClass("in")) {
+      $("button.navbar-toggle").click();
+    }
 
     //Show Content
     $el.css({
@@ -77,8 +85,8 @@ var Transition = Barba.BaseTransition.extend({
     //Scroll top
     window.scrollTo(0, 0);
 
-    animationIn.onComplete = function() {
-      $("#bmIn").hide()
+    animationOut.onComplete = function() {
+      $("#bmOut").hide();
       that.done();
     }
   }
