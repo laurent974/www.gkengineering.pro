@@ -25,6 +25,10 @@
 
       <div class="LoaderTransition"><!-- /.LoaderTransition -->
         <div class="LoaderTransition-Inner"><!-- /.LoaderTransition-Inner -->
+          <div class="spinner"><!-- .spinner -->
+            <div class="dot1"></div>
+            <div class="dot2"></div>
+          </div><!-- /.spinner -->
         </div><!-- /!.LoaderTransition-Inner -->
       </div><!-- /!.LoaderTransition -->
 
