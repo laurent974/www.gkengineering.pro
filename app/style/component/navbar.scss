@@ -182,4 +182,37 @@
       transition: 0.8s;
       -webkit-transition:  0.8s;
   }
+
+  .navbar-toggle {
+    overflow: hidden;
+    background-color: $white;
+    border: 0px;
+
+    &:focus,
+    &:hover {
+      background-color: $white;
+    }
+
+    .icon-bar {
+      background-color: $east_bay;
+      transition: opacity, transform;
+      transition-duration: 200ms;
+      transition-timing-function: cubic-bezier(0.7, 0, 0, 0.7);
+    }
+
+    &:not(.collapsed) {
+      .icon-bar {
+        &:nth-child(2) {
+          transform: translateY(6px) rotate(45deg);
+        }
+        &:nth-child(3) {
+          opacity: 0;
+          transform: translateX(-100%);
+        }
+        &:nth-child(4) {
+          transform: translateY(-6px) rotate(-45deg);
+        }
+      }
+    }
+  }
 }
