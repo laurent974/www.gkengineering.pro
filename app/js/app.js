@@ -11,6 +11,7 @@ var app = {
     AboutUsView.init();
     StartProjectView.init();
     JobsView.init();
+    TeamView.init();
   },
   menuInit: function() {
     Menu.init();
