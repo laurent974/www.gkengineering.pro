@@ -40,7 +40,7 @@
         <div class="navbar-inner container-fluid"><!-- .container-fluid -->
 
           <div class="navbar-header"><!-- .navbar-header -->
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu-menu-1"><!-- .navbar-toggle -->
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-menu-1"><!-- .navbar-toggle -->
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
