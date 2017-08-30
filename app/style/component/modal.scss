@@ -1,0 +1,59 @@
+.modal {
+  .Box-TitleBackground-Gothic {
+    margin-top: $spaceLarge;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    .Title {
+      margin-left: $spaceRegular;
+      padding: $spaceMedium;
+    }
+  }
+
+  &-boxContent {
+    margin-top: $spaceBig;
+    font-size: 16px;
+    @extend .Font-LightBlue;
+    padding-left: $spaceLarge;
+
+    ul {
+      padding-left: $spaceSmall;
+
+      li {
+        list-style: none;
+        margin-top: $spaceSmall;
+      }
+    }
+  }
+
+  &-col {
+    &--noPadding {
+      padding: 0;
+    }
+  }
+
+  &-imageBox {
+    text-align: center;
+
+    @include breakpoint(maxmd) {
+      margin-top: $spaceBig;
+    }
+
+    &:hover {
+      .TeamHead-Image--hide {
+        height: auto;
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .TeamHead-Image--show {
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+      }
+    }
+  }
+}

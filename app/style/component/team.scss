@@ -1,0 +1,87 @@
+.Team {
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+
+  .Box-TitleBackground-Gothic .Title {
+    font-size: 20px;
+  }
+
+  &Head {
+    cursor: pointer;
+    text-align: center;
+    margin-top: $spaceMedium;
+
+    @include breakpoint(maxmd) {
+      margin-top: $spaceBig;
+    }
+
+    &:hover {
+      text-decoration: none;
+
+      .TeamHead-Image--hide{
+        visibility: visible;
+        opacity: 1;
+        height: auto;
+      }
+      .TeamHead-Image--show {
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+      }
+
+      .TeamHead-Caption .Title .material-icons {
+        transform: rotate(225deg);
+      }
+    }
+
+    &-ImageWrapper {
+      display: inline-block;
+      position: relative;
+      width: 250px;
+      height: 250px;
+      overflow: hidden;
+      border-radius: 50%;
+      text-align: left;
+    }
+
+    &-Image {
+      position: absolute;
+      width: 100%;
+      height: auto;
+      transition: visibility 0s, opacity 0.2s linear;
+
+      &--show {
+        height: auto;
+        visibility: visible;
+        opacity: 1;
+      }
+
+      &--hide {
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+      }
+    }
+
+    &-Caption {
+      text-align: center;
+
+      .Title {
+        font-size: 20px;
+
+        .material-icons {
+          transition: transform 0.2s linear;
+          transform: rotate(50deg);
+          vertical-align: bottom;
+          font-size: 19px;
+          color: $crimson;
+        }
+      }
+    }
+  }
+}

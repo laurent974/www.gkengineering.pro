@@ -1,0 +1,13 @@
+.CitationBox {
+  &-Content {
+    font-size: 22px;
+
+    @include breakpoint(maxmd) {
+      text-align: center;
+    }
+  }
+
+  &-Author {
+    font-size: 16px;
+  }
+}
