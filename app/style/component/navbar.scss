@@ -151,8 +151,9 @@
 
       .Logo {
         @include breakpoint(md) {
-          transform: scale(0.7) rotate(0.01deg);
+          transform: scale(0.55) rotate(0.01deg);
           transform-origin: 24% -25%;
+          margin-top: $spaceSmall;
         }
       }
 
