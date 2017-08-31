@@ -65,8 +65,7 @@
   }
 
   &-Menu {
-    .menu-menu-footer-container,
-    .menu-menu-1-container {
+    > div {
       display: inline-block;
 
       @include breakpoint(md) {
