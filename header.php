@@ -2,15 +2,14 @@
 <html <?php language_attributes(); ?>>
   <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
-    <base href="http://localhost:3000/www.gk-engineering.com/">
+    <base href="<?php bloginfo('url')?>">
     <title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
     <!--[if lt IE 9]>
   	  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   	<![endif]-->
   	<?php wp_head(); ?>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
 
     <script type="text/javascript">
@@ -52,7 +51,7 @@
             </div><!-- /.navbar-Lang -->
 
             <a class="navbar-brand" href="<?php bloginfo('url')?>">
-              <img class="Logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="GK Engineering" width="150" height="75">
+              <img class="Logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="GK Engineering" width="187" height="95">
             </a>
           </div><!-- /!.navbar-header -->
             <?php
