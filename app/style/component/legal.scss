@@ -1,0 +1,19 @@
+.Legal {
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+
+  .Box-TitleBackground-Gothic .Title {
+    font-size: 20px;
+  }
+
+  &-Content {
+    margin-top: $spaceMedium;
+
+    p {
+      color: $pale_sky;
+    }
+  }
+}
