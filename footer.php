@@ -29,7 +29,7 @@
             </section><!-- /.Footer-Box -->
           </div>
           <span class="col-md-12 Footer-Copyright Font-White Font-Light">
-            Copyright © 2017 GKengineering.pro
+            Copyright © 2017 GKengineering.pro | <?php apply_filters( 'wpml_element_link', 272, 'page', '', '', 'legal-policies' ); ?>
           </span>
         </div><!-- /.Footer-Inner -->
       </footer><!-- /.Footer -->
