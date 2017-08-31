@@ -1,6 +1,6 @@
 .Footer {
   background: $shark;
-  color: $gothic;
+  color: $white;
 
   @include breakpoint($min:320px, $max: 1250px) {
     margin-bottom: 39px;
@@ -109,7 +109,7 @@
           padding: $spaceSmall;
 
           a {
-            color: $gothic;
+            color: $white;
             @extend .Font-Light;
             transition: 0.25s;
 
