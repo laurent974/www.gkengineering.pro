@@ -1,0 +1,29 @@
+.Sitemap {
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+
+  .Box-TitleBackground-Gothic .Title {
+    font-size: 20px;
+  }
+
+  &-Content {
+    margin-top: $spaceMedium;
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      text-align: center;
+
+      li {
+        a {
+          font-size: 18px;
+          color: $east_bay;
+          @extend .Font-Black;
+        }
+      }
+    }
+  }
+}
