@@ -4,6 +4,13 @@
   padding: 0 $spaceLarge;
   transition: 0.25s;
   text-align: center;
+  background: none;
+  border: 0;
+
+  &:focus,
+  &:hover {
+    outline: none;
+  }
 
   &-Rounded {
     border: 5px solid;
