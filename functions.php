@@ -1,6 +1,6 @@
 <?php
   // Supprimer barre noir
-  add_filter('show_admin_bar', '__return_false');  
+  add_filter('show_admin_bar', '__return_false');
 
   // Header clean
   remove_action( 'wp_head', 'rsd_link' );
@@ -129,4 +129,13 @@
   }
 
   add_action('admin_menu', 'remove_menu_items');
+
+  // ACF default language
+  add_filter('acf/settings/default_language', 'my_acf_settings_default_language');
+
+  function my_acf_settings_default_language( $language ) {
+
+      return 'en';
+
+  }
 ?>
