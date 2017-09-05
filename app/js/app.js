@@ -13,6 +13,7 @@ var app = {
     JobsView.init();
     TeamView.init();
     ProjectsView.init();
+    ServicesView.init();
   },
   menuInit: function() {
     Menu.init();
