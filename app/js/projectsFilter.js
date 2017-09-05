@@ -1,30 +1,43 @@
 var ProjectsFilter = {
   params: {
-    $grid: $(".Projects"),
+    $grid: $("body").find(".Projects"),
     $itemSelector: ".ProjectsBox-item",
-    $filtersBar: $(".Projects-FilterList")
+    $filtersBar: $("body").find(".Projects-FilterList"),
+    $gridActivated: ""
   },
 
-  handleFilterButton: function(grid) {
+  initParams: function() {
+    this.params.$grid = $("body").find(".Projects");
+    this.params.$filtersBar = $("body").find(".Projects-FilterList");
+  },
+
+  handleFilterButton: function() {
     var that = this;
 
     this.params.$filtersBar.on("click", ".js-buttonFilter", function() {
       var $this = $(this);
       var filterValue = $this.attr('data-filter');
-      $('.js-buttonFilter').closest("li").removeClass('active');
+      $('body').find('.js-buttonFilter').closest("li").removeClass('active');
       $this.closest("li").addClass("active");
-      grid.isotope({ filter: filterValue });
+      that.params.$gridActivated.isotope({ filter: filterValue });
     });
+  },
+
+  destroy: function() {
+    this.params.$gridActivated.isotope('destroy');
+    this.params.$gridActivated = "";
   },
 
   init: function() {
     var that = this;
 
-    var $grid = this.params.$grid.isotope({
+    this.initParams();
+
+    this.params.$gridActivated = this.params.$grid.isotope({
       itemSelector: that.params.$itemSelector,
       layoutMode: 'vertical'
     });
 
-    this.handleFilterButton($grid);
+    this.handleFilterButton();
   }
 }

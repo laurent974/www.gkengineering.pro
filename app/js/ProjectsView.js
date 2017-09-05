@@ -10,6 +10,7 @@ var ProjectsView = Barba.BaseView.extend({
   },
   onLeave: function() {
     ProjectLightbox.destroy();
+    ProjectsFilter.destroy();
     console.log("Projects Transition for leave");
   },
   onLeaveCompleted: function() {
