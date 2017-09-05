@@ -1,0 +1,142 @@
+.Services {
+  &-WhatWeAre,
+  &-Expertise {
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+
+    .Box-TitleBackground-Gothic .Title {
+      font-size: 20px;
+    }
+  }
+
+  &-WhatWeAre {
+    &Image {
+      height: 494px;
+      background: url("assets/img/service-whatweare.jpg") no-repeat center;
+      background-size: cover;
+    }
+
+    &Content {
+      position: absolute;
+      vertical-align: middle;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 50%;
+      font-size: 18px;
+      color: $east_bay;
+    }
+  }
+
+  &-Expertise {
+    &List {
+      margin-top: $spaceLarge;
+    }
+    &Box {
+      margin-top: $spaceLarge;
+      background-repeat: no-repeat;
+      background-position:  0 25px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      .Title-Services {
+        font-size: 24px;
+      }
+
+      &-Content {
+        margin-top: 310px;
+        font-size: 18px;
+        color: $east_bay;
+
+        ol {
+          counter-reset: number;
+          padding-left: 0;
+          margin-top: $spaceSmall;
+
+          li {
+            list-style-type: none;
+          	counter-increment: number;
+          	margin-bottom: 10px;
+
+            &:before {
+              display: inline-block;
+              content: counter(number);
+            	width: 20px;
+              height: 19px;
+              text-align: center;
+              padding-left: 1px;
+              padding-top: 3px;
+            	margin-right: $spaceMedium;
+            	vertical-align: middle;
+            	background: $east_bay;
+            	border-radius: 50%;
+            	font-weight: bold;
+            	font-size: 10px;
+            	color: $white;
+            }
+          }
+        }
+      }
+
+      &--mechanical {
+        background-image: url("assets/img/header-mechanical-eng.jpg");
+      }
+
+      &--electrical {
+        background-image: url("assets/img/header-electrical-eng.jpg");
+      }
+
+      &--plumbing {
+        background-image: url("assets/img/header-plumbing-eng.jpg");
+      }
+
+      &--technical {
+        background-image: url("assets/img/header-technical-audit.jpg");
+      }
+    }
+  }
+}
+
+.WhatWeDo-Menu {
+  position: fixed;
+  text-align: center;
+  z-index: 5;
+  right: 0;
+  top: 95px;
+  font-size: 16px;
+
+  &List {
+    background: $east_bay;
+    color: $white;
+    list-style: none;
+    text-align: center;
+    padding-left: 0;
+    border: 1px solid $pale_sky;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+
+    li {
+      padding: 0;
+      border-top: 1px solid $pale_sky;
+
+      .Button {
+        width: 100%;
+        transition: 0.25s;
+
+        &:hover {
+          background: $iron;
+          color: $east_bay;
+        }
+      }
+
+      &:first-child {
+        border-top: 0;
+      }
+    }
+  }
+}
