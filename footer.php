@@ -24,8 +24,10 @@
 
             <section class="col-xs-12 col-md-4 Footer-Box Footer-Social"><!-- .Footer-Box -->
               <h4 class="Title Font-White Font-Bold">Follow Us</h4>
-              <div class="FooterSocial-Icon">F</div>
-              <div class="FooterSocial-Icon">In</div>
+              <div class="Footer-SocialIcons"><!-- .Footer-SocialIcons -->
+                <a target="_blank" href="https://facebook.com/" class="FooterSocial-Icon FooterSocial-Icon--fb no-barba"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/social-facebook.png" alt="Facebook"></a>
+                <a target='_blank' href="https://linkedin.com/" class="FooterSocial-Icon FooterSocial-Icon--in no-barba"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/social-linkedin.png" alt="Facebook"></a>
+              </div><!-- /.Footer-SocialIcons -->
             </section><!-- /.Footer-Box -->
           </div>
           <span class="col-md-12 Footer-Copyright Font-White Font-Light">
