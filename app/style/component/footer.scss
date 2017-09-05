@@ -62,6 +62,7 @@
     width: 30px;
     vertical-align: top;
     font-size: 18px;
+    color: $gothic;
   }
 
   &-Menu {
@@ -113,7 +114,7 @@
             transition: 0.25s;
 
             &:hover {
-              color: $iron;
+              color: $gothic;
             }
           }
         }
@@ -127,6 +128,15 @@
     font-size: 13px;
     margin-top: $spaceBig;
 
+    a {
+      color: $gothic;
+      transition: 0.25s;
+
+      &:hover {
+        color: $white;
+      }
+    }
+
     @include breakpoint(md) {
       margin-top: $spaceMedium;
     }
@@ -135,6 +145,42 @@
   &-Social {
     .Title {
       font-size: 16px;
+    }
+
+    &Icons {
+      margin-top: $spaceMedium;
+    }
+  }
+
+  &Social-Icon {
+    display: inline-block;
+    border: 2px solid;
+    border-radius: 50%;
+    line-height: 41px;
+    width: 44px;
+    margin-left: $spaceMedium;
+    transition: 0.25s;
+
+    img {
+      transition: 0.25s;
+      filter: grayscale(1);
+    }
+
+    &:hover,
+    &:focus {
+      img {
+        filter: grayscale(0);
+      }
+    }
+
+    &--fb {
+      border-color: #3c5a9a;
+    }
+
+    &--in {
+      border-color: #007fb2;
+      line-height: 38px;
+      padding-bottom: 3px;
     }
   }
 }
