@@ -3,6 +3,7 @@ var ProjectsView = Barba.BaseView.extend({
   onEnter: function() {
     console.log('Projects is ready and attached to the DOM');
     ProjectLightbox.init();
+    ProjectsFilter.init();
   },
   onEnterCompleted: function() {
     console.log("Projects Transition has just finished");
