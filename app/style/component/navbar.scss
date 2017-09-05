@@ -5,6 +5,8 @@
   border          : 0;
   z-index    : 10;
 
+  background: linear-gradient(to bottom, white, transparent);
+
   @include breakpoint(xs) {
     position     : fixed;
     width        : 100%;
