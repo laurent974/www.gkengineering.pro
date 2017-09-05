@@ -4,10 +4,12 @@
   width: 100%;
   margin-right: 0;
   margin-left: 0;
+  transition: height 0.25s;
 
   &Box {
     position: relative;
     height: 347px;
+    width: 100%;
     margin-top: $spaceExtraLarge;
     overflow: hidden;
     background-repeat: no-repeat;
@@ -41,9 +43,8 @@
       li {
         display: inline-block;
 
-        a {
+        .Button {
           color: $pale_sky;
-          display: inline-block;
           padding: $spaceSmall $spaceMedium;
 
           transition: 0.25s;
@@ -55,7 +56,7 @@
           }
         }
 
-        &.active a {
+        &.active .Button {
           font-weight: 900;
           color: $east_bay;
         }
