@@ -70,7 +70,6 @@
 
       @include breakpoint(md) {
         display: block;
-        margin-left: 12%;
       }
 
       &:after {
@@ -80,7 +79,7 @@
       }
 
       ul {
-        float: left;
+        display: inline-block;
         text-align: left;
         margin-left: $spaceExtraLarge;
         margin-bottom: 0;
@@ -97,6 +96,7 @@
 
         &:first-child {
           margin-left: 0;
+          padding: 0;
 
           &:after {
             display: none;
