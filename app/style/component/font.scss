@@ -18,12 +18,15 @@
   &-Upper {
     text-transform: uppercase;
   }
+  &-Capitalize {
+    text-transform: capitalize;
+  }
 
   /* Colors */
   &-Blue {
     color: $east_bay;
   }
-  
+
   &-LightBlue {
     color: $gothic;
   }
