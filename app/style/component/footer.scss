@@ -154,7 +154,7 @@
 
   &Social-Icon {
     display: inline-block;
-    border: 2px solid;
+    border: 2px solid $gothic;
     border-radius: 50%;
     line-height: 41px;
     width: 44px;
@@ -174,13 +174,20 @@
     }
 
     &--fb {
-      border-color: #3c5a9a;
+      &:hover,
+      &:focus {
+        border-color: #3c5a9a;
+      }
     }
 
     &--in {
-      border-color: #007fb2;
       line-height: 38px;
       padding-bottom: 3px;
+
+      &:hover,
+      &:focus {
+        border-color: #007fb2;
+      }
     }
   }
 }
