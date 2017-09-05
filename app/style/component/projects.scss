@@ -1,0 +1,125 @@
+.Projects {
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+
+  &Box {
+    position: relative;
+    height: 347px;
+    margin-top: $spaceExtraLarge;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &-Filter {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    background: $iron;
+    padding: $spaceMedium $spaceExtraLarge;
+    color: $pale_sky;
+    font-size: 16px;
+
+    &List {
+      display: inline-block;
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 0;
+      margin-left: $spaceMedium;
+
+      &-Separ {
+        display: inline-block;
+        font-weight: 700;
+      }
+
+      li {
+        display: inline-block;
+
+        a {
+          color: $pale_sky;
+          display: inline-block;
+          padding: $spaceSmall $spaceMedium;
+
+          transition: 0.25s;
+
+          &:hover,
+          &:focus {
+            text-decoration: none;
+            color: $east_bay;
+          }
+        }
+
+        &.active a {
+          font-weight: 900;
+          color: $east_bay;
+        }
+      }
+    }
+  }
+
+  &-Description {
+    position: relative;
+    height: 100%;
+    width: 550px;
+    padding: $spaceExtraLarge;
+    background: rgba(0, 0, 0, .88);
+    text-align: center;
+
+    &Separ {
+      width: 300px;
+      height: 1px;
+      background-color: #404040;
+      margin: $spaceBig auto;
+    }
+
+    &Content {
+      max-height: 105px;
+      overflow-y: auto;
+
+      p {
+        margin-top: $spaceSmall;
+        color: $white;
+        @extend .Font-Light;
+        text-align: left;
+      }
+    }
+
+    &--right {
+      float: right;
+    }
+
+    .Title {
+      text-align: left;
+      font-size: 20px;
+    }
+  }
+
+  &-Type,
+  &-Country,
+  &-Budget {
+    text-align: left;
+    margin: 0;
+  }
+
+  &-Gallery {
+    display: none;
+
+    &Button {
+      position: absolute;
+      bottom: 0;
+      margin-left: -103px;
+      margin-bottom: $spaceExtraLarge;
+
+      .material-icons {
+        vertical-align: middle;
+        margin-right: $spaceSmall;
+      }
+    }
+  }
+}

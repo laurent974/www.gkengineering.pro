@@ -1,73 +1,103 @@
 <?php /* Template Name: Projects */ ?>
 
 <?php get_header(); ?>
-  <div class="barba-container Global-WithMargin" data-namespace="projectpage"><!-- .barba-container -->
+  <div class="barba-container Global-WithMargin" data-namespace="projectspage"><!-- .barba-container -->
     <div class="breadcrumb" typeof="BreadcrumbList" vocab="https://schema.org/"><!-- .breadcrumb -->
     	<?php if(function_exists('bcn_display')) {
     		bcn_display();
     	} ?>
     </div><!-- /.breadcrumb -->
 
+    <section class="Box Box--noMargin Projects-Filter container-fluid row"><!-- .Projects-Filter -->
+      <span class=""><?php _e("Filter") ?> :</span>
+      <ul class="Projects-FilterList"><!-- .Projects-FilterList -->
+        <li class="active"><a href="#" class="no-barba"><?php _e('All', "Page: Projects") ?></a></li><span class="Projects-FilterList-Separ">/</span>
+        <li><a href="#" class="no-barba"><?php _e('Energy Audit', "Page: Projects") ?></a></li><span class="Projects-FilterList-Separ">/</span>
+        <li><a href="#" class="no-barba"><?php _e('MEP Design', "Page: Projects") ?></a></li><span class="Projects-FilterList-Separ">/</span>
+        <li><a href="#" class="no-barba"><?php _e('Safety Audits', "Page: Projects") ?></a></li><span class="Projects-FilterList-Separ">/</span>
+        <li><a href="#" class="no-barba"><?php _e('Fit Out', "Page: Projects") ?></a></li><span class="Projects-FilterList-Separ">/</span>
+        <li><a href="#" class="no-barba"><?php _e('Technical Audit', "Page: Projects") ?></a></li>
+      </ul><!-- /.Projects-FilterList -->
+    </section><!-- /.Projects-Filter -->
+
     <section class="Box Box--noMargin Projects container-fluid row"><!-- .Projects -->
+      <?php if( have_rows('projects') ): ?>
+        <?php
+        $inc = 0;
 
-      <div class="container Projects-Content"><!-- .Projects-Content -->
-        <?php if( have_rows('projects') ): ?>
-        	<?php
-            $inc = 0;
+        while( have_rows('projects') ): the_row();
+          // vars
+          if($inc % 2 == 0) {
+            $place = "--right";
+          } else {
+            $place = "";
+          }
 
-            while( have_rows('projects') ): the_row();
-          		// vars
-              $inc++;
-              $name = get_sub_field('project_name');
-          		$background = get_sub_field('background_image');
-          		$country = get_sub_field('country');
-              $city = get_sub_field('city');
-              $budget = get_sub_field('budget');
-              $description = get_sub_field('description');
-              $gallery = get_sub_field('gallery');
+          $inc++;
+          $name = get_sub_field('project_name');
+          $background = get_sub_field('background_image');
+          $country = get_sub_field('country');
+          $city = get_sub_field('city');
+          $budget = get_sub_field('budget');
+          $description = get_sub_field('description');
+          $gallery = get_sub_field('gallery');
 
-              //Checkbox
-              $types = get_sub_field('type');
-              $field = get_sub_field_object('type');
-              $choices = $field['choices'];
-              $incField = 0;
+          //Format money
+          $budget = number_format($budget, 2, ',', ' ');
 
-          ?>
-        		<div class="col-lg-12 Projects-Description"><!-- .Projects-Description -->
-              <?php echo $name; ?> - <?php echo $country; ?>
+          //Checkbox
+          $types = get_sub_field('type');
+          $field = get_sub_field_object('type');
+          $choices = $field['choices'];
+          $incField = 0;
+        ?>
+      <article class="ProjectsBox" style="background-image: url('<?php echo $background['url']; ?>')"><!-- .ProjectBox -->
+          <div class="Projects-Description Projects-Description<?php echo $place; ?>"><!-- .Projects-Description -->
+            <h2 class="Title Title-Space Font-White Font-Upper Font-Black"><?php echo $name; ?> - <?php echo $country; ?></h2>
 
-              <?php foreach ($choices as $value => $label) {
-                  if (in_array($value, $types)) {
-                    if ($incField >= 1) {
-                      echo ' / ';
-                    }
-                    $incField++;
-                    echo $label;
-                  }
-              } ?>
-              <?php echo $city; ?>, <?php echo $country; ?>
-              <?php if ( $budget ): ?>
-                Budget: <?php echo $budget; ?>
-              <?php endif; ?>
+            <p class="Projects-Type Font-Light Font-PaleSky">
+            <?php foreach ($choices as $value => $label) {
+              if (in_array($value, $types)) {
+                if ($incField >= 1) {
+                  echo ' / ';
+                }
+                $incField++;
+                echo $label;
+              }
+            } ?>
+            </p>
+
+            <p class="Projects-Country Font-Light Font-PaleSky Font-Capitalize"><?php echo $city; ?>, <?php echo $country; ?></p>
+            <?php if ( $budget ): ?>
+              <p class="Projects-Budget Font-Light Font-PaleSky"><?php _e('Budget', 'Page: Projects'); ?>: <?php echo $budget; ?> $</p>
+            <?php endif; ?>
+            <div class="Projects-DescriptionSepar"></div>
+            <div class="Projects-DescriptionContent"><!-- .Projects-DescriptionContent -->
               <?php echo $description; ?>
-        			<img class="" src="<?php echo $background['url']; ?>" alt="<?php echo $name ?>" />
+            </div><!-- /.Projects-DescriptionContent -->
 
-              <?php if( $gallery ): ?><!-- Start Gallery loop -->
-                <ul>
-                  <?php foreach( $gallery as $image ): ?>
-                    <li>
-                      <?php echo $image['title']; ?>
-                    	<?php echo wp_get_attachment_image( $image['ID'], "full" ); ?>
-                      <?php echo $image['description']; ?>
-                    </li>
-                  <?php endforeach; ?>
-                </ul>
-              <?php endif; ?><!-- END Gallery loop -->
-        		</div><!-- /.Projects-Description -->
-        	<?php endwhile; ?>
-        <?php endif; ?>
+            <?php if ($gallery): ?>
+              <button class="Button Font-White Font-Light Projects-GalleryButton swipebox" rel="gallery-<?php echo $inc; ?>" href="<?php echo $gallery[0][url]; ?>" title="<?php echo $gallery[0][title] . ' - ' . $gallery[0][description]; ?>"><i class="material-icons">&#xE8A7;</i> <?php _e('Images Gallery', 'Page: Projects'); ?></button>
+            <?php endif; ?>
+          </div><!-- /.Projects-Description -->
 
-      </div><!-- /.Projects-Content -->
+            <?php if( $gallery ): ?><!-- Start Gallery loop -->
+              <div class="Projects-Gallery"><!-- .Projects-Gallery -->
+              <div class="Projects-GallerySlides">
+                <?php $galleryLoop = 0; ?>
+                <?php foreach( $gallery as $image ): ?>
+                  <?php if ($galleryLoop > 0) { ?>
+                    <?php print_r($gallery[$galleryLoop]) ?>
+                    <a rel="gallery-<?php echo $inc; ?>" href="<?php echo $gallery[$galleryLoop][url]; ?>" class="swipebox hide" title="<?php echo $gallery[$galleryLoop][title] . ' - ' . $gallery[$galleryLoop][description]; ?>"></a>
+                  <?php } ?>
+                  <?php $galleryLoop++; ?>
+                <?php endforeach; ?>
+              </div>
+            </div><!-- /.Projects-Gallery -->
+            <?php endif; ?><!-- END Gallery loop -->
+      </article><!-- /.ProjectBox -->
+      <?php endwhile; ?>
+    <?php endif; ?>
     </section><!-- /.Projects -->
 
     <section class="Box--mediumMargin ProjectStartBox container-fluid"><!-- .ProjectStartBox -->
