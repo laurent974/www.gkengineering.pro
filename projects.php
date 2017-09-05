@@ -11,12 +11,12 @@
     <section class="Box Box--noMargin Projects-Filter container-fluid row"><!-- .Projects-Filter -->
       <span class=""><?php _e("Filter") ?> :</span>
       <ul class="Projects-FilterList"><!-- .Projects-FilterList -->
-        <li class="active"><a href="#" class="no-barba"><?php _e('All', "Page: Projects") ?></a></li><span class="Projects-FilterList-Separ">/</span>
-        <li><a href="#" class="no-barba"><?php _e('Energy Audit', "Page: Projects") ?></a></li><span class="Projects-FilterList-Separ">/</span>
-        <li><a href="#" class="no-barba"><?php _e('MEP Design', "Page: Projects") ?></a></li><span class="Projects-FilterList-Separ">/</span>
-        <li><a href="#" class="no-barba"><?php _e('Safety Audits', "Page: Projects") ?></a></li><span class="Projects-FilterList-Separ">/</span>
-        <li><a href="#" class="no-barba"><?php _e('Fit Out', "Page: Projects") ?></a></li><span class="Projects-FilterList-Separ">/</span>
-        <li><a href="#" class="no-barba"><?php _e('Technical Audit', "Page: Projects") ?></a></li>
+        <li class="active"><button class="Button js-buttonFilter" data-filter="*"><?php _e('All', "Page: Projects") ?></button></li><span class="Projects-FilterList-Separ">/</span>
+        <li><button class="Button js-buttonFilter" data-filter=".<?php echo str_replace(' ', '_', __('Energy Audit', 'Page: Projects')); ?>"><?php _e('Energy Audit', "Page: Projects") ?></button></li><span class="Projects-FilterList-Separ">/</span>
+        <li><button class="Button js-buttonFilter" data-filter=".<?php echo str_replace(' ', '_', __('MEP Design', 'Page: Projects')); ?>"><?php _e('MEP Design', "Page: Projects") ?></button></li><span class="Projects-FilterList-Separ">/</span>
+        <li><button class="Button js-buttonFilter" data-filter=".<?php echo str_replace(' ', '_', __('Safety Audits', 'Page: Projects')); ?>"><?php _e('Safety Audits', "Page: Projects") ?></button></li><span class="Projects-FilterList-Separ">/</span>
+        <li><button class="Button js-buttonFilter" data-filter=".<?php echo str_replace(' ', '_', __('Fit Out', 'Page: Projects')); ?>"><?php _e('Fit Out', "Page: Projects") ?></button></li><span class="Projects-FilterList-Separ">/</span>
+        <li><button class="Button js-buttonFilter" data-filter=".<?php echo str_replace(' ', '_', __('Technical Audit', 'Page: Projects')); ?>"><?php _e('Technical Audit', "Page: Projects") ?></button></li>
       </ul><!-- /.Projects-FilterList -->
     </section><!-- /.Projects-Filter -->
 
@@ -49,22 +49,27 @@
           $types = get_sub_field('type');
           $field = get_sub_field_object('type');
           $choices = $field['choices'];
+          $filter = "";
+          $filterWithoutSepar = "";
           $incField = 0;
+          foreach ($choices as $value => $label) {
+            if (in_array($value, $types)) {
+              if ($incField >= 1) {
+                $filter = $filter . ' / ';
+                $filterWithoutSepar = $filterWithoutSepar . ' ';
+              }
+              $incField++;
+              $filter = $filter . $label;
+              $filterWithoutSepar = $filterWithoutSepar . str_replace(' ', '_', $label);
+            }
+          }
         ?>
-      <article class="ProjectsBox" style="background-image: url('<?php echo $background['url']; ?>')"><!-- .ProjectBox -->
+      <article class="ProjectsBox ProjectsBox-item <?php echo $filterWithoutSepar; ?>" style="background-image: url('<?php echo $background['url']; ?>')"><!-- .ProjectBox -->
           <div class="Projects-Description Projects-Description<?php echo $place; ?>"><!-- .Projects-Description -->
             <h2 class="Title Title-Space Font-White Font-Upper Font-Black"><?php echo $name; ?> - <?php echo $country; ?></h2>
 
             <p class="Projects-Type Font-Light Font-PaleSky">
-            <?php foreach ($choices as $value => $label) {
-              if (in_array($value, $types)) {
-                if ($incField >= 1) {
-                  echo ' / ';
-                }
-                $incField++;
-                echo $label;
-              }
-            } ?>
+              <?php echo $filter; ?>
             </p>
 
             <p class="Projects-Country Font-Light Font-PaleSky Font-Capitalize"><?php echo $city; ?>, <?php echo $country; ?></p>
