@@ -26,5 +26,10 @@
     min-width: 540px;
     padding: $spaceMedium $spaceLarge;
     background: $crimson;
+
+    @include breakpoint(xs) {
+      min-width: auto;
+      width: 100%;
+    }
   }
 }
