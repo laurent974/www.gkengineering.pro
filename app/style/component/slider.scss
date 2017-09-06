@@ -1,13 +1,33 @@
 .carousel {
   z-index   : 5;
   height    : 100%;
- 
 
   &-inner {
     height: 100vh;
 
     & > .item > img.item-Hide {
       display: none;
+    }
+  }
+
+  .carousel-scrolldown {
+    position: absolute;
+    bottom: 0;
+    right: 150px;
+    z-index: 5;
+    background: rgba(0, 0, 0, .4);
+    padding-right: $spaceMedium;
+
+    @include breakpoint(maxmd) {
+      bottom: 64px;
+      right: 50px;
+    }
+
+    @include breakpoint(xs) {
+      padding-right: 0;
+      width: 40px;
+      height: 40px;
+      right: $spaceMedium;
     }
   }
 
@@ -26,12 +46,29 @@
       transform  : translateY(-50%);
       text-shadow: unset;
 
+      &--bottomRight {
+        transform: translateY(0);
+        top: auto;
+        bottom: 0;
+        text-align: right;
+        padding-right: $spaceBig;
+
+        @include breakpoint(xs) {
+          top: 50%;
+          bottom: auto;
+          padding: 0 10px;
+        }
+      }
+
       h3 {
         position : relative;
+        display: inline-block;
+        padding: $spaceBig $spaceLarge;
         transform: translateY(-50%);
         top      : 50%;
         color    : $east_bay;
         font-size: 85px;
+        background: rgba(255, 255, 255, .8);
 
         @include breakpoint($min: 320px, $max: 1500px) {
           font-size: 50px;
@@ -44,11 +81,24 @@
         @include breakpoint($min: 320px, $max: 530px) {
           font-size: 25px;
         }
+
+        @include breakpoint(xs) {
+          padding: $spaceSmall $spaceSmall;
+        }
+      }
+
+      h4 {
+        font-size: 22px;
+        text-shadow: 0px 1px 8px rgba(150, 150, 150, 1);
       }
     }
   }
 
   .carousel-indicators {
+    @include breakpoint(xs) {
+      bottom: 64px;
+    }
+
     li {
       border          : 5px solid $pale_sky;
       background-color: $pale_sky;
@@ -60,9 +110,9 @@
       }
 
       &.active {
-       border          : 10px solid $crimson;
-       background-color: $crimson;
-     }
+        border          : 10px solid $crimson;
+        background-color: $crimson;
+      }
     }
   }
 
@@ -80,5 +130,64 @@
       top: 50%;
       transform: translateY(-50%);
     }
+  }
+}
+
+$ani-speed: 2s;
+$ani-delay: 1s;
+
+.arrowScroll {
+  opacity: 0;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform-origin: 50% 50%;
+  transform: translate3d(-50%, -50%, 0);
+
+  @include breakpoint(xs) {
+    left: 15px;
+  }
+}
+
+.arrow-1 {
+    animation: arrow-movement $ani-speed ease-in-out infinite;
+}
+.arrow-2 {
+    animation: arrow-movement $ani-speed $ani-delay ease-in-out infinite;
+}
+
+.arrowScroll:before,
+.arrowScroll:after {
+  background: #fff;
+  content: '';
+  display: block;
+  height: 1px;
+  position: absolute;
+    top: 0;
+    left: 0;
+  width: 11px;
+}
+
+.arrowScroll:before {
+  transform: rotate(45deg) translateX(-23%);
+  transform-origin: top left;
+}
+
+.arrowScroll:after {
+  transform: rotate(-45deg) translateX(23%);
+  transform-origin: top right;
+}
+
+// Animation
+@keyframes arrow-movement {
+  0%   {
+    opacity: 0;
+    top: 30%;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
