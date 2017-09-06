@@ -108,6 +108,12 @@
       padding: 0;
       margin-top: $spaceExtraLarge;
       border: 0;
+
+      @include breakpoint($min: 768px, $max: 863px) {
+        position: absolute;
+        right: 0;
+        top: 23px;
+      }
     }
 
     &-Mobile {
