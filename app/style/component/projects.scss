@@ -15,9 +15,14 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+    @include breakpoint(xs) {
+      margin-top: $spaceSmall;
+    }
   }
 
   &-Filter {
+    display: block;
     padding-left: 0;
     padding-right: 0;
     width: 100%;
@@ -27,6 +32,42 @@
     padding: $spaceMedium $spaceExtraLarge;
     color: $pale_sky;
     font-size: 16px;
+
+    @include breakpoint(xs) {
+      display: none;
+    }
+
+    &Mobile {
+      position: fixed;
+      display: none;
+      bottom: 39px;
+      background: $iron;
+      color: $pale_sky;
+      font-size: 16px;
+      padding: $spaceMedium $spaceBig;
+      width: 100%;
+      z-index: 5;
+
+      @include breakpoint(xs) {
+        display: table;
+      }
+
+      &-Title,
+      #Projects-FilterSelect {
+        display: table-cell;
+      }
+
+      &-Title {
+        width: 60px;
+        margin-right: $spaceMedium;
+      }
+
+      #Projects-FilterSelect {
+        width: 100%;
+        max-width: 500px;
+        padding: $spaceMedium $spaceBig;
+      }
+    }
 
     &List {
       display: inline-block;
@@ -67,10 +108,14 @@
   &-Description {
     position: relative;
     height: 100%;
-    width: 550px;
+    width: 100%;
     padding: $spaceExtraLarge;
     background: rgba(0, 0, 0, .88);
     text-align: center;
+
+    @include breakpoint(md) {
+      width: 550px;
+    }
 
     &Separ {
       width: 300px;
@@ -80,14 +125,21 @@
     }
 
     &Content {
-      max-height: 105px;
       overflow-y: auto;
+      max-height: 78px;
+
+      @include breakpoint(md) {
+        max-height: 105px;
+      }
 
       p {
         margin-top: $spaceSmall;
         color: $white;
         @extend .Font-Light;
-        text-align: left;
+
+        @include breakpoint(md) {
+          text-align: left;
+        }
       }
     }
 
@@ -96,16 +148,22 @@
     }
 
     .Title {
-      text-align: left;
       font-size: 20px;
+
+      @include breakpoint(md) {
+        text-align: left;
+      }
     }
   }
 
   &-Type,
   &-Country,
   &-Budget {
-    text-align: left;
     margin: 0;
+
+    @include breakpoint(md) {
+      text-align: left;
+    }
   }
 
   &-Gallery {
@@ -122,5 +180,11 @@
         margin-right: $spaceSmall;
       }
     }
+  }
+}
+
+[data-namespace="projectspage"] .Footer {
+  @include breakpoint(xs) {
+    margin-bottom: 103px;
   }
 }

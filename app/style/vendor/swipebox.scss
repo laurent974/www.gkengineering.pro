@@ -165,8 +165,8 @@ html.swipebox-html.swipebox-touch {
 }
 
 #swipebox-close{
-	top: 0;
-	right: 0;
+	top: $spaceExtraLarge;
+	right: $spaceRegular;
 	position: absolute;
 	z-index: 9999;
 	background-position: 15px 12px;

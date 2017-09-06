@@ -1,14 +1,16 @@
 var ProjectsFilter = {
   params: {
-    $grid: $("body").find(".Projects"),
+    $grid: "",
     $itemSelector: ".ProjectsBox-item",
-    $filtersBar: $("body").find(".Projects-FilterList"),
+    $filtersBar: "",
+    $FiltersBarMobile: "",
     $gridActivated: ""
   },
 
   initParams: function() {
     this.params.$grid = $("body").find(".Projects");
     this.params.$filtersBar = $("body").find(".Projects-FilterList");
+    this.params.$filtersBarMobile = $("body").find("#Projects-FilterSelect");
   },
 
   handleFilterButton: function() {
@@ -20,6 +22,17 @@ var ProjectsFilter = {
       $('body').find('.js-buttonFilter').closest("li").removeClass('active');
       $this.closest("li").addClass("active");
       that.params.$gridActivated.isotope({ filter: filterValue });
+    });
+  },
+
+  handleFilterButtonMobile: function() {
+    var that = this;
+
+    this.params.$filtersBarMobile.on("change", function() {
+      var optionSelected = $(this).find("option:selected");
+      var valueSelected  = optionSelected.val();
+
+      $("body").find('[data-filter="' + valueSelected + '"]').click();
     });
   },
 
@@ -39,5 +52,6 @@ var ProjectsFilter = {
     });
 
     this.handleFilterButton();
+    this.handleFilterButtonMobile();
   }
 }

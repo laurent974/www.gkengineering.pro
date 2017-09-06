@@ -8,8 +8,8 @@
     	} ?>
     </div><!-- /.breadcrumb -->
 
-    <section class="Box Box--noMargin Projects-Filter container-fluid row"><!-- .Projects-Filter -->
-      <span class=""><?php _e("Filter") ?> :</span>
+    <section class="Box--noMargin Projects-Filter container-fluid row"><!-- .Projects-Filter -->
+      <span class=""><?php _e("Filter", "Page: Projects") ?> :</span>
       <ul class="Projects-FilterList"><!-- .Projects-FilterList -->
         <li class="active"><button class="Button js-buttonFilter" data-filter="*"><?php _e('All', "Page: Projects") ?></button></li><span class="Projects-FilterList-Separ">/</span>
         <li><button class="Button js-buttonFilter" data-filter=".<?php echo str_replace(' ', '_', __('Energy Audit', 'Page: Projects')); ?>"><?php _e('Energy Audit', "Page: Projects") ?></button></li><span class="Projects-FilterList-Separ">/</span>
@@ -20,7 +20,19 @@
       </ul><!-- /.Projects-FilterList -->
     </section><!-- /.Projects-Filter -->
 
-    <section class="Box Box--noMargin Projects container-fluid row"><!-- .Projects -->
+    <section class="Projects-FilterMobile"><!-- .Projects-FilterMobile -->
+      <span class="Projects-FilterMobile-Title"><?php _e("Filter", "Page: Projects") ?> :</span>
+      <select name="Projects-FilterSelect" id="Projects-FilterSelect"><!-- #Projects-FilterSelect -->
+        <option value="*"><?php _e('All', "Page: Projects") ?></option>
+        <option value=".<?php echo str_replace(' ', '_', __('Energy Audit', 'Page: Projects')); ?>"><?php _e('Energy Audit', "Page: Projects") ?></option>
+        <option value=".<?php echo str_replace(' ', '_', __('MEP Design', 'Page: Projects')); ?>"><?php _e('MEP Design', "Page: Projects") ?></option>
+        <option value=".<?php echo str_replace(' ', '_', __('Safety Audits', 'Page: Projects')); ?>"><?php _e('Safety Audits', "Page: Projects") ?></option>
+        <option value=".<?php echo str_replace(' ', '_', __('Fit Out', 'Page: Projects')); ?>"><?php _e('Fit Out', "Page: Projects") ?></option>
+        <option value=".<?php echo str_replace(' ', '_', __('Technical Audit', 'Page: Projects')); ?>"><?php _e('Technical Audit', "Page: Projects") ?></option>
+      </select><!-- #Projects-FilterSelect -->
+    </section><!-- /.Projects-FilterMobile -->
+
+    <section class="Box--noMargin Projects container-fluid row"><!-- .Projects -->
       <?php if( have_rows('projects') ): ?>
         <?php
         $inc = 0;
