@@ -41,7 +41,7 @@
                   <div class="panel-body">
                     <?php echo $job_description; ?>
 
-                    <a href="#" class="Button Button-Rounded Button-BlueLight Button-Apply Font-Upper Font-LightBlue no-barba"><?php _e("Apply", "Page: Jobs"); ?></a>
+                    <button data-Anchor="js-jobsForm" class="Button Button-Rounded Button-BlueLight Button-Apply Font-Upper Font-LightBlue no-barba"><?php _e("Apply", "Page: Jobs"); ?></a>
                   </div>
                 </div>
               </div>
@@ -62,7 +62,7 @@ Sorry recruitment is currently closed. You can make a spontaneous application, w
     <section class="Box Box--noMargin JobsForm container-fluid row"><!-- .JobsForm -->
       <div class="Box-TitleBackground-Gothic"><!-- .Box-TitleBackground-Gothic -->
         <div class="container"><!-- .container -->
-          <h2 class="Title Font-Black Font-White Font-Upper Title-Space"><?php _e("Join Us!", "Page: Jobs") ?></h2>
+          <h2 class="Title Font-Black Font-White Font-Upper Title-Space js-jobsForm"><?php _e("Join Us!", "Page: Jobs") ?></h2>
         </div><!-- /.container -->
       </div><!-- /.Box-TitleBackground-Gothic -->
 
