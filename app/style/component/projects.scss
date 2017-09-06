@@ -59,7 +59,7 @@
 
       &-Title {
         width: 60px;
-        margin-right: $spaceMedium;
+        padding: 0 $spaceMedium;
       }
 
       #Projects-FilterSelect {
@@ -184,7 +184,7 @@
 }
 
 [data-namespace="projectspage"] .Footer {
-  @include breakpoint(xs) {
+  @include breakpoint(maxmd) {
     margin-bottom: 103px;
   }
 }
