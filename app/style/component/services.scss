@@ -28,6 +28,19 @@
       left: 50%;
       font-size: 18px;
       color: $east_bay;
+
+      @include breakpoint($min: 767px, $max: 992px) {
+        background: rgba(255,255,255,.8);
+        padding: $spaceMedium $spaceBig;
+      }
+
+      @include breakpoint(xs) {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: translateY(0);
+        margin-top: $spaceRegular;
+      }
     }
   }
 
@@ -49,9 +62,13 @@
       }
 
       &-Content {
-        margin-top: 310px;
+        margin-top: $spaceMedium;
         font-size: 18px;
         color: $east_bay;
+
+        @include breakpoint(md) {
+          margin-top: 310px;
+        }
 
         ol {
           counter-reset: number;
@@ -83,20 +100,45 @@
         }
       }
 
-      &--mechanical {
+      &--mechanical,
+      &--mechanical .Services-ExpertiseBoxMobileImage {
         background-image: url("assets/img/header-mechanical-eng.jpg");
       }
 
-      &--electrical {
+      &--electrical,
+      &--electrical .Services-ExpertiseBoxMobileImage {
         background-image: url("assets/img/header-electrical-eng.jpg");
       }
 
-      &--plumbing {
+      &--plumbing,
+      &--plumbing .Services-ExpertiseBoxMobileImage {
         background-image: url("assets/img/header-plumbing-eng.jpg");
       }
 
-      &--technical {
+      &--technical,
+      &--technical .Services-ExpertiseBoxMobileImage {
         background-image: url("assets/img/header-technical-audit.jpg");
+      }
+
+      &--mechanical,
+      &--electrical,
+      &--plumbing,
+      &--technical {
+        @include breakpoint(maxmd) {
+          background-image: none;
+        }
+      }
+
+      &MobileImage {
+        height: 200px;
+        margin-top: $spaceMedium;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @include breakpoint(md) {
+          display: none;
+        }
       }
     }
   }
@@ -109,6 +151,42 @@
   right: 0;
   top: 95px;
   font-size: 16px;
+
+  @include breakpoint(maxmd) {
+    display: none;
+  }
+
+  &Mobile {
+    display: table;
+    position: fixed;
+    bottom: 39px;
+    background: $iron;
+    color: $pale_sky;
+    font-size: 16px;
+    padding: $spaceMedium $spaceSmall;
+    width: 100%;
+    z-index: 5;
+
+    @include breakpoint(md) {
+      display: none;
+    }
+
+    &-Title,
+    #WhatWeDo-MenuMobileSelect {
+      display: table-cell;
+    }
+
+    &-Title {
+      width: 120px;
+      padding: 0 $spaceMedium;
+    }
+
+    #WhatWeDo-MenuMobileSelect {
+      width: 100%;
+      max-width: 500px;
+      padding: $spaceMedium $spaceSmall;
+    }
+  }
 
   &List {
     background: $east_bay;
@@ -138,5 +216,11 @@
         border-top: 0;
       }
     }
+  }
+}
+
+[data-namespace="servicepage"] .Footer {
+  @include breakpoint(maxmd) {
+    margin-bottom: 103px;
   }
 }

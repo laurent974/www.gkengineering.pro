@@ -1,12 +1,25 @@
 var WhatWeDo = {
   params: {
     $menu: "",
-    $button: ""
+    $button: "",
+    $menuMobile: ""
   },
 
   initParams: function() {
     this.params.$menu = $('body').find('.WhatWeDo-MenuList');
     this.params.$button = $('body').find('.WhatWeDo-MenuList').find('.Button');
+    this.params.$menuMobile = $('body').find('#WhatWeDo-MenuMobileSelect');
+  },
+
+  handleMenuButtonMobile: function() {
+    var that = this;
+
+    this.params.$menuMobile.on("change", function() {
+      var optionSelected = $(this).find("option:selected");
+      var valueSelected  = optionSelected.val();
+
+      $("body").find('[data-anchor="' + valueSelected + '"]').click();
+    });
   },
 
   init: function() {
@@ -21,5 +34,7 @@ var WhatWeDo = {
           }, 800);
       }
     });
+    
+    this.handleMenuButtonMobile();
   }
 }

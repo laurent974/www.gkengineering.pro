@@ -8,7 +8,7 @@
     	} ?>
     </div>
 
-    <div class="WhatWeDo-Menu"><!-- .WhatWeDo-Menu -->
+    <section class="WhatWeDo-Menu"><!-- .WhatWeDo-Menu -->
       <h3 class="Title Font-Blue Font-Upper"><?php _e("What we do", "Page: Services"); ?></h3>
       <ul class="WhatWeDo-MenuList"><!-- .WhatWeDo-MenuList -->
         <li><button class="Button" data-anchor=".Services-ExpertiseBox--mechanical"><?php _e("Mechanical Engineering", "Page: Services"); ?></button></li>
@@ -16,7 +16,17 @@
         <li><button class="Button" data-anchor=".Services-ExpertiseBox--plumbing"><?php _e("Plumbing Engineering", "Page: Services"); ?></button></li>
         <li><button class="Button" data-anchor=".Services-ExpertiseBox--technical"><?php _e("Technical Audits", "Page: Services"); ?></button></li>
       </ul><!-- /.WhatWeDo-MenuList -->
-    </div><!-- /.WhatWeDo-Menu -->
+    </section><!-- /.WhatWeDo-Menu -->
+
+    <section class="WhatWeDo-MenuMobile"><!-- .WhatWeDo-MenuMobile -->
+      <span class="WhatWeDo-MenuMobile-Title"><?php _e("What we do", "Page: Services"); ?> :</span>
+      <select name="WhatWeDo-MenuMobileSelect" id="WhatWeDo-MenuMobileSelect"><!-- #WhatWeDo-MenuMobile -->
+        <option value=".Services-ExpertiseBox--mechanical"><?php _e("Mechanical Engineering", "Page: Services"); ?></option>
+        <option value=".Services-ExpertiseBox--electrical"><?php _e("Electrical Engineering", "Page: Services"); ?></option>
+        <option value=".Services-ExpertiseBox--plumbing"><?php _e("Plumbing Engineering", "Page: Services"); ?></option>
+        <option value=".Services-ExpertiseBox--technical"><?php _e("Technical Audits", "Page: Services"); ?></option>
+      </select><!-- #WhatWeDo-MenuMobileSelect -->
+    </section><!-- /.WhatWeDo-MenuMobile -->
 
     <section class="Box Box--noMargin Services-WhatWeAre container-fluid row"><!-- .Services-WhatWeAre -->
       <div class="Box-TitleBackground-Gothic"><!-- .Box-TitleBackground-Gothic -->
@@ -25,8 +35,8 @@
         </div><!-- /.container -->
       </div><!-- /.Box-TitleBackground-Gothic -->
 
-      <div class="Services-WhatWeAreImage col-md-6"></div>
-      <div class="Services-WhatWeAreContent col-md-6"><!-- .container -->
+      <div class="Services-WhatWeAreImage hidden-xs col-md-6"></div>
+      <div class="Services-WhatWeAreContent col-xs-12 col-md-6"><!-- .container -->
         <?php echo get_field( "what_we_are" ); ?>
       </div><!-- /.container -->
     </section><!-- /.Services-WhatWeAre -->
@@ -43,6 +53,7 @@
         <article class="Services-ExpertiseBox Services-ExpertiseBox--mechanical"><!-- .Services-ExpertiseBox -->
           <div class="container"><!-- .container -->
             <h2 class="Title Title-Services Title-Space Font-Upper Font-Black Font-White Title--bgRed"><?php _e('Mechanical Engineering', 'Page: Services'); ?></h2>
+            <div class="Services-ExpertiseBoxMobileImage"></div>
             <div class="Services-ExpertiseBox-Content"><!-- .Services-ExpertiseBox-Content -->
               <p class="Title Title-Blue Font-Upper Font-Black"><?php _e('Expertise', 'Page: Services'); ?> :</p>
               <?php echo get_field( "mechanical_engineering" ); ?>
@@ -53,6 +64,7 @@
         <article class="Services-ExpertiseBox Services-ExpertiseBox--electrical"><!-- .Services-ExpertiseBox -->
           <div class="container"><!-- .container -->
             <h2 class="Title Title-Services Title-Space Font-Upper Font-Black Font-White Title--bgRed"><?php _e('Electrical Engineering', 'Page: Services'); ?></h2>
+            <div class="Services-ExpertiseBoxMobileImage"></div>
             <div class="Services-ExpertiseBox-Content"><!-- .Services-ExpertiseBox-Content -->
               <p class="Title Title-Blue Font-Upper Font-Black"><?php _e('Expertise', 'Page: Services'); ?> :</p>
               <?php echo get_field( "electrical_engineering" ); ?>
@@ -63,6 +75,7 @@
         <article class="Services-ExpertiseBox Services-ExpertiseBox--plumbing"><!-- .Services-ExpertiseBox -->
           <div class="container"><!-- .container -->
             <h2 class="Title Title-Services Title-Space Font-Upper Font-Black Font-White Title--bgRed"><?php _e('Plumbing Engineering', 'Page: Services'); ?></h2>
+            <div class="Services-ExpertiseBoxMobileImage"></div>
             <div class="Services-ExpertiseBox-Content"><!-- .Services-ExpertiseBox-Content -->
               <p class="Title Title-Blue Font-Upper Font-Black"><?php _e('Expertise', 'Page: Services'); ?> :</p>
               <?php echo get_field( "plumbing_engineering" ); ?>
@@ -73,6 +86,7 @@
         <article class="Services-ExpertiseBox Services-ExpertiseBox--technical"><!-- .Services-ExpertiseBox -->
           <div class="container"><!-- .container -->
             <h2 class="Title Title-Services Title-Space Font-Upper Font-Black Font-White Title--bgRed"><?php _e('Technical Audits', 'Page: Services'); ?></h2>
+            <div class="Services-ExpertiseBoxMobileImage"></div>
             <div class="Services-ExpertiseBox-Content"><!-- .Services-ExpertiseBox-Content -->
               <p class="Title Title-Blue Font-Upper Font-Black"><?php _e('Expertise', 'Page: Services'); ?> :</p>
               <?php echo get_field( "technical_audits" ); ?>
