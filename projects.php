@@ -12,11 +12,11 @@
       <span class=""><?php _e("Filter", "Page: Projects") ?> :</span>
       <ul class="Projects-FilterList"><!-- .Projects-FilterList -->
         <li class="active"><button class="Button js-buttonFilter" data-filter="*"><?php _e('All', "Page: Projects") ?></button></li><span class="Projects-FilterList-Separ">/</span>
-        <li><button class="Button js-buttonFilter" data-filter=".<?php echo str_replace(' ', '_', __('Energy Audit', 'Page: Projects')); ?>"><?php _e('Energy Audit', "Page: Projects") ?></button></li><span class="Projects-FilterList-Separ">/</span>
-        <li><button class="Button js-buttonFilter" data-filter=".<?php echo str_replace(' ', '_', __('MEP Design', 'Page: Projects')); ?>"><?php _e('MEP Design', "Page: Projects") ?></button></li><span class="Projects-FilterList-Separ">/</span>
-        <li><button class="Button js-buttonFilter" data-filter=".<?php echo str_replace(' ', '_', __('Safety Audits', 'Page: Projects')); ?>"><?php _e('Safety Audits', "Page: Projects") ?></button></li><span class="Projects-FilterList-Separ">/</span>
-        <li><button class="Button js-buttonFilter" data-filter=".<?php echo str_replace(' ', '_', __('Fit Out', 'Page: Projects')); ?>"><?php _e('Fit Out', "Page: Projects") ?></button></li><span class="Projects-FilterList-Separ">/</span>
-        <li><button class="Button js-buttonFilter" data-filter=".<?php echo str_replace(' ', '_', __('Technical Audit', 'Page: Projects')); ?>"><?php _e('Technical Audit', "Page: Projects") ?></button></li>
+        <li><button class="Button js-buttonFilter" data-filter=".energy"><?php _e('Energy Audit', "Page: Projects") ?></button></li><span class="Projects-FilterList-Separ">/</span>
+        <li><button class="Button js-buttonFilter" data-filter=".safety"><?php _e('Safety Audit', "Page: Projects") ?></button></li><span class="Projects-FilterList-Separ">/</span>
+        <li><button class="Button js-buttonFilter" data-filter=".technical"><?php _e('Technical Audit', "Page: Projects") ?></button></li><span class="Projects-FilterList-Separ">/</span>
+        <li><button class="Button js-buttonFilter" data-filter=".mep"><?php _e('MEP Design', "Page: Projects") ?></button></li><span class="Projects-FilterList-Separ">/</span>
+        <li><button class="Button js-buttonFilter" data-filter=".fit_out"><?php _e('Fit Out', "Page: Projects") ?></button></li>
       </ul><!-- /.Projects-FilterList -->
     </section><!-- /.Projects-Filter -->
 
@@ -24,11 +24,11 @@
       <span class="Projects-FilterMobile-Title"><?php _e("Filter", "Page: Projects") ?> :</span>
       <select name="Projects-FilterSelect" id="Projects-FilterSelect"><!-- #Projects-FilterSelect -->
         <option value="*"><?php _e('All', "Page: Projects") ?></option>
-        <option value=".<?php echo str_replace(' ', '_', __('Energy Audit', 'Page: Projects')); ?>"><?php _e('Energy Audit', "Page: Projects") ?></option>
-        <option value=".<?php echo str_replace(' ', '_', __('MEP Design', 'Page: Projects')); ?>"><?php _e('MEP Design', "Page: Projects") ?></option>
-        <option value=".<?php echo str_replace(' ', '_', __('Safety Audits', 'Page: Projects')); ?>"><?php _e('Safety Audits', "Page: Projects") ?></option>
-        <option value=".<?php echo str_replace(' ', '_', __('Fit Out', 'Page: Projects')); ?>"><?php _e('Fit Out', "Page: Projects") ?></option>
-        <option value=".<?php echo str_replace(' ', '_', __('Technical Audit', 'Page: Projects')); ?>"><?php _e('Technical Audit', "Page: Projects") ?></option>
+        <option value=".energy"><?php _e('Energy Audit', "Page: Projects") ?></option>
+        <option value=".safety"><?php _e('Safety Audit', "Page: Projects") ?></option>
+        <option value=".technical"><?php _e('Technical Audit', "Page: Projects") ?></option>
+        <option value=".mep"><?php _e('MEP Design', "Page: Projects") ?></option>
+        <option value=".fit_out"><?php _e('Fit Out', "Page: Projects") ?></option>
       </select><!-- #Projects-FilterSelect -->
     </section><!-- /.Projects-FilterMobile -->
 
@@ -60,20 +60,25 @@
           //Checkbox
           $types = get_sub_field('type');
           $field = get_sub_field_object('type');
-          $choices = $field['choices'];
           $filter = "";
           $filterWithoutSepar = "";
           $incField = 0;
-          foreach ($choices as $value => $label) {
-            if (in_array($value, $types)) {
-              if ($incField >= 1) {
-                $filter = $filter . ' / ';
-                $filterWithoutSepar = $filterWithoutSepar . ' ';
-              }
-              $incField++;
-              $filter = $filter . $label;
-              $filterWithoutSepar = $filterWithoutSepar . str_replace(' ', '_', $label);
+
+          foreach ($types as $choice) {
+            if ($incField >= 1) {
+              $filter = $filter . ' / ';
+              $filterWithoutSepar = $filterWithoutSepar . ' ';
             }
+            $filter = $filter . $field["choices"][$choice];
+            $filterWithoutSepar = $filterWithoutSepar . str_replace(' ', '_', $choice);
+            $incField++;
+          }
+
+          //Fix bug ACF WPML -> ne traduit pas les labels de checkbox
+          if (ICL_LANGUAGE_CODE == 'fr' || ICL_LANGUAGE_CODE == 'kh') {
+            $engWords = array('Energy Audit', 'MEP Design', 'Safety Audit', 'Fit Out', 'Technical Audit');
+            $frenchWords   = array(__('Energy Audit', "Page: Projects"), __('MEP Design', "Page: Projects"), __('Safety Audit', "Page: Projects"), __('Fit Out', "Page: Projects"), __('Technical Audit', "Page: Projects"));
+            $filter = str_replace($engWords, $frenchWords, $filter);
           }
         ?>
       <article class="ProjectsBox ProjectsBox-item <?php echo $filterWithoutSepar; ?>" style="background-image: url('<?php echo $background['url']; ?>')"><!-- .ProjectBox -->
