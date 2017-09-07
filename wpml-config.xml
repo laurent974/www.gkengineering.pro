@@ -3,34 +3,201 @@
    <custom-field action="translate" style="visual">introduction</custom-field>
 
    <custom-field action="copy">job_0_job_title</custom-field>
+   <custom-field action="copy">_job_0_job_title</custom-field>
    <custom-field action="copy">job_0_job_description</custom-field>
+   <custom-field action="copy">_job_0_job_description</custom-field>
 
    <custom-field action="copy">job_1_job_title</custom-field>
+   <custom-field action="copy">_job_1_job_title</custom-field>
    <custom-field action="copy">job_1_job_description</custom-field>
+   <custom-field action="copy">_job_1_job_description</custom-field>
 
    <custom-field action="copy">job_2_job_title</custom-field>
+   <custom-field action="copy">_job_2_job_title</custom-field>
    <custom-field action="copy">job_2_job_description</custom-field>
+   <custom-field action="copy">_job_2_job_description</custom-field>
 
    <custom-field action="copy">job_3_job_title</custom-field>
+   <custom-field action="copy">_job_3_job_title</custom-field>
    <custom-field action="copy">job_3_job_description</custom-field>
+   <custom-field action="copy">_job_3_job_description</custom-field>
 
    <custom-field action="copy">job_4_job_title</custom-field>
+   <custom-field action="copy">_job_4_job_title</custom-field>
    <custom-field action="copy">job_4_job_description</custom-field>
+   <custom-field action="copy">_job_4_job_description</custom-field>
 
    <custom-field action="copy">job_5_job_title</custom-field>
+   <custom-field action="copy">_job_5_job_title</custom-field>
    <custom-field action="copy">job_5_job_description</custom-field>
+   <custom-field action="copy">_job_5_job_description</custom-field>
 
    <custom-field action="copy">job_6_job_title</custom-field>
+   <custom-field action="copy">_job_6_job_title</custom-field>
    <custom-field action="copy">job_6_job_description</custom-field>
+   <custom-field action="copy">_job_6_job_description</custom-field>
 
    <custom-field action="copy">job_7_job_title</custom-field>
+   <custom-field action="copy">_job_7_job_title</custom-field>
    <custom-field action="copy">job_7_job_description</custom-field>
+   <custom-field action="copy">_job_7_job_description</custom-field>
 
    <custom-field action="copy">job_8_job_title</custom-field>
+   <custom-field action="copy">_job_8_job_title</custom-field>
    <custom-field action="copy">job_8_job_description</custom-field>
+   <custom-field action="copy">_job_8_job_description</custom-field>
 
    <custom-field action="copy">job_9_job_title</custom-field>
+   <custom-field action="copy">_job_9_job_title</custom-field>
    <custom-field action="copy">job_9_job_description</custom-field>
+   <custom-field action="copy">_job_9_job_description</custom-field>
+
+   <custom-field action="copy">clients_0_company_name</custom-field>
+   <custom-field action="copy">_clients_0_company_name</custom-field>
+   <custom-field action="translate">clients_0_company_function</custom-field>
+   <custom-field action="copy">_clients_0_company_function</custom-field>
+   <custom-field action="copy">clients_0_logo</custom-field>
+   <custom-field action="copy">_clients_0_logo</custom-field>
+
+   <custom-field action="copy">clients_1_company_name</custom-field>
+   <custom-field action="copy">_clients_1_company_name</custom-field>
+   <custom-field action="translate">clients_1_company_function</custom-field>
+   <custom-field action="copy">_clients_1_company_function</custom-field>
+   <custom-field action="copy">clients_1_logo</custom-field>
+   <custom-field action="copy">_clients_1_logo</custom-field>
+
+   <custom-field action="copy">clients_2_company_name</custom-field>
+   <custom-field action="copy">_clients_2_company_name</custom-field>
+   <custom-field action="translate">clients_2_company_function</custom-field>
+   <custom-field action="copy">_clients_2_company_function</custom-field>
+   <custom-field action="copy">clients_2_logo</custom-field>
+   <custom-field action="copy">_clients_2_logo</custom-field>
+
+   <custom-field action="copy">clients_3_company_name</custom-field>
+   <custom-field action="copy">_clients_3_company_name</custom-field>
+   <custom-field action="translate">clients_3_company_function</custom-field>
+   <custom-field action="copy">_clients_3_company_function</custom-field>
+   <custom-field action="copy">clients_3_logo</custom-field>
+   <custom-field action="copy">_clients_3_logo</custom-field>
+
+   <custom-field action="copy">clients_4_company_name</custom-field>
+   <custom-field action="copy">_clients_4_company_name</custom-field>
+   <custom-field action="translate">clients_4_company_function</custom-field>
+   <custom-field action="copy">_clients_4_company_function</custom-field>
+   <custom-field action="copy">clients_4_logo</custom-field>
+   <custom-field action="copy">_clients_4_logo</custom-field>
+
+   <custom-field action="copy">clients_5_company_name</custom-field>
+   <custom-field action="copy">_clients_5_company_name</custom-field>
+   <custom-field action="translate">clients_5_company_function</custom-field>
+   <custom-field action="copy">_clients_5_company_function</custom-field>
+   <custom-field action="copy">clients_5_logo</custom-field>
+   <custom-field action="copy">_clients_5_logo</custom-field>
+
+   <custom-field action="copy">clients_6_company_name</custom-field>
+   <custom-field action="copy">_clients_6_company_name</custom-field>
+   <custom-field action="translate">clients_6_company_function</custom-field>
+   <custom-field action="copy">_clients_6_company_function</custom-field>
+   <custom-field action="copy">clients_6_logo</custom-field>
+   <custom-field action="copy">_clients_6_logo</custom-field>
+
+   <custom-field action="copy">clients_7_company_name</custom-field>
+   <custom-field action="copy">_clients_7_company_name</custom-field>
+   <custom-field action="translate">clients_7_company_function</custom-field>
+   <custom-field action="copy">_clients_7_company_function</custom-field>
+   <custom-field action="copy">clients_7_logo</custom-field>
+   <custom-field action="copy">_clients_7_logo</custom-field>
+
+   <custom-field action="copy">clients_8_company_name</custom-field>
+   <custom-field action="copy">_clients_8_company_name</custom-field>
+   <custom-field action="translate">clients_8_company_function</custom-field>
+   <custom-field action="copy">_clients_8_company_function</custom-field>
+   <custom-field action="copy">clients_8_logo</custom-field>
+   <custom-field action="copy">_clients_8_logo</custom-field>
+
+   <custom-field action="copy">clients_9_company_name</custom-field>
+   <custom-field action="copy">_clients_9_company_name</custom-field>
+   <custom-field action="translate">clients_9_company_function</custom-field>
+   <custom-field action="copy">_clients_9_company_function</custom-field>
+   <custom-field action="copy">clients_9_logo</custom-field>
+   <custom-field action="copy">_clients_9_logo</custom-field>
+
+   <custom-field action="copy">clients_10_company_name</custom-field>
+   <custom-field action="copy">_clients_10_company_name</custom-field>
+   <custom-field action="translate">clients_10_company_function</custom-field>
+   <custom-field action="copy">_clients_10_company_function</custom-field>
+   <custom-field action="copy">clients_10_logo</custom-field>
+   <custom-field action="copy">_clients_10_logo</custom-field>
+
+   <custom-field action="copy">clients_11_company_name</custom-field>
+   <custom-field action="copy">_clients_11_company_name</custom-field>
+   <custom-field action="translate">clients_11_company_function</custom-field>
+   <custom-field action="copy">_clients_11_company_function</custom-field>
+   <custom-field action="copy">clients_11_logo</custom-field>
+   <custom-field action="copy">_clients_11_logo</custom-field>
+
+   <custom-field action="copy">clients_12_company_name</custom-field>
+   <custom-field action="copy">_clients_12_company_name</custom-field>
+   <custom-field action="translate">clients_12_company_function</custom-field>
+   <custom-field action="copy">_clients_12_company_function</custom-field>
+   <custom-field action="copy">clients_12_logo</custom-field>
+   <custom-field action="copy">_clients_12_logo</custom-field>
+
+   <custom-field action="copy">clients_13_company_name</custom-field>
+   <custom-field action="copy">_clients_13_company_name</custom-field>
+   <custom-field action="translate">clients_13_company_function</custom-field>
+   <custom-field action="copy">_clients_13_company_function</custom-field>
+   <custom-field action="copy">clients_13_logo</custom-field>
+   <custom-field action="copy">_clients_13_logo</custom-field>
+
+   <custom-field action="copy">clients_14_company_name</custom-field>
+   <custom-field action="copy">_clients_14_company_name</custom-field>
+   <custom-field action="translate">clients_14_company_function</custom-field>
+   <custom-field action="copy">_clients_14_company_function</custom-field>
+   <custom-field action="copy">clients_14_logo</custom-field>
+   <custom-field action="copy">_clients_14_logo</custom-field>
+
+   <custom-field action="copy">clients_15_company_name</custom-field>
+   <custom-field action="copy">_clients_15_company_name</custom-field>
+   <custom-field action="translate">clients_15_company_function</custom-field>
+   <custom-field action="copy">_clients_15_company_function</custom-field>
+   <custom-field action="copy">clients_15_logo</custom-field>
+   <custom-field action="copy">_clients_15_logo</custom-field>
+
+   <custom-field action="copy">clients_16_company_name</custom-field>
+   <custom-field action="copy">_clients_16_company_name</custom-field>
+   <custom-field action="translate">clients_16_company_function</custom-field>
+   <custom-field action="copy">_clients_16_company_function</custom-field>
+   <custom-field action="copy">clients_16_logo</custom-field>
+   <custom-field action="copy">_clients_16_logo</custom-field>
+
+   <custom-field action="copy">clients_17_company_name</custom-field>
+   <custom-field action="copy">_clients_17_company_name</custom-field>
+   <custom-field action="translate">clients_17_company_function</custom-field>
+   <custom-field action="copy">_clients_17_company_function</custom-field>
+   <custom-field action="copy">clients_17_logo</custom-field>
+   <custom-field action="copy">_clients_17_logo</custom-field>
+
+   <custom-field action="copy">clients_18_company_name</custom-field>
+   <custom-field action="copy">_clients_18_company_name</custom-field>
+   <custom-field action="translate">clients_18_company_function</custom-field>
+   <custom-field action="copy">_clients_18_company_function</custom-field>
+   <custom-field action="copy">clients_18_logo</custom-field>
+   <custom-field action="copy">_clients_18_logo</custom-field>
+
+   <custom-field action="copy">clients_19_company_name</custom-field>
+   <custom-field action="copy">_clients_19_company_name</custom-field>
+   <custom-field action="translate">clients_19_company_function</custom-field>
+   <custom-field action="copy">_clients_19_company_function</custom-field>
+   <custom-field action="copy">clients_19_logo</custom-field>
+   <custom-field action="copy">_clients_19_logo</custom-field>
+
+   <custom-field action="copy">clients_20_company_name</custom-field>
+   <custom-field action="copy">_clients_20_company_name</custom-field>
+   <custom-field action="translate">clients_20_company_function</custom-field>
+   <custom-field action="copy">_clients_20_company_function</custom-field>
+   <custom-field action="copy">clients_20_logo</custom-field>
+   <custom-field action="copy">_clients_20_logo</custom-field>
 
    <custom-field action="translate" style="visual">team_member_0_diplomas</custom-field>
    <custom-field action="translate" style="visual">team_member_0_projects</custom-field>
@@ -180,7 +347,7 @@
    <custom-field action="translate">team_member_20_status</custom-field>
 
    <custom-field action="copy">projects_0_project_name</custom-field>
-   <custom-field action="copy">projects_0_type</custom-field>
+   <custom-field action="translate">projects_0_type</custom-field>
    <custom-field action="translate">projects_0_country</custom-field>
    <custom-field action="copy">projects_0_city</custom-field>
    <custom-field action="copy">projects_0_budget</custom-field>
@@ -466,5 +633,440 @@
    <custom-field action="translate" style="visual">projects_31_description</custom-field>
    <custom-field action="copy">projects_31_background_image</custom-field>
    <custom-field action="translate">projects_31_gallery</custom-field>
+
+   <custom-field action="copy">_team_member_0_diplomas</custom-field>
+   <custom-field action="copy">_team_member_0_projects</custom-field>
+   <custom-field action="copy">_team_member_0_name</custom-field>
+   <custom-field action="copy">_team_member_0_photo</custom-field>
+   <custom-field action="copy">_team_member_0_photo_fun</custom-field>
+   <custom-field action="copy">_team_member_0_status</custom-field>
+
+   <custom-field action="copy">_team_member_1_diplomas</custom-field>
+   <custom-field action="copy">_team_member_1_projects</custom-field>
+   <custom-field action="copy">_team_member_1_name</custom-field>
+   <custom-field action="copy">_team_member_1_photo</custom-field>
+   <custom-field action="copy">_team_member_1_photo_fun</custom-field>
+   <custom-field action="copy">_team_member_1_status</custom-field>
+
+   <custom-field action="copy">_team_member_2_diplomas</custom-field>
+   <custom-field action="copy">_team_member_2_projects</custom-field>
+   <custom-field action="copy">_team_member_2_name</custom-field>
+   <custom-field action="copy">_team_member_2_photo</custom-field>
+   <custom-field action="copy">_team_member_2_photo_fun</custom-field>
+   <custom-field action="copy">_team_member_2_status</custom-field>
+
+   <custom-field action="copy">_team_member_3_diplomas</custom-field>
+   <custom-field action="copy">_team_member_3_projects</custom-field>
+   <custom-field action="copy">_team_member_3_name</custom-field>
+   <custom-field action="copy">_team_member_3_photo</custom-field>
+   <custom-field action="copy">_team_member_3_photo_fun</custom-field>
+   <custom-field action="copy">_team_member_3_status</custom-field>
+
+   <custom-field action="copy">_team_member_4_diplomas</custom-field>
+   <custom-field action="copy">_team_member_4_projects</custom-field>
+   <custom-field action="copy">_team_member_4_name</custom-field>
+   <custom-field action="copy">_team_member_4_photo</custom-field>
+   <custom-field action="copy">_team_member_4_photo_fun</custom-field>
+   <custom-field action="copy">_team_member_4_status</custom-field>
+
+   <custom-field action="copy">_team_member_5_diplomas</custom-field>
+   <custom-field action="copy">_team_member_5_projects</custom-field>
+   <custom-field action="copy">_team_member_5_name</custom-field>
+   <custom-field action="copy">_team_member_5_photo</custom-field>
+   <custom-field action="copy">_team_member_5_photo_fun</custom-field>
+   <custom-field action="copy">_team_member_5_status</custom-field>
+
+   <custom-field action="copy">_team_member_6_diplomas</custom-field>
+   <custom-field action="copy">_team_member_6_projects</custom-field>
+   <custom-field action="copy">_team_member_6_name</custom-field>
+   <custom-field action="copy">_team_member_6_photo</custom-field>
+   <custom-field action="copy">_team_member_6_photo_fun</custom-field>
+   <custom-field action="copy">_team_member_6_status</custom-field>
+
+   <custom-field action="copy">_team_member_7_diplomas</custom-field>
+   <custom-field action="copy">_team_member_7_projects</custom-field>
+   <custom-field action="copy">_team_member_7_name</custom-field>
+   <custom-field action="copy">_team_member_7_photo</custom-field>
+   <custom-field action="copy">_team_member_7_photo_fun</custom-field>
+   <custom-field action="copy">_team_member_7_status</custom-field>
+
+   <custom-field action="copy">_team_member_8_diplomas</custom-field>
+   <custom-field action="copy">_team_member_8_projects</custom-field>
+   <custom-field action="copy">_team_member_8_name</custom-field>
+   <custom-field action="copy">_team_member_8_photo</custom-field>
+   <custom-field action="copy">_team_member_8_photo_fun</custom-field>
+   <custom-field action="copy">_team_member_8_status</custom-field>
+
+   <custom-field action="copy">_team_member_9_diplomas</custom-field>
+   <custom-field action="copy">_team_member_9_projects</custom-field>
+   <custom-field action="copy">_team_member_9_name</custom-field>
+   <custom-field action="copy">_team_member_9_photo</custom-field>
+   <custom-field action="copy">_team_member_9_photo_fun</custom-field>
+   <custom-field action="copy">_team_member_9_status</custom-field>
+
+   <custom-field action="copy">_team_member_10_diplomas</custom-field>
+   <custom-field action="copy">_team_member_10_projects</custom-field>
+   <custom-field action="copy">_team_member_10_name</custom-field>
+   <custom-field action="copy">_team_member_10_photo</custom-field>
+   <custom-field action="copy">_team_member_10_photo_fun</custom-field>
+   <custom-field action="copy">_team_member_10_status</custom-field>
+
+   <custom-field action="copy">_team_member_11_diplomas</custom-field>
+   <custom-field action="copy">_team_member_11_projects</custom-field>
+   <custom-field action="copy">_team_member_11_name</custom-field>
+   <custom-field action="copy">_team_member_11_photo</custom-field>
+   <custom-field action="copy">_team_member_11_photo_fun</custom-field>
+   <custom-field action="copy">_team_member_11_status</custom-field>
+
+   <custom-field action="copy">_team_member_12_diplomas</custom-field>
+   <custom-field action="copy">_team_member_12_projects</custom-field>
+   <custom-field action="copy">_team_member_12_name</custom-field>
+   <custom-field action="copy">_team_member_12_photo</custom-field>
+   <custom-field action="copy">_team_member_12_photo_fun</custom-field>
+   <custom-field action="copy">_team_member_12_status</custom-field>
+
+   <custom-field action="copy">_team_member_13_diplomas</custom-field>
+   <custom-field action="copy">_team_member_13_projects</custom-field>
+   <custom-field action="copy">_team_member_13_name</custom-field>
+   <custom-field action="copy">_team_member_13_photo</custom-field>
+   <custom-field action="copy">_team_member_13_photo_fun</custom-field>
+   <custom-field action="copy">_team_member_13_status</custom-field>
+
+   <custom-field action="copy">_team_member_14_diplomas</custom-field>
+   <custom-field action="copy">_team_member_14_projects</custom-field>
+   <custom-field action="copy">_team_member_14_name</custom-field>
+   <custom-field action="copy">_team_member_14_photo</custom-field>
+   <custom-field action="copy">_team_member_14_photo_fun</custom-field>
+   <custom-field action="copy">_team_member_14_status</custom-field>
+
+   <custom-field action="copy">_team_member_15_diplomas</custom-field>
+   <custom-field action="copy">_team_member_15_projects</custom-field>
+   <custom-field action="copy">_team_member_15_name</custom-field>
+   <custom-field action="copy">_team_member_15_photo</custom-field>
+   <custom-field action="copy">_team_member_15_photo_fun</custom-field>
+   <custom-field action="copy">_team_member_15_status</custom-field>
+
+   <custom-field action="copy">_team_member_16_diplomas</custom-field>
+   <custom-field action="copy">_team_member_16_projects</custom-field>
+   <custom-field action="copy">_team_member_16_name</custom-field>
+   <custom-field action="copy">_team_member_16_photo</custom-field>
+   <custom-field action="copy">_team_member_16_photo_fun</custom-field>
+   <custom-field action="copy">_team_member_16_status</custom-field>
+
+   <custom-field action="copy">_team_member_17_diplomas</custom-field>
+   <custom-field action="copy">_team_member_17_projects</custom-field>
+   <custom-field action="copy">_team_member_17_name</custom-field>
+   <custom-field action="copy">_team_member_17_photo</custom-field>
+   <custom-field action="copy">_team_member_17_photo_fun</custom-field>
+   <custom-field action="copy">_team_member_17_status</custom-field>
+
+   <custom-field action="copy">_team_member_18_diplomas</custom-field>
+   <custom-field action="copy">_team_member_18_projects</custom-field>
+   <custom-field action="copy">_team_member_18_name</custom-field>
+   <custom-field action="copy">_team_member_18_photo</custom-field>
+   <custom-field action="copy">_team_member_18_photo_fun</custom-field>
+   <custom-field action="copy">_team_member_18_status</custom-field>
+
+   <custom-field action="copy">_team_member_19_diplomas</custom-field>
+   <custom-field action="copy">_team_member_19_projects</custom-field>
+   <custom-field action="copy">_team_member_19_name</custom-field>
+   <custom-field action="copy">_team_member_19_photo</custom-field>
+   <custom-field action="copy">_team_member_19_photo_fun</custom-field>
+   <custom-field action="copy">_team_member_19_status</custom-field>
+
+   <custom-field action="copy">_team_member_20_diplomas</custom-field>
+   <custom-field action="copy">_team_member_20_projects</custom-field>
+   <custom-field action="copy">_team_member_20_name</custom-field>
+   <custom-field action="copy">_team_member_20_photo</custom-field>
+   <custom-field action="copy">_team_member_20_photo_fun</custom-field>
+   <custom-field action="copy">_team_member_20_status</custom-field>
+
+   <custom-field action="copy">_projects_0_project_name</custom-field>
+   <custom-field action="copy">_projects_0_type</custom-field>
+   <custom-field action="copy">_projects_0_country</custom-field>
+   <custom-field action="copy">_projects_0_city</custom-field>
+   <custom-field action="copy">_projects_0_budget</custom-field>
+   <custom-field action="copy">_projects_0_description</custom-field>
+   <custom-field action="copy">_projects_0_background_image</custom-field>
+   <custom-field action="copy">_projects_0_gallery</custom-field>
+
+   <custom-field action="copy">_projects_1_project_name</custom-field>
+   <custom-field action="copy">_projects_1_type</custom-field>
+   <custom-field action="copy">_projects_1_country</custom-field>
+   <custom-field action="copy">_projects_1_city</custom-field>
+   <custom-field action="copy">_projects_1_budget</custom-field>
+   <custom-field action="copy">_projects_1_description</custom-field>
+   <custom-field action="copy">_projects_1_background_image</custom-field>
+   <custom-field action="copy">_projects_1_gallery</custom-field>
+
+   <custom-field action="copy">_projects_2_project_name</custom-field>
+   <custom-field action="copy">_projects_2_type</custom-field>
+   <custom-field action="copy">_projects_2_country</custom-field>
+   <custom-field action="copy">_projects_2_city</custom-field>
+   <custom-field action="copy">_projects_2_budget</custom-field>
+   <custom-field action="copy">_projects_2_description</custom-field>
+   <custom-field action="copy">_projects_2_background_image</custom-field>
+   <custom-field action="copy">_projects_2_gallery</custom-field>
+
+   <custom-field action="copy">_projects_3_project_name</custom-field>
+   <custom-field action="copy">_projects_3_type</custom-field>
+   <custom-field action="copy">_projects_3_country</custom-field>
+   <custom-field action="copy">_projects_3_city</custom-field>
+   <custom-field action="copy">_projects_3_budget</custom-field>
+   <custom-field action="copy">_projects_3_description</custom-field>
+   <custom-field action="copy">_projects_3_background_image</custom-field>
+   <custom-field action="copy">_projects_3_gallery</custom-field>
+
+   <custom-field action="copy">_projects_4_project_name</custom-field>
+   <custom-field action="copy">_projects_4_type</custom-field>
+   <custom-field action="copy">_projects_4_country</custom-field>
+   <custom-field action="copy">_projects_4_city</custom-field>
+   <custom-field action="copy">_projects_4_budget</custom-field>
+   <custom-field action="copy">_projects_4_description</custom-field>
+   <custom-field action="copy">_projects_4_background_image</custom-field>
+   <custom-field action="copy">_projects_4_gallery</custom-field>
+
+   <custom-field action="copy">_projects_5_project_name</custom-field>
+   <custom-field action="copy">_projects_5_type</custom-field>
+   <custom-field action="copy">_projects_5_country</custom-field>
+   <custom-field action="copy">_projects_5_city</custom-field>
+   <custom-field action="copy">_projects_5_budget</custom-field>
+   <custom-field action="copy">_projects_5_description</custom-field>
+   <custom-field action="copy">_projects_5_background_image</custom-field>
+   <custom-field action="copy">_projects_5_gallery</custom-field>
+
+   <custom-field action="copy">_projects_6_project_name</custom-field>
+   <custom-field action="copy">_projects_6_type</custom-field>
+   <custom-field action="copy">_projects_6_country</custom-field>
+   <custom-field action="copy">_projects_6_city</custom-field>
+   <custom-field action="copy">_projects_6_budget</custom-field>
+   <custom-field action="copy">_projects_6_description</custom-field>
+   <custom-field action="copy">_projects_6_background_image</custom-field>
+   <custom-field action="copy">_projects_6_gallery</custom-field>
+
+   <custom-field action="copy">_projects_7_project_name</custom-field>
+   <custom-field action="copy">_projects_7_type</custom-field>
+   <custom-field action="copy">_projects_7_country</custom-field>
+   <custom-field action="copy">_projects_7_city</custom-field>
+   <custom-field action="copy">_projects_7_budget</custom-field>
+   <custom-field action="copy">_projects_7_description</custom-field>
+   <custom-field action="copy">_projects_7_background_image</custom-field>
+   <custom-field action="copy">_projects_7_gallery</custom-field>
+
+   <custom-field action="copy">_projects_8_project_name</custom-field>
+   <custom-field action="copy">_projects_8_type</custom-field>
+   <custom-field action="copy">_projects_8_country</custom-field>
+   <custom-field action="copy">_projects_8_city</custom-field>
+   <custom-field action="copy">_projects_8_budget</custom-field>
+   <custom-field action="copy">_projects_8_description</custom-field>
+   <custom-field action="copy">_projects_8_background_image</custom-field>
+   <custom-field action="copy">_projects_8_gallery</custom-field>
+
+   <custom-field action="copy">_projects_9_project_name</custom-field>
+   <custom-field action="copy">_projects_9_type</custom-field>
+   <custom-field action="copy">_projects_9_country</custom-field>
+   <custom-field action="copy">_projects_9_city</custom-field>
+   <custom-field action="copy">_projects_9_budget</custom-field>
+   <custom-field action="copy">_projects_9_description</custom-field>
+   <custom-field action="copy">_projects_9_background_image</custom-field>
+   <custom-field action="copy">_projects_9_gallery</custom-field>
+
+   <custom-field action="copy">_projects_10_project_name</custom-field>
+   <custom-field action="copy">_projects_10_type</custom-field>
+   <custom-field action="copy">_projects_10_country</custom-field>
+   <custom-field action="copy">_projects_10_city</custom-field>
+   <custom-field action="copy">_projects_10_budget</custom-field>
+   <custom-field action="copy">_projects_10_description</custom-field>
+   <custom-field action="copy">_projects_10_background_image</custom-field>
+   <custom-field action="copy">_projects_10_gallery</custom-field>
+
+   <custom-field action="copy">_projects_11_project_name</custom-field>
+   <custom-field action="copy">_projects_11_type</custom-field>
+   <custom-field action="copy">_projects_11_country</custom-field>
+   <custom-field action="copy">_projects_11_city</custom-field>
+   <custom-field action="copy">_projects_11_budget</custom-field>
+   <custom-field action="copy">_projects_11_description</custom-field>
+   <custom-field action="copy">_projects_11_background_image</custom-field>
+   <custom-field action="copy">_projects_11_gallery</custom-field>
+
+   <custom-field action="copy">_projects_12_project_name</custom-field>
+   <custom-field action="copy">_projects_12_type</custom-field>
+   <custom-field action="copy">_projects_12_country</custom-field>
+   <custom-field action="copy">_projects_12_city</custom-field>
+   <custom-field action="copy">_projects_12_budget</custom-field>
+   <custom-field action="copy">_projects_12_description</custom-field>
+   <custom-field action="copy">_projects_12_background_image</custom-field>
+   <custom-field action="copy">_projects_12_gallery</custom-field>
+
+   <custom-field action="copy">_projects_13_project_name</custom-field>
+   <custom-field action="copy">_projects_13_type</custom-field>
+   <custom-field action="copy">_projects_13_country</custom-field>
+   <custom-field action="copy">_projects_13_city</custom-field>
+   <custom-field action="copy">_projects_13_budget</custom-field>
+   <custom-field action="copy">_projects_13_description</custom-field>
+   <custom-field action="copy">_projects_13_background_image</custom-field>
+   <custom-field action="copy">_projects_13_gallery</custom-field>
+
+   <custom-field action="copy">_projects_14_project_name</custom-field>
+   <custom-field action="copy">_projects_14_type</custom-field>
+   <custom-field action="copy">_projects_14_country</custom-field>
+   <custom-field action="copy">_projects_14_city</custom-field>
+   <custom-field action="copy">_projects_14_budget</custom-field>
+   <custom-field action="copy">_projects_14_description</custom-field>
+   <custom-field action="copy">_projects_14_background_image</custom-field>
+   <custom-field action="copy">_projects_14_gallery</custom-field>
+
+   <custom-field action="copy">_projects_15_project_name</custom-field>
+   <custom-field action="copy">_projects_15_type</custom-field>
+   <custom-field action="copy">_projects_15_country</custom-field>
+   <custom-field action="copy">_projects_15_city</custom-field>
+   <custom-field action="copy">_projects_15_budget</custom-field>
+   <custom-field action="copy">_projects_15_description</custom-field>
+   <custom-field action="copy">_projects_15_background_image</custom-field>
+   <custom-field action="copy">_projects_15_gallery</custom-field>
+
+   <custom-field action="copy">_projects_16_project_name</custom-field>
+   <custom-field action="copy">_projects_16_type</custom-field>
+   <custom-field action="copy">_projects_16_country</custom-field>
+   <custom-field action="copy">_projects_16_city</custom-field>
+   <custom-field action="copy">_projects_16_budget</custom-field>
+   <custom-field action="copy">_projects_16_description</custom-field>
+   <custom-field action="copy">_projects_16_background_image</custom-field>
+   <custom-field action="copy">_projects_16_gallery</custom-field>
+
+   <custom-field action="copy">_projects_17_project_name</custom-field>
+   <custom-field action="copy">_projects_17_type</custom-field>
+   <custom-field action="copy">_projects_17_country</custom-field>
+   <custom-field action="copy">_projects_17_city</custom-field>
+   <custom-field action="copy">_projects_17_budget</custom-field>
+   <custom-field action="copy">_projects_17_description</custom-field>
+   <custom-field action="copy">_projects_17_background_image</custom-field>
+   <custom-field action="copy">_projects_17_gallery</custom-field>
+
+   <custom-field action="copy">_projects_18_project_name</custom-field>
+   <custom-field action="copy">_projects_18_type</custom-field>
+   <custom-field action="copy">_projects_18_country</custom-field>
+   <custom-field action="copy">_projects_18_city</custom-field>
+   <custom-field action="copy">_projects_18_budget</custom-field>
+   <custom-field action="copy">_projects_18_description</custom-field>
+   <custom-field action="copy">_projects_18_background_image</custom-field>
+   <custom-field action="copy">_projects_18_gallery</custom-field>
+
+   <custom-field action="copy">_projects_19_project_name</custom-field>
+   <custom-field action="copy">_projects_19_type</custom-field>
+   <custom-field action="copy">_projects_19_country</custom-field>
+   <custom-field action="copy">_projects_19_city</custom-field>
+   <custom-field action="copy">_projects_19_budget</custom-field>
+   <custom-field action="copy">_projects_19_description</custom-field>
+   <custom-field action="copy">_projects_19_background_image</custom-field>
+   <custom-field action="copy">_projects_19_gallery</custom-field>
+
+   <custom-field action="copy">_projects_20_project_name</custom-field>
+   <custom-field action="copy">_projects_20_type</custom-field>
+   <custom-field action="copy">_projects_20_country</custom-field>
+   <custom-field action="copy">_projects_20_city</custom-field>
+   <custom-field action="copy">_projects_20_budget</custom-field>
+   <custom-field action="copy">_projects_20_description</custom-field>
+   <custom-field action="copy">_projects_20_background_image</custom-field>
+   <custom-field action="copy">_projects_20_gallery</custom-field>
+
+   <custom-field action="copy">_projects_21_project_name</custom-field>
+   <custom-field action="copy">_projects_21_type</custom-field>
+   <custom-field action="copy">_projects_21_country</custom-field>
+   <custom-field action="copy">_projects_21_city</custom-field>
+   <custom-field action="copy">_projects_21_budget</custom-field>
+   <custom-field action="copy">_projects_21_description</custom-field>
+   <custom-field action="copy">_projects_21_background_image</custom-field>
+   <custom-field action="copy">_projects_21_gallery</custom-field>
+
+   <custom-field action="copy">_projects_22_project_name</custom-field>
+   <custom-field action="copy">_projects_22_type</custom-field>
+   <custom-field action="copy">_projects_22_country</custom-field>
+   <custom-field action="copy">_projects_22_city</custom-field>
+   <custom-field action="copy">_projects_22_budget</custom-field>
+   <custom-field action="copy">_projects_22_description</custom-field>
+   <custom-field action="copy">_projects_22_background_image</custom-field>
+   <custom-field action="copy">_projects_22_gallery</custom-field>
+
+   <custom-field action="copy">_projects_23_project_name</custom-field>
+   <custom-field action="copy">_projects_23_type</custom-field>
+   <custom-field action="copy">_projects_23_country</custom-field>
+   <custom-field action="copy">_projects_23_city</custom-field>
+   <custom-field action="copy">_projects_23_budget</custom-field>
+   <custom-field action="copy">_projects_23_description</custom-field>
+   <custom-field action="copy">_projects_23_background_image</custom-field>
+   <custom-field action="copy">_projects_23_gallery</custom-field>
+
+   <custom-field action="copy">_projects_24_project_name</custom-field>
+   <custom-field action="copy">_projects_24_type</custom-field>
+   <custom-field action="copy">_projects_24_country</custom-field>
+   <custom-field action="copy">_projects_24_city</custom-field>
+   <custom-field action="copy">_projects_24_budget</custom-field>
+   <custom-field action="copy">_projects_24_description</custom-field>
+   <custom-field action="copy">_projects_24_background_image</custom-field>
+   <custom-field action="copy">_projects_24_gallery</custom-field>
+
+   <custom-field action="copy">_projects_25_project_name</custom-field>
+   <custom-field action="copy">_projects_25_type</custom-field>
+   <custom-field action="copy">_projects_25_country</custom-field>
+   <custom-field action="copy">_projects_25_city</custom-field>
+   <custom-field action="copy">_projects_25_budget</custom-field>
+   <custom-field action="copy">_projects_25_description</custom-field>
+   <custom-field action="copy">_projects_25_background_image</custom-field>
+   <custom-field action="copy">_projects_25_gallery</custom-field>
+
+   <custom-field action="copy">_projects_26_project_name</custom-field>
+   <custom-field action="copy">_projects_26_type</custom-field>
+   <custom-field action="copy">_projects_26_country</custom-field>
+   <custom-field action="copy">_projects_26_city</custom-field>
+   <custom-field action="copy">_projects_26_budget</custom-field>
+   <custom-field action="copy">_projects_26_description</custom-field>
+   <custom-field action="copy">_projects_26_background_image</custom-field>
+   <custom-field action="copy">_projects_26_gallery</custom-field>
+
+   <custom-field action="copy">_projects_27_project_name</custom-field>
+   <custom-field action="copy">_projects_27_type</custom-field>
+   <custom-field action="copy">_projects_27_country</custom-field>
+   <custom-field action="copy">_projects_27_city</custom-field>
+   <custom-field action="copy">_projects_27_budget</custom-field>
+   <custom-field action="copy">_projects_27_description</custom-field>
+   <custom-field action="copy">_projects_27_background_image</custom-field>
+   <custom-field action="copy">_projects_27_gallery</custom-field>
+
+   <custom-field action="copy">_projects_28_project_name</custom-field>
+   <custom-field action="copy">_projects_28_type</custom-field>
+   <custom-field action="copy">_projects_28_country</custom-field>
+   <custom-field action="copy">_projects_28_city</custom-field>
+   <custom-field action="copy">_projects_28_budget</custom-field>
+   <custom-field action="copy">_projects_28_description</custom-field>
+   <custom-field action="copy">_projects_28_background_image</custom-field>
+   <custom-field action="copy">_projects_28_gallery</custom-field>
+
+   <custom-field action="copy">_projects_29_project_name</custom-field>
+   <custom-field action="copy">_projects_29_type</custom-field>
+   <custom-field action="copy">_projects_29_country</custom-field>
+   <custom-field action="copy">_projects_29_city</custom-field>
+   <custom-field action="copy">_projects_29_budget</custom-field>
+   <custom-field action="copy">_projects_29_description</custom-field>
+   <custom-field action="copy">_projects_29_background_image</custom-field>
+   <custom-field action="copy">_projects_29_gallery</custom-field>
+
+   <custom-field action="copy">_projects_30_project_name</custom-field>
+   <custom-field action="copy">_projects_30_type</custom-field>
+   <custom-field action="copy">_projects_30_country</custom-field>
+   <custom-field action="copy">_projects_30_city</custom-field>
+   <custom-field action="copy">_projects_30_budget</custom-field>
+   <custom-field action="copy">_projects_30_description</custom-field>
+   <custom-field action="copy">_projects_30_background_image</custom-field>
+   <custom-field action="copy">_projects_30_gallery</custom-field>
+
+   <custom-field action="copy">_projects_31_project_name</custom-field>
+   <custom-field action="copy">_projects_31_type</custom-field>
+   <custom-field action="copy">_projects_31_country</custom-field>
+   <custom-field action="copy">_projects_31_city</custom-field>
+   <custom-field action="copy">_projects_31_budget</custom-field>
+   <custom-field action="copy">_projects_31_description</custom-field>
+   <custom-field action="copy">_projects_31_background_image</custom-field>
+   <custom-field action="copy">_projects_31_gallery</custom-field>
  </custom-fields>
 </wpml-config>
