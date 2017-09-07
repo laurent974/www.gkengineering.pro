@@ -1,6 +1,77 @@
 /* Slider */
 .slick-slide {
-    margin: 0px 20px;
+  margin: 0px 20px;
+  height: 98px;
+  position: relative;
+  overflow: hidden;
+
+  &:focus {
+    outline: none;
+  }
+
+  @include breakpoint(xs) {
+    height: auto;
+  }
+
+  .customer-logosCaption {
+    background-color: $iron;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: $white;
+    z-index: 100;
+    transition: all 300ms ease-out;
+    opacity: 0;
+    width: 162px;
+    height: 98px;
+    padding: $spaceBig;
+
+    @include breakpoint(xs) {
+      display: none;
+      position: relative;
+      width: auto;
+      height: auto;
+    }
+
+    &Text {
+      transition: all 600ms ease-out;
+      transform: translateY(40px);
+      color: $black;
+      text-align: center;
+      font-size: 14px;
+      margin-top: $spaceMedium;
+
+      &.Title {
+        font-size: 14px;
+        opacity: 0;
+        transition-delay: 0.1s;
+        transition-duration: 0.2s;
+      }
+    }
+  }
+
+  p.customer-logosCaptionText {
+    opacity: 0;
+    transition-delay: 0.2s;
+    transition-duration: 0.2s;
+    color: $pale_sky;
+  }
+
+  &:hover .customer-logosCaption {
+    opacity: 1;
+  }
+
+  &:hover .customer-logosCaptionText.Title,
+  &:focus .customer-logosCaptionText.Title {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  &:hover p.customer-logosCaptionText,
+  &:focus p.customer-logosCaptionText {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
 
 .slick-slide img {
@@ -82,7 +153,6 @@
 {
     display: none;
     float: left;
-    height: 100%;
     min-height: 1px;
 }
 [dir='rtl'] .slick-slide
@@ -92,6 +162,13 @@
 .slick-slide img
 {
     display: block;
+    position: absolute;
+    left: 0;
+    transition: all 300ms ease-out;
+
+    @include breakpoint(xs) {
+      position: relative; 
+    }
 }
 .slick-slide.slick-loading img
 {
