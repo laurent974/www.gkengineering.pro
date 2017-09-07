@@ -26,7 +26,7 @@
               <h4 class="Title Font-White Font-Bold">Follow Us</h4>
               <div class="Footer-SocialIcons"><!-- .Footer-SocialIcons -->
                 <a target="_blank" href="https://facebook.com/" class="FooterSocial-Icon FooterSocial-Icon--fb no-barba"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/social-facebook.png" alt="Facebook"></a>
-                <a target='_blank' href="https://linkedin.com/" class="FooterSocial-Icon FooterSocial-Icon--in no-barba"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/social-linkedin.png" alt="Facebook"></a>
+                <a target='_blank' href="https://linkedin.com/" class="FooterSocial-Icon FooterSocial-Icon--in no-barba"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/social-linkedin.png" alt="linkedin"></a>
               </div><!-- /.Footer-SocialIcons -->
             </section><!-- /.Footer-Box -->
           </div>
