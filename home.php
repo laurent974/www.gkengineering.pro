@@ -26,19 +26,19 @@
         <div class="item"><!-- .item -->
             <img class="item-Hide" src="<?php echo get_template_directory_uri(); ?>/assets/img/slider-2.jpg" data-color="firebrick" alt="Second Image">
             <div class="carousel-caption"><!-- .carousel-caption -->
-                <h3 class="Font-Light Font-Upper"><?php _e("We are", "page: Home") ?> <strong>HVAC Engineer</strong></h3>
+                <h3 class="Font-Light Font-Upper"><?php _e("We are", "page: Home") ?> <strong><?php _e('HVAC Engineer', 'Page: Home'); ?></strong></h3>
             </div><!-- /.carousel-caption -->
         </div><!-- /.item -->
         <div class="item"><!-- .item -->
             <img class="item-Hide" src="<?php echo get_template_directory_uri(); ?>/assets/img/slider-3.jpg" data-color="violet" alt="Third Image">
             <div class="carousel-caption"><!-- .carousel-caption -->
-                <h3 class="Font-Light Font-Upper"><?php _e("We are", "page: Home") ?> <strong>Electrical Engineer</strong></h3>
+                <h3 class="Font-Light Font-Upper"><?php _e("We are", "page: Home") ?> <strong><?php _e('Electrical Engineer', 'Page: Home'); ?></strong></h3>
             </div><!-- /.carousel-caption -->
         </div><!-- /.item -->
         <div class="item">
             <img class="item-Hide" src="<?php echo get_template_directory_uri(); ?>/assets/img/slider-4.jpg" data-color="lightgreen" alt="Fourth Image">
             <div class="carousel-caption">
-                <h3 class="Font-Light Font-Upper"><?php _e("We are", "page: Home") ?> <strong>Plumbing Engineer</strong></h3>
+                <h3 class="Font-Light Font-Upper"><?php _e("We are", "page: Home") ?> <strong><?php _e('Plumbing Engineer', 'Page: Home'); ?></strong></h3>
             </div>
         </div>
       </div>
