@@ -20,6 +20,16 @@
     <script type="text/javascript">
       var templateUrl = '<?php echo get_template_directory_uri(); ?>';
     </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107316274-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag('js', new Date());
+
+      gtag('config', 'UA-107316274-1');
+    </script>
+
   </head>
   <body>
     <div class="Global"><!-- .Global -->
