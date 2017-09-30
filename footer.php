@@ -10,7 +10,7 @@
                   <div class="postal-code">Phnom Penh</div >
                   <div class="country-name">Cambodia</div >
                 </div>
-                <div class="tel"><i class="material-icons">&#xE0D4;</i> 061 661 112</div>
+                <div class="tel"><i class="material-icons">&#xE0D4;</i> +855 (0) 23 987 770</div>
                 <div class="email"><i class="material-icons">&#xE0E1;</i> contact@gkengineering.pro</div>
               </address>
             </section><!-- /.Footer-Box -->
@@ -23,9 +23,9 @@
             </section><!-- /.Footer-Box -->
 
             <section class="col-xs-12 col-md-4 Footer-Box Footer-Social"><!-- .Footer-Box -->
-              <h4 class="Title Font-White Font-Bold">Follow Us</h4>
+              <h4 class="Title Font-White Font-Bold"><?php _e("Follow Us", "Page: All") ?></h4>
               <div class="Footer-SocialIcons"><!-- .Footer-SocialIcons -->
-                <a target="_blank" href="https://facebook.com/" class="FooterSocial-Icon FooterSocial-Icon--fb no-barba"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/social-facebook.png" alt="Facebook"></a>
+                <a target="_blank" href="https://fb.me/Gkengineering.pro" class="FooterSocial-Icon FooterSocial-Icon--fb no-barba"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/social-facebook.png" alt="Facebook"></a>
                 <a target='_blank' href="https://linkedin.com/" class="FooterSocial-Icon FooterSocial-Icon--in no-barba"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/social-linkedin.png" alt="linkedin"></a>
               </div><!-- /.Footer-SocialIcons -->
             </section><!-- /.Footer-Box -->
@@ -43,10 +43,5 @@
 
   <!-- gMap -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJzT1SMgW1oVenVOqjXm_xON3O7k8f9EE"></script>
-
-  <!-- A supprimer en prod -->
-  <script id="__bs_script__">//<![CDATA[
-    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.18.13'><\/script>".replace("HOST", location.hostname));
-//]]></script>
   </body>
 </html>
