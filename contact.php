@@ -26,7 +26,7 @@
               <div class="postal-code">Phnom Penh</div >
               <div class="country-name">Cambodia</div >
             </div>
-            <div class="tel"><i class="material-icons">&#xE0D4;</i> 061 661 112</div>
+            <div class="tel"><i class="material-icons">&#xE0D4;</i> +855 (0) 23 987 770</div>
             <div class="email"><i class="material-icons">&#xE0E1;</i> contact@gkengineering.pro</div>
           </address>
         </div><!-- /.Box -->
