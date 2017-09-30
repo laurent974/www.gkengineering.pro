@@ -128,12 +128,21 @@
             $function = get_sub_field('company_function');
             $logo = get_sub_field('logo');
             $logo = wp_get_attachment_image_src( $logo, "full" )[0];
+            $link = get_sub_field('link');
         ?>
           <div class="slide">
             <img src="<?php echo $logo; ?>" alt="<?php echo $company; ?>">
             <div class="customer-logosCaption">
+              <?php
+                if ($link) {
+                  echo '<a href="' . $link . '">';
+                }
+              ?>
               <h4 class="Title Font-Upper Font-Black customer-logosCaptionText"><?php echo $company; ?></h4>
               <p class="Font-Light Font-PaleSky customer-logosCaptionText"><?php echo $function; ?></p>
+              <?php
+                if ($link) echo '</a>';
+              ?>
             </div>
           </div>
         <?php
