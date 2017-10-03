@@ -52,8 +52,7 @@
             ?>
           <?php else: ?>
             <h3 class="Title Title-PaleSky Font-Upper Font-Black Jobs-Title"><?php _e("Recruitment is close :", "Page: Jobs") ?></h3>
-            <p class="Jobs-NoOffer Font-Light Font-LightBlue"><?php _e("
-Sorry recruitment is currently closed. You can make a spontaneous application, we will study it. Thank you.", "Page: Jobs") ?></p>
+            <p class="Jobs-NoOffer Font-Light Font-LightBlue"><?php _e("Sorry recruitment is currently closed. You can make a spontaneous application, we will study it. Thank you.", "Page: Jobs") ?></p>
           <?php endif; ?>
         </div><!-- /.panel-group -->
       </div><!-- /.container -->
