@@ -135,7 +135,7 @@
             <div class="customer-logosCaption">
               <?php
                 if ($link) {
-                  echo '<a href="' . $link . '">';
+                  echo '<a target="_blank" href="' . $link . '">';
                 }
               ?>
               <h4 class="Title Font-Upper Font-Black customer-logosCaptionText"><?php echo $company; ?></h4>
