@@ -45,7 +45,10 @@
             $place = "";
           }
 
+
+
           $inc++;
+          $id = $inc -1;
           $name = get_sub_field('project_name');
           $background = get_sub_field('background_image');
           $country = get_sub_field('country');
@@ -109,7 +112,6 @@
                 <?php $galleryLoop = 0; ?>
                 <?php foreach( $gallery as $image ): ?>
                   <?php if ($galleryLoop > 0) { ?>
-                    <?php print_r($gallery[$galleryLoop]) ?>
                     <a rel="gallery-<?php echo $inc; ?>" href="<?php echo $gallery[$galleryLoop][url]; ?>" class="swipebox hide" title="<?php echo $gallery[$galleryLoop][title] . ' - ' . $gallery[$galleryLoop][description]; ?>"></a>
                   <?php } ?>
                   <?php $galleryLoop++; ?>
@@ -117,6 +119,9 @@
               </div>
             </div><!-- /.Projects-Gallery -->
             <?php endif; ?><!-- END Gallery loop -->
+            <div class="Projects-Share"><!-- .Projects-Share -->
+              <a class="Button Button-Rounded Button-White" href="<?php echo get_permalink( apply_filters( 'wpml_object_id', 558, 'page' ) ); ?>?id=<?php echo $id; ?>"><?php _e('View Project', 'Page: Projects'); ?></a>
+            </div><!-- /.Projects-Share -->
       </article><!-- /.ProjectBox -->
       <?php endwhile; ?>
     <?php endif; ?>
