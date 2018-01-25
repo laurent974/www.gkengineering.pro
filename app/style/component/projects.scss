@@ -191,6 +191,21 @@
       }
     }
   }
+
+  &Share {
+    position: relative;
+    width: 100%;
+    margin-top: $spaceBig;
+    text-align: center;
+  }
+}
+
+iframe[title="G+"] {
+  padding-top: 4px;
+}
+
+iframe[title="fb:share_button Facebook Social Plugin"] {
+  margin-top: -6px;
 }
 
 [data-namespace="projectspage"] .Footer {
