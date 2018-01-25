@@ -1,4 +1,16 @@
 <?php /* Template Name: Project */ ?>
+<?php
+  $id = $_GET['id'];
+  $repeater = get_field('projects', 29);
+
+  $name = $repeater[$id]['project_name'];
+  $background = $repeater[$id]['background_image'];
+  $country = $repeater[$id]['country'];
+  $city = $repeater[$id]['city'];
+  $budget = $repeater[$id]['budget'];
+  $description = $repeater[$id]['description'];
+  $gallery = $repeater[$id]['gallery'];
+?>
 
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -32,8 +44,31 @@
       gtag('config', 'UA-107316274-1');
     </script>
 
+    <!-- Facebook OpenGraph -->
+    <meta property="og:url"           content="<?php echo get_permalink( apply_filters( 'wpml_object_id', 558, 'page' ) ); ?>?id=<?php echo $id; ?>" />
+    <meta property="og:type"          content="Project" />
+    <meta property="og:title"         content="<?php echo $name; ?>" />
+    <meta property="og:description"   content="<?php echo  strip_tags($description); ?>" />
+    <meta property="og:image"         content="<?php echo $background['url']; ?>" />
+    <!-- /Facebook OpenGraph -->
   </head>
   <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.11';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+      {lang: 'en'}
+    </script>
+
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+
     <div class="Global"><!-- .Global -->
       <!-- Animation Div -->
       <div id="bmIn"></div>
@@ -96,23 +131,6 @@
           		bcn_display();
           	} ?>
           </div><!-- /.breadcrumb -->
-            Project
-
-            <?php
-              $id = $_GET['id'];
-              echo 'id'. $id;
-              $repeater = get_field('projects', 29);
-
-              $name = $repeater[$id]['project_name'];
-              $background = $repeater[$id]['background_image'];
-              $country = $repeater[$id]['country'];
-              $city = $repeater[$id]['city'];
-              $budget = $repeater[$id]['budget'];
-              $description = $repeater[$id]['description'];
-              $gallery = $repeater[$id]['gallery'];
-
-              echo $name;
-           ?>
 
            <article class="ProjectsBox ProjectsBox-item <?php echo $filterWithoutSepar; ?>" style="background-image: url('<?php echo $background['url']; ?>')"><!-- .ProjectBox -->
                <div class="Projects-Description Projects-Description<?php echo $place; ?>"><!-- .Projects-Description -->
@@ -150,6 +168,16 @@
                  </div><!-- /.Projects-Gallery -->
                  <?php endif; ?><!-- END Gallery loop -->
            </article><!-- /.ProjectBox -->
+
+           <article class="ProjectsShare">
+             <div class="fb-share-button" data-href="<?php echo get_permalink( apply_filters( 'wpml_object_id', 558, 'page' ) ); ?>?id=<?php echo $id; ?>" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo get_permalink( apply_filters( 'wpml_object_id', 558, 'page' ) ); ?>?id=<?php echo $id; ?>%2F&amp;src=sdkpreparse">Share</a></div>
+
+             <g:plusone size="tall"></g:plusone>
+
+             <a href="http://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="InfoWebMaster">Tweet</a>
+
+             <script type="IN/Share"></script>
+           </article>
 
           <section class="Box--mediumMargin ProjectStartBox container-fluid"><!-- .ProjectStartBox -->
             <div class="ProjectStartBox-Inner">
