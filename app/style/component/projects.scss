@@ -145,6 +145,17 @@
 
     &--right {
       float: right;
+
+      .Projects-View {
+        right: $spaceSmall;
+        left: auto;
+
+        @include breakpoint(maxmd) {
+          right: auto;
+          left: 50%;
+          margin-left: -50px;
+        }
+      }
     }
 
     .Title {
@@ -156,14 +167,30 @@
     }
   }
 
-  &-Share {
+  &-View {
     position: absolute;
-    bottom: 0;
-    margin-bottom: 10px;
-    left: 30%;
-    margin-left: -37px;
-    top: 50%;
-    margin-top: -8px;
+    bottom: $spaceMedium;
+    left: $spaceSmall;
+
+    @include breakpoint(maxmd) {
+      left: 50%;
+      bottom: 13px;
+      margin-left: -50px;
+    }
+
+    &Button {
+      border: 2px solid $white;
+      padding: $spaceSmall $spaceMedium;
+      color: $white;
+      @extend .Font-Bold;
+      transition: 0.25s;
+
+      &:hover {
+        background: $white;
+        text-decoration: none;
+        color: $black;
+      }
+    }
   }
 
   &-Type,
