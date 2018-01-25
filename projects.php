@@ -104,6 +104,10 @@
             <?php if ($gallery): ?>
               <button class="Button Font-White Font-Light Projects-GalleryButton swipebox" rel="gallery-<?php echo $inc; ?>" href="<?php echo $gallery[0][url]; ?>" title="<?php echo $gallery[0][title] . ' - ' . $gallery[0][description]; ?>"><i class="material-icons">&#xE8A7;</i> <?php _e('Images Gallery', 'Page: Projects'); ?></button>
             <?php endif; ?>
+
+            <div class="Projects-View"><!-- .Projects-View -->
+              <a class="Projects-ViewButton" href="<?php echo get_permalink( apply_filters( 'wpml_object_id', 558, 'page' ) ); ?>?id=<?php echo $id; ?>"><?php _e('View Project', 'Page: Projects'); ?></a>
+            </div><!-- /.Projects-View -->
           </div><!-- /.Projects-Description -->
 
             <?php if( $gallery ): ?><!-- Start Gallery loop -->
@@ -119,9 +123,6 @@
               </div>
             </div><!-- /.Projects-Gallery -->
             <?php endif; ?><!-- END Gallery loop -->
-            <div class="Projects-Share"><!-- .Projects-Share -->
-              <a class="Button Button-Rounded Button-White" href="<?php echo get_permalink( apply_filters( 'wpml_object_id', 558, 'page' ) ); ?>?id=<?php echo $id; ?>"><?php _e('View Project', 'Page: Projects'); ?></a>
-            </div><!-- /.Projects-Share -->
       </article><!-- /.ProjectBox -->
       <?php endwhile; ?>
     <?php endif; ?>
