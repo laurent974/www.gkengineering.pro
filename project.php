@@ -10,6 +10,7 @@
   $budget = $repeater[$id]['budget'];
   $description = $repeater[$id]['description'];
   $gallery = $repeater[$id]['gallery'];
+  $url = "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +18,7 @@
   <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <base href="<?php bloginfo('url')?>">
-    <title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
+    <title><?php bloginfo('name'); ?> - <?php echo $name; ?></title>
     <!--[if lt IE 9]>
   	  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   	<![endif]-->
@@ -45,30 +46,24 @@
     </script>
 
     <!-- Facebook OpenGraph -->
-    <meta property="og:url"           content="<?php echo get_permalink( apply_filters( 'wpml_object_id', 558, 'page' ) ); ?>?id=<?php echo $id; ?>" />
-    <meta property="og:type"          content="Project" />
-    <meta property="og:title"         content="<?php echo $name; ?>" />
-    <meta property="og:description"   content="<?php echo  strip_tags($description); ?>" />
-    <meta property="og:image"         content="<?php echo $background['url']; ?>" />
+    <meta property="og:url" content="<?php echo $url; ?>" />
+    <meta property="article:publisher" content="https://www.facebook.com/Gkengineering.pro">
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="<?php echo $name; ?> - GK Engineering" />
+    <meta property="og:description" content="<?php echo  strip_tags($description); ?>" />
+    <meta property="og:image" content="<?php echo $background['url']; ?>" />
+    <meta property="og:site_name" content="GK-Engineering">
+    <meta property="og:image:width" content="1920">
     <!-- /Facebook OpenGraph -->
+
+    <!-- Twitter OpenGraph -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:description" content="<?php echo  strip_tags($description); ?>">
+    <meta name="twitter:title" content="<?php echo $name; ?> - GK Engineering">
+    <meta name="twitter:image" content="<?php echo $background['url']; ?>">
+    <!-- /Twitter OpenGraph -->
   </head>
   <body>
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11';
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-
-    <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
-      {lang: 'en'}
-    </script>
-
-    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-    <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
-
     <div class="Global"><!-- .Global -->
       <!-- Animation Div -->
       <div id="bmIn"></div>
@@ -170,13 +165,14 @@
            </article><!-- /.ProjectBox -->
 
            <article class="ProjectsShare">
-             <div class="fb-share-button" data-href="<?php echo get_permalink( apply_filters( 'wpml_object_id', 558, 'page' ) ); ?>?id=<?php echo $id; ?>" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo get_permalink( apply_filters( 'wpml_object_id', 558, 'page' ) ); ?>?id=<?php echo $id; ?>%2F&amp;src=sdkpreparse">Share</a></div>
 
-             <g:plusone size="tall"></g:plusone>
+             <a title="Share this page on Facebook" href="https://www.facebook.com/sharer.php?u=<?php echo $url; ?>&t=<?php echo $title; ?>" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;" class="Share-fb"></a>
 
-             <a href="http://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="InfoWebMaster">Tweet</a>
+             <a title="Share this page on Google +" href="https://plus.google.com/share?url=<?php echo $url; ?>&amp;hl=fr" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;" class="Share-Google"></a>
 
-             <script type="IN/Share"></script>
+             <a title="Share this page on Twitter" href="https://twitter.com/share?url=<?php echo $url; ?>&amp;text=<?php echo $title; ?>" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;" class="Share-Twitter"></a>
+
+              <a title="Share this page on LinkeDin" href="https://www.linkedin.com/shareArticle?mini=true&url=<?php echo $url; ?>&title=<?php echo $title; ?>" rel="nofollow" onclick="javascript:window.open(this.href, '','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;" class="Share-Linkedin"></a>
            </article>
 
           <section class="Box--mediumMargin ProjectStartBox container-fluid"><!-- .ProjectStartBox -->
