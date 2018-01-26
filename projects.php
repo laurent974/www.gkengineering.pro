@@ -106,7 +106,8 @@
             <?php endif; ?>
 
             <div class="Projects-View"><!-- .Projects-View -->
-              <a class="Projects-ViewButton" href="<?php echo get_permalink( apply_filters( 'wpml_object_id', 558, 'page' ) ); ?>?id=<?php echo $id; ?>"><?php _e('View Project', 'Page: Projects'); ?></a>
+              <!--<a class="Projects-ViewButton" href="<?php echo get_permalink( apply_filters( 'wpml_object_id', 558, 'page' ) ); ?>?id=<?php echo $id; ?>"><?php _e('View Project', 'Page: Projects'); ?></a> Local DEV-->
+              <a class="Projects-ViewButton" href="<?php echo get_permalink( apply_filters( 'wpml_object_id', 700, 'page' ) ); ?>?id=<?php echo $id; ?>"><?php _e('View Project', 'Page: Projects'); ?></a>
             </div><!-- /.Projects-View -->
           </div><!-- /.Projects-Description -->
 
