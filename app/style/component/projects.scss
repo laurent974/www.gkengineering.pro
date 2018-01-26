@@ -235,6 +235,34 @@ iframe[title="fb:share_button Facebook Social Plugin"] {
   margin-top: -6px;
 }
 
+.Share-fb,
+.Share-Google,
+.Share-Twitter,
+.Share-Linkedin {
+  display: inline-block;
+  height: 20px;
+}
+
+.Share-fb {
+  background-image:url('assets/img/share-fb.png');
+  width: 59px;
+}
+
+.Share-Google {
+  background-image:url('assets/img/share-google.png');
+  width: 50px;
+}
+
+.Share-Twitter {
+  background-image:url('assets/img/share-tweet.png');
+  width: 60px;
+}
+
+.Share-Linkedin {
+  background-image:url('assets/img/share-linkedin.png');
+  width: 60px;
+}
+
 [data-namespace="projectspage"] .Footer {
   @include breakpoint(maxmd) {
     margin-bottom: 103px;
