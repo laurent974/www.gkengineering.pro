@@ -13,6 +13,18 @@
   remove_action( 'wp_head','qtranxf_wp_head_meta_generator');
   remove_action( 'wp_head', 'wp_resource_hints', 2 );
 
+  //Remove WPML Generator in Header
+  if ( ! empty ( $GLOBALS['sitepress'] ) ) {
+    add_action( 'wp_head', function() {
+        remove_action(
+            current_filter(),
+            array ( $GLOBALS['sitepress'], 'meta_generator_tag' )
+        );
+    },
+    0
+    );
+  }
+
   // Clean JS
   function starter_scripts() {
     wp_deregister_script( 'jquery' );
