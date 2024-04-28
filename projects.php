@@ -45,8 +45,6 @@
             $place = "";
           }
 
-
-
           $inc++;
           $id = $inc -1;
           $name = get_sub_field('project_name');
@@ -58,7 +56,9 @@
           $gallery = get_sub_field('gallery');
 
           //Format money
-          $budget = number_format($budget, 2, ',', ' ');
+          if ($budget) {
+            $budget = number_format($budget, 2, ',', ' ');
+          }
 
           //Checkbox
           $types = get_sub_field('type');
@@ -66,6 +66,8 @@
           $filter = "";
           $filterWithoutSepar = "";
           $incField = 0;
+
+
 
           foreach ($types as $choice) {
             if ($incField >= 1) {
@@ -77,12 +79,14 @@
             $incField++;
           }
 
+
           //Fix bug ACF WPML -> ne traduit pas les labels de checkbox
           if (ICL_LANGUAGE_CODE == 'fr' || ICL_LANGUAGE_CODE == 'kh') {
             $engWords = array('Energy Audit', 'MEP Design', 'Safety Audit', 'Fit Out', 'Technical Audit');
             $frenchWords   = array(__('Energy Audit', "Page: Projects"), __('MEP Design', "Page: Projects"), __('Safety Audit', "Page: Projects"), __('Fit Out', "Page: Projects"), __('Technical Audit', "Page: Projects"));
             $filter = str_replace($engWords, $frenchWords, $filter);
           }
+
         ?>
       <article class="ProjectsBox ProjectsBox-item <?php echo $filterWithoutSepar; ?>" style="background-image: url('<?php echo $background['url']; ?>')"><!-- .ProjectBox -->
           <div class="Projects-Description Projects-Description<?php echo $place; ?>"><!-- .Projects-Description -->
@@ -99,10 +103,10 @@
             <div class="Projects-DescriptionSepar"></div>
             <div class="Projects-DescriptionContent"><!-- .Projects-DescriptionContent -->
               <?php echo $description; ?>
-            </div><!-- /.Projects-DescriptionContent -->
+            </div>
 
             <?php if ($gallery): ?>
-              <button class="Button Font-White Font-Light Projects-GalleryButton swipebox" rel="gallery-<?php echo $inc; ?>" href="<?php echo $gallery[0][url]; ?>" title="<?php echo $gallery[0][title] . ' - ' . $gallery[0][description]; ?>"><i class="material-icons">&#xE8A7;</i> <?php _e('Images Gallery', 'Page: Projects'); ?></button>
+              <button class="Button Font-White Font-Light Projects-GalleryButton swipebox" rel="gallery-<?php echo $inc; ?>" href="<?php echo $gallery[0]["url"]; ?>" title="<?php echo $gallery[0]["title"] . ' - ' . $gallery[0]["description"]; ?>"><i class="material-icons">&#xE8A7;</i> <?php _e('Images Gallery', 'Page: Projects'); ?></button>
             <?php endif; ?>
 
             <div class="Projects-View"><!-- .Projects-View -->
@@ -117,7 +121,7 @@
                 <?php $galleryLoop = 0; ?>
                 <?php foreach( $gallery as $image ): ?>
                   <?php if ($galleryLoop > 0) { ?>
-                    <a rel="gallery-<?php echo $inc; ?>" href="<?php echo $gallery[$galleryLoop][url]; ?>" class="swipebox hide" title="<?php echo $gallery[$galleryLoop][title] . ' - ' . $gallery[$galleryLoop][description]; ?>"></a>
+                    <a rel="gallery-<?php echo $inc; ?>" href="<?php echo $gallery[$galleryLoop]["url"]; ?>" class="swipebox hide" title="<?php echo $gallery[$galleryLoop]["title"] . ' - ' . $gallery[$galleryLoop]["description"]; ?>"></a>
                   <?php } ?>
                   <?php $galleryLoop++; ?>
                 <?php endforeach; ?>
